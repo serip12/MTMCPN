@@ -25,5 +25,6 @@
         "libs/wxcurl/include",
         "libs/wxJSON/include"
     ],
-    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json"
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "dotnet.defaultSolution": "libs/serial/visual_studio/visual_studio.sln"
 }
