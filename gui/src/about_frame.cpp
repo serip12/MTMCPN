@@ -159,7 +159,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_hyperlinkLogFile = new wxHyperlinkCtrl(
       m_scrolledWindowAbout, wxID_ANY,
-      _T("/Users/nohal/Library/Logs/eyesea.log"),
+      _T("/Users/nohal/Library/Logs/its.log"),
       wxT("http://www.wxformbuilder.org"), wxDefaultPosition, wxDefaultSize,
       wxHL_CONTEXTMENU | wxHL_ALIGN_LEFT);
   m_hyperlinkLogFile->SetFont(

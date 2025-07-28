@@ -2507,11 +2507,11 @@ msgstr ""
 #: gui/src/routemanagerdialog.cpp:2700 gui/src/routemanagerdialog.cpp:2732
 #: gui/src/routemanagerdialog.cpp:2871 gui/src/routemanagerdialog.cpp:3035
 #: gui/src/toolbar.cpp:2274
-msgid "OpenCPN Alert"
+msgid "ITS Alert"
 msgstr ""
 
 #: gui/include/gui/AISTargetAlertDialog.h:73
-msgid "OpenCPN AIS Alert"
+msgid "ITS AIS Alert"
 msgstr ""
 
 #: gui/include/gui/AISTargetQueryDialog.h:50
@@ -2541,7 +2541,7 @@ msgid "Overwrite Garmin device route number 1?"
 msgstr ""
 
 #: gui/include/gui/n0183_ctx_factory.h:39
-msgid "OpenCPN Message"
+msgid "ITS Message"
 msgstr ""
 
 #: gui/include/gui/options.h:90 gui/src/ocpn_frame.cpp:3749
@@ -2561,7 +2561,7 @@ msgid "Send to GPS"
 msgstr ""
 
 #: gui/include/gui/printout_base.h:32
-msgid "OpenCPN print"
+msgid "ITS print"
 msgstr ""
 
 #: gui/include/gui/printout_chart.h:28
@@ -2653,7 +2653,7 @@ msgid "Track properties"
 msgstr ""
 
 #: gui/include/gui/wiz_ui.h:68 gui/include/gui/wiz_ui_proto.h:87
-msgid "OpenCPN Initial Configuration"
+msgid "ITS Initial Configuration"
 msgstr ""
 
 #: gui/src/about.cpp:135 gui/src/about.cpp:179 gui/src/about.cpp:303
@@ -2730,7 +2730,7 @@ msgstr ""
 
 #: gui/src/about_frame.cpp:109
 msgid ""
-"OpenCPN is a Free Software project, built by sailors.\n"
+"ITS is a Free Software project, built by sailors.\n"
 "It is freely available to download and distribute without charge."
 msgstr ""
 
@@ -2767,7 +2767,7 @@ msgid "Plugin API: "
 msgstr ""
 
 #: gui/src/about_frame.cpp:242
-msgid "OpenCPN Website"
+msgid "ITS Website"
 msgstr ""
 
 #: gui/src/ais_info_gui.cpp:95
@@ -2793,7 +2793,7 @@ msgstr ""
 #: gui/src/SendToPeerDlg.cpp:99 gui/src/SendToPeerDlg.cpp:106
 #: gui/src/SendToPeerDlg.cpp:113 gui/src/tcmgr.cpp:685
 #: gui/src/udev_rule_mgr.cpp:376
-msgid "OpenCPN Info"
+msgid "ITS Info"
 msgstr ""
 
 #: gui/src/ais_info_gui.cpp:200 gui/src/options.cpp:5050
@@ -3718,7 +3718,7 @@ msgid "Are you sure you want to delete this track?"
 msgstr ""
 
 #: gui/src/canvasMenu.cpp:1912 gui/src/routeman_gui.cpp:267
-msgid "OpenCPN Track Delete"
+msgid "ITS Track Delete"
 msgstr ""
 
 #: gui/src/canvasMenu.cpp:1954
@@ -4061,15 +4061,15 @@ msgid " ChartFile:  "
 msgstr ""
 
 #: gui/src/chartdbs.cpp:1685
-msgid "OpenCPN Chart Scan...."
+msgid "ITS Chart Scan...."
 msgstr ""
 
 #: gui/src/chartdbs.cpp:1724
-msgid "OpenCPN Directory Scan...."
+msgid "ITS Directory Scan...."
 msgstr ""
 
 #: gui/src/chartdbs.cpp:2075
-msgid "OpenCPN Chart Add...."
+msgid "ITS Chart Add...."
 msgstr ""
 
 #: gui/src/chcanv.cpp:1443 gui/src/chcanv.cpp:1458
@@ -4081,7 +4081,7 @@ msgid "\" is empty."
 msgstr ""
 
 #: gui/src/chcanv.cpp:1450 gui/src/chcanv.cpp:1465
-msgid "OpenCPN Group Notice"
+msgid "ITS Group Notice"
 msgstr ""
 
 #: gui/src/chcanv.cpp:1463
@@ -4181,7 +4181,7 @@ msgstr ""
 #: gui/src/chcanv.cpp:8444 gui/src/chcanv.cpp:8899 gui/src/chcanv.cpp:8937
 #: gui/src/chcanv.cpp:8957 gui/src/chcanv.cpp:9017 gui/src/chcanv.cpp:9417
 #: gui/src/chcanv.cpp:9435 gui/src/chcanv.cpp:9683 gui/src/chcanv.cpp:9701
-msgid "OpenCPN Route Create"
+msgid "ITS Route Create"
 msgstr ""
 
 #: gui/src/chcanv.cpp:8351 gui/src/chcanv.cpp:8929
@@ -4219,7 +4219,7 @@ msgid "Replace this RoutePoint by the nearby Waypoint?"
 msgstr ""
 
 #: gui/src/chcanv.cpp:9385 gui/src/chcanv.cpp:9652
-msgid "OpenCPN RoutePoint change"
+msgid "ITS RoutePoint change"
 msgstr ""
 
 #: gui/src/chcanv.cpp:9410 gui/src/chcanv.cpp:9676
@@ -4353,7 +4353,7 @@ msgid "Hide This Chart"
 msgstr ""
 
 #: gui/src/cm93.cpp:6238
-msgid "OpenCPN CM93 Cell Offset Adjustments"
+msgid "ITS CM93 Cell Offset Adjustments"
 msgstr ""
 
 #: gui/src/cm93.cpp:6267
@@ -4821,12 +4821,12 @@ msgstr ""
 
 #: gui/src/connection_edit.cpp:1725 gui/src/options.cpp:8134
 #: gui/src/routeman_gui.cpp:74
-msgid "OpenCPN Warning"
+msgid "ITS Warning"
 msgstr ""
 
 #: gui/src/connection_edit.cpp:1728 gui/src/options.cpp:7177
 #: gui/src/routemanagerdialog.cpp:1934
-msgid "OpenCPN info"
+msgid "ITS info"
 msgstr ""
 
 #: gui/src/connection_edit.cpp:2346
@@ -5206,7 +5206,7 @@ msgid "Waiting for raster chart compression thread exit."
 msgstr ""
 
 #: gui/src/glTextureManager.cpp:1468
-msgid "OpenCPN Compressed Cache Update"
+msgid "ITS Compressed Cache Update"
 msgstr ""
 
 #: gui/src/glTextureManager.cpp:1505 gui/src/ocpn_frame.cpp:8225
@@ -5325,15 +5325,15 @@ msgid "More keys are available in the manual."
 msgstr ""
 
 #: gui/src/kml.cpp:471
-msgid "OpenCPN Route"
+msgid "ITS Route"
 msgstr ""
 
 #: gui/src/kml.cpp:515
-msgid "OpenCPN Track"
+msgid "ITS Track"
 msgstr ""
 
 #: gui/src/kml.cpp:564
-msgid "OpenCPN Waypoint"
+msgid "ITS Waypoint"
 msgstr ""
 
 #: gui/src/kml.cpp:635
@@ -5680,7 +5680,7 @@ msgid "Repeat:"
 msgstr ""
 
 #: gui/src/notification_manager_gui.cpp:279
-msgid "OpenCPN Notifications"
+msgid "ITS Notifications"
 msgstr ""
 
 #: gui/src/notification_manager_gui.cpp:295
@@ -5696,7 +5696,7 @@ msgid "Failed to initialize the user interface. "
 msgstr ""
 
 #: gui/src/ocpn_app.cpp:1331
-msgid "OpenCPN cannot start. "
+msgid "ITS cannot start. "
 msgstr ""
 
 #: gui/src/ocpn_app.cpp:1332
@@ -5721,7 +5721,7 @@ msgstr ""
 
 #: gui/src/ocpn_app.cpp:1905
 #, c-format
-msgid "OpenCPN Initialized in %ld ms."
+msgid "ITS Initialized in %ld ms."
 msgstr ""
 
 #: gui/src/ocpn_fontdlg.cpp:75
@@ -5845,13 +5845,13 @@ msgstr ""
 #: gui/src/ocpn_frame.cpp:516
 msgid ""
 "\n"
-"OpenCPN is distributed in the hope that it will be useful, but WITHOUT ANY "
+"ITS is distributed in the hope that it will be useful, but WITHOUT ANY "
 "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR "
 "A PARTICULAR PURPOSE.\n"
 "\n"
 "See the GNU General Public License for more details.\n"
 "\n"
-"OpenCPN must only be used in conjunction with approved paper charts and "
+"ITS must only be used in conjunction with approved paper charts and "
 "traditional methods of navigation.\n"
 "\n"
 "DO NOT rely upon OpenCPN for safety of life or property.\n"
@@ -5860,7 +5860,7 @@ msgid ""
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:530
-msgid "OpenCPN for Android"
+msgid "ITS for Android"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:540
@@ -5880,7 +5880,7 @@ msgid ""
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:955
-msgid "OpenCPN needs to update the chart database from config file entries...."
+msgid "ITS needs to update the chart database from config file entries...."
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:967
@@ -5901,7 +5901,7 @@ msgstr ""
 
 #: gui/src/ocpn_frame.cpp:975 gui/src/ocpn_frame.cpp:4502
 #: gui/src/ocpn_frame.cpp:4512
-msgid "OpenCPN Chart Update"
+msgid "ITS Chart Update"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:1768
@@ -6095,7 +6095,7 @@ msgid "&Window"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:3760
-msgid "OpenCPN Help"
+msgid "ITS Help"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:3761
@@ -6164,7 +6164,7 @@ msgid " (Ctrl-Space)"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:8190
-msgid "OpenCPN ENC Prepare"
+msgid "ITS ENC Prepare"
 msgstr ""
 
 #: gui/src/ocpn_frame.cpp:8256
@@ -7721,14 +7721,14 @@ msgstr ""
 msgid ""
 "Compression will alter chart files on disk.\n"
 "This may make them incompatible with other programs or older versions of "
-"OpenCPN.\n"
+"ITS.\n"
 "Compressed charts may take slightly longer to load and display on some "
 "systems.\n"
 "They can be decompressed again using unxz or 7 zip programs."
 msgstr ""
 
 #: gui/src/options.cpp:8151 gui/src/options.cpp:8195
-msgid "OpenCPN Compress Charts"
+msgid "ITS Compress Charts"
 msgstr ""
 
 #: gui/src/options.cpp:8188
@@ -7820,7 +7820,7 @@ msgid ""
 msgstr ""
 
 #: gui/src/Osenc.cpp:1175 gui/src/Osenc.cpp:1183 gui/src/s57chart.cpp:3876
-msgid "OpenCPN Create SENC Warning"
+msgid "ITS Create SENC Warning"
 msgstr ""
 
 #: gui/src/Osenc.cpp:1180
@@ -7833,7 +7833,7 @@ msgid ""
 msgstr ""
 
 #: gui/src/Osenc.cpp:1677
-msgid "OpenCPN S57 SENC File Create..."
+msgid "ITS S57 SENC File Create..."
 msgstr ""
 
 #: gui/src/pluginmanager.cpp:349
@@ -7924,7 +7924,7 @@ msgstr ""
 #: gui/src/pluginmanager.cpp:2288 gui/src/pluginmanager.cpp:2300
 #: gui/src/pluginmanager.cpp:2310 gui/src/pluginmanager.cpp:2319
 #: gui/src/pluginmanager.cpp:2349
-msgid "OpenCPN Catalog update"
+msgid "ITS Catalog update"
 msgstr ""
 
 #: gui/src/pluginmanager.cpp:2299 gui/src/pluginmanager.cpp:2309
@@ -7949,7 +7949,7 @@ msgstr ""
 
 #: gui/src/pluginmanager.cpp:2383 gui/src/pluginmanager.cpp:2388
 #: gui/src/pluginmanager.cpp:2396
-msgid "OpenCPN Plugin Import Error"
+msgid "ITS Plugin Import Error"
 msgstr ""
 
 #: gui/src/pluginmanager.cpp:2387
@@ -8073,7 +8073,7 @@ msgstr ""
 
 #: gui/src/rest_server_gui.cpp:49 gui/src/rest_server_gui.cpp:67
 #: gui/src/rest_server_gui.cpp:240 gui/src/SendToPeerDlg.cpp:127
-msgid "OpenCPN Server Message"
+msgid "ITS Server Message"
 msgstr ""
 
 #: gui/src/route_gui.cpp:631
@@ -8332,7 +8332,7 @@ msgid "Are you sure you want to delete the selected object(s)"
 msgstr ""
 
 #: gui/src/routemanagerdialog.cpp:2316
-msgid "OpenCPN Converting Track to Route...."
+msgid "ITS Converting Track to Route...."
 msgstr ""
 
 #: gui/src/routemanagerdialog.cpp:2317
@@ -8647,7 +8647,7 @@ msgid "Are you sure you want to move Down this waypoint?"
 msgstr ""
 
 #: gui/src/RoutePropDlgImpl.cpp:838
-msgid "OpenCPN Move Waypoint"
+msgid "ITS Move Waypoint"
 msgstr ""
 
 #: gui/src/RoutePropDlgImpl.cpp:873
@@ -8655,7 +8655,7 @@ msgid "Are you sure you want to remove this waypoint?"
 msgstr ""
 
 #: gui/src/RoutePropDlgImpl.cpp:874
-msgid "OpenCPN Remove Waypoint"
+msgid "ITS Remove Waypoint"
 msgstr ""
 
 #: gui/src/RoutePropDlgImpl.cpp:950 gui/src/TrackPropDlg.cpp:1435
@@ -8723,7 +8723,7 @@ msgid ""
 "in safe mode without plugins and other possibly problematic\n"
 "features?\n"
 "</p><br/></br><p>You may consider visiting the <a href=\"https://github.com/"
-"OpenCPN/OpenCPN/wiki/OpenCPN-5.10-known-issues\">list of known issues</a>.</p>"
+"ITS/OpenCPN/wiki/OpenCPN-5.10-known-issues\">list of known issues</a>.</p>"
 msgstr ""
 
 #: gui/src/safe_mode_gui.cpp:39
@@ -9061,7 +9061,7 @@ msgid "The device @device@ can not be found (disconnected?)"
 msgstr ""
 
 #: gui/src/udev_rule_mgr.cpp:152
-msgid "Opencpn: device not found"
+msgid "ITS: device not found"
 msgstr ""
 
 #: gui/src/udev_rule_mgr.cpp:235

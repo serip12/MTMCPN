@@ -1639,7 +1639,7 @@ bool MyApp::OnInit() {
   // Strip the commit SHA number from the string to be shown in frame title.
   wxString short_version_name = wxString(PACKAGE_VERSION).BeforeFirst('+');
   wxString myframe_window_title =
-      wxString(wxT("OpenCPN ") + short_version_name);
+      wxString(wxT("ITS ") + short_version_name);
 
   if (g_bportable) {
     myframe_window_title += _(" -- [Portable(-p) executing from ");
@@ -1895,7 +1895,7 @@ bool MyApp::OnInit() {
   //      Start up the Ten Hz timer....
   gFrame->FrameTenHzTimer.Start(100, wxTIMER_CONTINUOUS);
 
-  //    wxLogMessage( wxString::Format(_T("OpenCPN Initialized in %ld ms."),
+  //    wxLogMessage( wxString::Format(_T("ITS Initialized in %ld ms."),
   //    init_sw.Time() ) );
 
   OCPNPlatform::Initialize_4();

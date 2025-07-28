@@ -81,7 +81,7 @@ public:
   TestGLCanvas(wxWindow* parent, wxWindowID id = wxID_ANY,
                const wxPoint& pos = wxPoint(0, 0),
                const wxSize& size = wxSize(0, 0), long style = 0,
-               const wxString& name = "OpenCPNGLUtilAppTestCanvas");
+               const wxString& name = "ITSGLUtilAppTestCanvas");
   TestGLCanvas(const TestGLCanvas&) = delete;
   TestGLCanvas& operator=(const TestGLCanvas&) = delete;
 
@@ -111,7 +111,7 @@ public:
     if (wxGetEnv("WAYLAND_DISPLAY", nullptr)) setenv("GDK_BACKEND", "x11", 1);
 #endif  // __linux__
     CheckBuildOptions(WX_BUILD_OPTIONS_SIGNATURE, "program");
-    SetAppName("opencpn-glutil");
+    SetAppName("ITS-glutil");
   }
 
   void OnInitCmdLine(wxCmdLineParser& parser) override {
@@ -249,7 +249,7 @@ public:
     }
     wxAppConsole::OnCmdLineParsed(parser);
     if (argc == 1) {
-      std::cout << "OpenCPN OpenGL Utility application. Use -h for help"
+      std::cout << "ITS OpenGL Utility application. Use -h for help"
                 << std::endl;
       exit(0);
     }

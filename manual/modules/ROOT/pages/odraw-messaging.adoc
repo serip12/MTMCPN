@@ -192,7 +192,7 @@ filtering provided by OCPN messaging on this value. +
 
 Using this construct there are validation checks to make sure messages
 are valid to process. If they are not valid there will be error messages
-entered into the "eyesea.log" file with relevant information. +
+entered into the "its.log" file with relevant information. +
 
 Currently this message construct is used by OD, WD, WR (Ocpn_Draw_pi,
 Watchdog_pi, Weather_Routing_pi) and the AIS processing in OCPN when it

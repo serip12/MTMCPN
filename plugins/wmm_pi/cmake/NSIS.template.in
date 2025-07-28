@@ -2734,7 +2734,7 @@ Function Check_Config_Exists
 			SectionSetText ${SecDeleteNavobjFile} ""
 		${EndIf}
 
-		${If} ${FileExists} "$APPDATA\@CPACK_NSIS_PACKAGE_NAME_LC@\eyesea.log"
+		${If} ${FileExists} "$APPDATA\@CPACK_NSIS_PACKAGE_NAME_LC@\its.log"
 			StrCpy $LOG_EXISTS 1
 			IntOp $Count_SecGrpResetConfig $Count_SecGrpResetConfig + 1
 			SectionSetText ${SecDeleteLogFile} $(SecDeleteLogFile_Text)
@@ -4468,8 +4468,8 @@ Var explArrCount
 	;Delete CM93 directory
 	LangString SecDeleteCM93_Text ${LANG_ENGLISH} "Delete CM93 Directory"
 
-	;Delete Log file (eyesea.log)
-	LangString SecDeleteLogFile_Text ${LANG_ENGLISH} "Delete Log file (eyesea.log)"
+	;Delete Log file (its.log)
+	LangString SecDeleteLogFile_Text ${LANG_ENGLISH} "Delete Log file (its.log)"
 
 	;Delete navobj.xml
 	LangString SecDeleteNavobjFile_Text ${LANG_ENGLISH} "Delete Navobject file (navobj.xml)"
@@ -4500,7 +4500,7 @@ Var explArrCount
 
 	LangString SecDeleteNavobjFile_Desc ${LANG_ENGLISH} "Deletes the file 'navobj.xml' in the config folder. This file contains the Tracks."
 
-	LangString SecDeleteLogFile_Desc ${LANG_ENGLISH} "Deletes the OpenCPN log file 'eyesea.log'."
+	LangString SecDeleteLogFile_Desc ${LANG_ENGLISH} "Deletes the OpenCPN log file 'its.log'."
 
 	LangString SecGrpShortcuts_Desc ${LANG_ENGLISH} "Creates shortcuts in both, the Start Menu and on the Desktop."
 

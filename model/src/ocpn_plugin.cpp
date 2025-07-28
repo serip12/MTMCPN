@@ -96,11 +96,11 @@ int opencpn_plugin::GetPlugInVersionMinor() { return 0; }
 wxString opencpn_plugin::GetCommonName() { return "BaseClassCommonName"; }
 
 wxString opencpn_plugin::GetShortDescription() {
-  return "OpenCPN PlugIn Base Class";
+  return "ITS PlugIn Base Class";
 }
 
 wxString opencpn_plugin::GetLongDescription() {
-  return "OpenCPN PlugIn Base Class\n\
+  return "ITS PlugIn Base Class\n\
 PlugInManager created this base class";
 }
 

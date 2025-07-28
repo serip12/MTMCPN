@@ -74,10 +74,10 @@ public:
   AbstractPlatform() = default;
   virtual ~AbstractPlatform() = default;
 
-  /** Return dir path for eyesea.log, etc., respecting -c cli option. */
+  /** Return dir path for its.log, etc., respecting -c cli option. */
   wxString& GetPrivateDataDir();
 
-  /** Return dir path for eyesea.log, etc., does not respect -c option. */
+  /** Return dir path for its.log, etc., does not respect -c option. */
   wxString& DefaultPrivateDataDir();
 
   wxString* GetPluginDirPtr();

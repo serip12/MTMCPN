@@ -1743,82 +1743,82 @@ void PlugInManager::SendSKConfigToAllPlugIns() {
 void PlugInManager::SendBaseConfigToAllPlugIns() {
   // Send the current run-time configuration to all PlugIns
   wxJSONValue v;
-  v[_T("OpenCPN Version Major")] = VERSION_MAJOR;
-  v[_T("OpenCPN Version Minor")] = VERSION_MINOR;
-  v[_T("OpenCPN Version Patch")] = VERSION_PATCH;
-  v[_T("OpenCPN Version Date")] = VERSION_DATE;
-  v[_T("OpenCPN Version Full")] = VERSION_FULL;
+  v[_T("ITS Version Major")] = VERSION_MAJOR;
+  v[_T("ITS Version Minor")] = VERSION_MINOR;
+  v[_T("ITS Version Patch")] = VERSION_PATCH;
+  v[_T("ITS Version Date")] = VERSION_DATE;
+  v[_T("ITS Version Full")] = VERSION_FULL;
 
   // Some useful display metrics
   if (g_MainToolbar) {
-    v[_T("OpenCPN Toolbar Width")] = g_MainToolbar->GetToolbarRect().width;
-    v[_T("OpenCPN Toolbar Height")] = g_MainToolbar->GetToolbarRect().height;
-    v[_T("OpenCPN Toolbar PosnX")] = g_MainToolbar->GetToolbarRect().x;
-    v[_T("OpenCPN Toolbar PosnY")] = g_MainToolbar->GetToolbarRect().y;
+    v[_T("ITS Toolbar Width")] = g_MainToolbar->GetToolbarRect().width;
+    v[_T("ITS Toolbar Height")] = g_MainToolbar->GetToolbarRect().height;
+    v[_T("ITS Toolbar PosnX")] = g_MainToolbar->GetToolbarRect().x;
+    v[_T("ITS Toolbar PosnY")] = g_MainToolbar->GetToolbarRect().y;
   }
 
   // Some rendering parameters
-  v[_T("OpenCPN Zoom Mod Vector")] = g_chart_zoom_modifier_vector;
-  v[_T("OpenCPN Zoom Mod Other")] = g_chart_zoom_modifier_raster;
-  v[_T("OpenCPN Scale Factor Exp")] =
+  v[_T("ITS Zoom Mod Vector")] = g_chart_zoom_modifier_vector;
+  v[_T("ITS Zoom Mod Other")] = g_chart_zoom_modifier_raster;
+  v[_T("ITS Scale Factor Exp")] =
       g_Platform->GetChartScaleFactorExp(g_ChartScaleFactor);
-  v[_T("OpenCPN Display Width")] = (int)g_display_size_mm;
-  v[_T("OpenCPN Content Scale Factor")] = OCPN_GetDisplayContentScaleFactor();
-  v[_T("OpenCPN Display DIP Scale Factor")] = OCPN_GetWinDIPScaleFactor();
+  v[_T("ITS Display Width")] = (int)g_display_size_mm;
+  v[_T("ITS Content Scale Factor")] = OCPN_GetDisplayContentScaleFactor();
+  v[_T("ITS Display DIP Scale Factor")] = OCPN_GetWinDIPScaleFactor();
 
   wxJSONWriter w;
   wxString out;
   w.Write(v, out);
-  SendMessageToAllPlugins(wxString(_T("OpenCPN Config")), out);
+  SendMessageToAllPlugins(wxString(_T("ITS Config")), out);
 }
 
 void PlugInManager::SendS52ConfigToAllPlugIns(bool bReconfig) {
   // Send the current run-time configuration to all PlugIns
   wxJSONValue v;
-  v[_T("OpenCPN Version Major")] = VERSION_MAJOR;
-  v[_T("OpenCPN Version Minor")] = VERSION_MINOR;
-  v[_T("OpenCPN Version Patch")] = VERSION_PATCH;
-  v[_T("OpenCPN Version Date")] = VERSION_DATE;
-  v[_T("OpenCPN Version Full")] = VERSION_FULL;
+  v[_T("ITS Version Major")] = VERSION_MAJOR;
+  v[_T("ITS Version Minor")] = VERSION_MINOR;
+  v[_T("ITS Version Patch")] = VERSION_PATCH;
+  v[_T("ITS Version Date")] = VERSION_DATE;
+  v[_T("ITS Version Full")] = VERSION_FULL;
 
   //  S52PLIB state
   if (ps52plib) {
-    //         v[_T("OpenCPN S52PLIB ShowText")] = ps52plib->GetShowS57Text();
-    //         v[_T("OpenCPN S52PLIB ShowSoundings")] =
-    //         ps52plib->GetShowSoundings(); v[_T("OpenCPN S52PLIB ShowLights")]
+    //         v[_T("ITS S52PLIB ShowText")] = ps52plib->GetShowS57Text();
+    //         v[_T("ITS S52PLIB ShowSoundings")] =
+    //         ps52plib->GetShowSoundings(); v[_T("ITS S52PLIB ShowLights")]
     //         = !ps52plib->GetLightsOff();
-    v[_T("OpenCPN S52PLIB ShowAnchorConditions")] = ps52plib->GetAnchorOn();
-    v[_T("OpenCPN S52PLIB ShowQualityOfData")] = ps52plib->GetQualityOfData();
-    //         v[_T("OpenCPN S52PLIB DisplayCategory")] =
+    v[_T("ITS S52PLIB ShowAnchorConditions")] = ps52plib->GetAnchorOn();
+    v[_T("ITS S52PLIB ShowQualityOfData")] = ps52plib->GetQualityOfData();
+    //         v[_T("ITS S52PLIB DisplayCategory")] =
     //         ps52plib->GetDisplayCategory();
 
     // Global parameters
-    v[_T("OpenCPN S52PLIB MetaDisplay")] = ps52plib->m_bShowMeta;
-    v[_T("OpenCPN S52PLIB DeclutterText")] = ps52plib->m_bDeClutterText;
-    v[_T("OpenCPN S52PLIB ShowNationalText")] = ps52plib->m_bShowNationalTexts;
-    v[_T("OpenCPN S52PLIB ShowImportantTextOnly")] =
+    v[_T("ITS S52PLIB MetaDisplay")] = ps52plib->m_bShowMeta;
+    v[_T("ITS S52PLIB DeclutterText")] = ps52plib->m_bDeClutterText;
+    v[_T("ITS S52PLIB ShowNationalText")] = ps52plib->m_bShowNationalTexts;
+    v[_T("ITS S52PLIB ShowImportantTextOnly")] =
         ps52plib->m_bShowS57ImportantTextOnly;
-    v[_T("OpenCPN S52PLIB UseSCAMIN")] = ps52plib->m_bUseSCAMIN;
-    v[_T("OpenCPN S52PLIB UseSUPER_SCAMIN")] = ps52plib->m_bUseSUPER_SCAMIN;
-    v[_T("OpenCPN S52PLIB SymbolStyle")] = ps52plib->m_nSymbolStyle;
-    v[_T("OpenCPN S52PLIB BoundaryStyle")] = ps52plib->m_nBoundaryStyle;
-    v[_T("OpenCPN S52PLIB ColorShades")] =
+    v[_T("ITS S52PLIB UseSCAMIN")] = ps52plib->m_bUseSCAMIN;
+    v[_T("ITS S52PLIB UseSUPER_SCAMIN")] = ps52plib->m_bUseSUPER_SCAMIN;
+    v[_T("ITS S52PLIB SymbolStyle")] = ps52plib->m_nSymbolStyle;
+    v[_T("ITS S52PLIB BoundaryStyle")] = ps52plib->m_nBoundaryStyle;
+    v[_T("ITS S52PLIB ColorShades")] =
         S52_getMarinerParam(S52_MAR_TWO_SHADES);
-    v[_T("OpenCPN S52PLIB Safety Depth")] =
+    v[_T("ITS S52PLIB Safety Depth")] =
         (double)S52_getMarinerParam(S52_MAR_SAFETY_DEPTH);
-    v[_T("OpenCPN S52PLIB Shallow Contour")] =
+    v[_T("ITS S52PLIB Shallow Contour")] =
         (double)S52_getMarinerParam(S52_MAR_SHALLOW_CONTOUR);
-    v[_T("OpenCPN S52PLIB Deep Contour")] =
+    v[_T("ITS S52PLIB Deep Contour")] =
         (double)S52_getMarinerParam(S52_MAR_DEEP_CONTOUR);
   }
 
   // Notify plugins that S52PLIB may have reconfigured global options
-  v[_T("OpenCPN S52PLIB GlobalReconfig")] = bReconfig;
+  v[_T("ITS S52PLIB GlobalReconfig")] = bReconfig;
 
   wxJSONWriter w;
   wxString out;
   w.Write(v, out);
-  SendMessageToAllPlugins(wxString(_T("OpenCPN Config")), out);
+  SendMessageToAllPlugins(wxString(_T("ITS Config")), out);
 }
 
 void PlugInManager::NotifyAuiPlugIns(void) {

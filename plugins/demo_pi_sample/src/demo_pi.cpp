@@ -199,7 +199,7 @@ void DemoPi::SetPositionFixEx(PlugIn_Position_Fix_Ex& pfix) {}
 
 DemoWindow::DemoWindow(wxWindow* parent, wxWindowID id)
     : wxWindow(parent, id, wxPoint(10, 10), wxSize(200, 200), wxSIMPLE_BORDER,
-               "OpenCPN PlugIn"),
+               "ITS PlugIn"),
       m_lat(0.0),
       m_lon(1.0),
       m_sog(2.0),

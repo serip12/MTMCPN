@@ -447,7 +447,7 @@ void OCPNPlatform::Initialize_1(void) {
     crAddFile2(config_crash.c_str(), NULL, NULL,
                CR_AF_MISSING_FILE_OK | CR_AF_ALLOW_DELETE);
 
-    wxString log_crash = _T("eyesea.log");
+    wxString log_crash = _T("its.log");
     log_crash.Prepend(home_data_crash);
     crAddFile2(log_crash.c_str(), NULL, NULL,
                CR_AF_MISSING_FILE_OK | CR_AF_ALLOW_DELETE);

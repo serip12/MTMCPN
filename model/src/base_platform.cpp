@@ -638,7 +638,7 @@ bool BasePlatform::InitializeLogFile(void) {
   mlog_file = LibPref.GetFullPath();
   appendOSDirSlash(&mlog_file);
 
-  mlog_file.Append(_T("Logs/"));  // so, on OS X, eyesea.log ends up in
+  mlog_file.Append(_T("Logs/"));  // so, on OS X, its.log ends up in
                                   // ~/Library/Logs which makes it accessible to
                                   // Applications/Utilities/Console....
 #endif
@@ -660,7 +660,7 @@ bool BasePlatform::InitializeLogFile(void) {
     }
   }
 
-  mlog_file.Append(_T("eyesea.log"));
+  mlog_file.Append(_T("its.log"));
   wxString logit = mlog_file;
 
 #ifdef __ANDROID__
@@ -675,7 +675,7 @@ bool BasePlatform::InitializeLogFile(void) {
       oldlog.Append(_T(".log"));
       //  Defer the showing of this messagebox until the system locale is
       //  established.
-      large_log_message = (_T("Old log will be moved to eyesea.log.log"));
+      large_log_message = (_T("Old log will be moved to its.log.log"));
       ::wxRenameFile(mlog_file, oldlog);
     }
   }

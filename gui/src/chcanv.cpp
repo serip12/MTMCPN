@@ -9755,7 +9755,7 @@ bool ChartCanvas::MouseEventProcessObjects(wxMouseEvent &event) {
                         _("Do you really want to delete and replace this "
                           "WayPoint") +
                             _T("\n") + _("which has been created manually?"),
-                        ("OpenCPN RoutePoint warning"),
+                        ("ITS RoutePoint warning"),
                         (long)wxYES_NO | wxCANCEL | wxYES_DEFAULT);
                   }
                 }
@@ -10021,7 +10021,7 @@ bool ChartCanvas::MouseEventProcessObjects(wxMouseEvent &event) {
                         _("Do you really want to delete and replace this "
                           "WayPoint") +
                             _T("\n") + _("which has been created manually?"),
-                        ("OpenCPN RoutePoint warning"),
+                        ("ITS RoutePoint warning"),
                         (long)wxYES_NO | wxCANCEL | wxYES_DEFAULT);
                   }
                 }
@@ -11731,53 +11731,53 @@ void ChartCanvas::UpdateCanvasS52PLIBConfig() {
 
   if (bSendPlibState) {
     wxJSONValue v;
-    v[_T("OpenCPN Version Major")] = VERSION_MAJOR;
-    v[_T("OpenCPN Version Minor")] = VERSION_MINOR;
-    v[_T("OpenCPN Version Patch")] = VERSION_PATCH;
-    v[_T("OpenCPN Version Date")] = VERSION_DATE;
-    v[_T("OpenCPN Version Full")] = VERSION_FULL;
+    v[_T("ITS Version Major")] = VERSION_MAJOR;
+    v[_T("ITS Version Minor")] = VERSION_MINOR;
+    v[_T("ITS Version Patch")] = VERSION_PATCH;
+    v[_T("ITS Version Date")] = VERSION_DATE;
+    v[_T("ITS Version Full")] = VERSION_FULL;
 
     //  S52PLIB state
-    v[_T("OpenCPN S52PLIB ShowText")] = GetShowENCText();
-    v[_T("OpenCPN S52PLIB ShowSoundings")] = GetShowENCDepth();
-    v[_T("OpenCPN S52PLIB ShowLights")] = GetShowENCLights();
-    v[_T("OpenCPN S52PLIB ShowAnchorConditions")] = m_encShowAnchor;
-    v[_T("OpenCPN S52PLIB ShowQualityOfData")] = GetShowENCDataQual();
-    v[_T("OpenCPN S52PLIB ShowATONLabel")] = GetShowENCBuoyLabels();
-    v[_T("OpenCPN S52PLIB ShowLightDescription")] = GetShowENCLightDesc();
+    v[_T("ITS S52PLIB ShowText")] = GetShowENCText();
+    v[_T("ITS S52PLIB ShowSoundings")] = GetShowENCDepth();
+    v[_T("ITS S52PLIB ShowLights")] = GetShowENCLights();
+    v[_T("ITS S52PLIB ShowAnchorConditions")] = m_encShowAnchor;
+    v[_T("ITS S52PLIB ShowQualityOfData")] = GetShowENCDataQual();
+    v[_T("ITS S52PLIB ShowATONLabel")] = GetShowENCBuoyLabels();
+    v[_T("ITS S52PLIB ShowLightDescription")] = GetShowENCLightDesc();
 
-    v[_T("OpenCPN S52PLIB DisplayCategory")] = GetENCDisplayCategory();
+    v[_T("ITS S52PLIB DisplayCategory")] = GetENCDisplayCategory();
 
-    v[_T("OpenCPN S52PLIB SoundingsFactor")] = g_ENCSoundingScaleFactor;
-    v[_T("OpenCPN S52PLIB TextFactor")] = g_ENCTextScaleFactor;
+    v[_T("ITS S52PLIB SoundingsFactor")] = g_ENCSoundingScaleFactor;
+    v[_T("ITS S52PLIB TextFactor")] = g_ENCTextScaleFactor;
 
     // Global S52 options
 
-    v[_T("OpenCPN S52PLIB MetaDisplay")] = ps52plib->m_bShowMeta;
-    v[_T("OpenCPN S52PLIB DeclutterText")] = ps52plib->m_bDeClutterText;
-    v[_T("OpenCPN S52PLIB ShowNationalText")] = ps52plib->m_bShowNationalTexts;
-    v[_T("OpenCPN S52PLIB ShowImportantTextOnly")] =
+    v[_T("ITS S52PLIB MetaDisplay")] = ps52plib->m_bShowMeta;
+    v[_T("ITS S52PLIB DeclutterText")] = ps52plib->m_bDeClutterText;
+    v[_T("ITS S52PLIB ShowNationalText")] = ps52plib->m_bShowNationalTexts;
+    v[_T("ITS S52PLIB ShowImportantTextOnly")] =
         ps52plib->m_bShowS57ImportantTextOnly;
-    v[_T("OpenCPN S52PLIB UseSCAMIN")] = ps52plib->m_bUseSCAMIN;
-    v[_T("OpenCPN S52PLIB UseSUPER_SCAMIN")] = ps52plib->m_bUseSUPER_SCAMIN;
-    v[_T("OpenCPN S52PLIB SymbolStyle")] = ps52plib->m_nSymbolStyle;
-    v[_T("OpenCPN S52PLIB BoundaryStyle")] = ps52plib->m_nBoundaryStyle;
-    v[_T("OpenCPN S52PLIB ColorShades")] =
+    v[_T("ITS S52PLIB UseSCAMIN")] = ps52plib->m_bUseSCAMIN;
+    v[_T("ITS S52PLIB UseSUPER_SCAMIN")] = ps52plib->m_bUseSUPER_SCAMIN;
+    v[_T("ITS S52PLIB SymbolStyle")] = ps52plib->m_nSymbolStyle;
+    v[_T("ITS S52PLIB BoundaryStyle")] = ps52plib->m_nBoundaryStyle;
+    v[_T("ITS S52PLIB ColorShades")] =
         S52_getMarinerParam(S52_MAR_TWO_SHADES);
 
     // Some global GUI parameters, for completeness
-    v[_T("OpenCPN Zoom Mod Vector")] = g_chart_zoom_modifier_vector;
-    v[_T("OpenCPN Zoom Mod Other")] = g_chart_zoom_modifier_raster;
-    v[_T("OpenCPN Scale Factor Exp")] =
+    v[_T("ITS Zoom Mod Vector")] = g_chart_zoom_modifier_vector;
+    v[_T("ITS Zoom Mod Other")] = g_chart_zoom_modifier_raster;
+    v[_T("ITS Scale Factor Exp")] =
         g_Platform->GetChartScaleFactorExp(g_ChartScaleFactor);
-    v[_T("OpenCPN Display Width")] = (int)g_display_size_mm;
+    v[_T("ITS Display Width")] = (int)g_display_size_mm;
 
     wxJSONWriter w;
     wxString out;
     w.Write(v, out);
 
     if (!g_lastS52PLIBPluginMessage.IsSameAs(out)) {
-      SendMessageToAllPlugins(wxString("OpenCPN Config"), out);
+      SendMessageToAllPlugins(wxString("ITS Config"), out);
       g_lastS52PLIBPluginMessage = out;
     }
   }
