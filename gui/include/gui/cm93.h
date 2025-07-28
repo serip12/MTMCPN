@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  CM93 Chart Object
  * Author:   David Register
  *

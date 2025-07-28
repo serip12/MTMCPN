@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Chart Symbols
  * Author:   Jesper Weissglas
  *

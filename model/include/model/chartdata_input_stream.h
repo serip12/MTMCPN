@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Support XZ compressed charts
  * Author:   Sean D'Epagnier
  *

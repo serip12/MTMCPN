@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Navigation Utility Functions
  * Author:   David Register
  *

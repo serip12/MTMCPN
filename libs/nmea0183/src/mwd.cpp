@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  NMEA0183 Support Classes
  * Author:   Samuel R. Blackburn, David S. Register, Jean-Eudes Onfray
  *

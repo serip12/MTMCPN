@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Test driver which reads and writes data to/from files.
  * Author:   David Register, Alec Leamas
  *

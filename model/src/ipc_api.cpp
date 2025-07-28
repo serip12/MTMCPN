@@ -37,7 +37,7 @@ std::string GetSocketPath() {
 }
 
 IpcClient::IpcClient(const std::string& path) {
-  connection = MakeConnection("localhost", path, "EyeSea");
+  connection = MakeConnection("localhost", path, "ITS");
   if (!connection)
     throw LocalApiException(std::string("Cannot connect to: ") + path);
 };

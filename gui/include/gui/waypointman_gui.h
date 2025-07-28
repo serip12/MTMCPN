@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  WaypoinrMan drawing stuff
  * Author:   David Register, Alec Leamas
  *

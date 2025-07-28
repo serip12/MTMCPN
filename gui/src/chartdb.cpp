@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Chart Database Object
  * Author:   David Register, Mark A Sikes
  *

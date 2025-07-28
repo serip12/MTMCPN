@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Implement comm_drv_n0183_android_bt.h -- Nmea 0183 driver.
  * Author:   David Register, Alec Leamas
  *

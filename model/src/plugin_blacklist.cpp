@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Plugin blacklist for plugins which can or should not be loaded
  * Author:   Alec Leamas
  *

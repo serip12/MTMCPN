@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  texture OpenGL text rendering built from wxFont
  * Author:   Sean D'Epagnier
  *

@@ -1,6 +1,6 @@
 /*************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose: wxCommandEvt subclass which can carry also a shared_ptr<void>
  *
  * Copyright (C) 2022 Alec Leamas

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  NMEA Data Multiplexer Object
  * Author:   David Register
  *

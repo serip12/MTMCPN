@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Misc driver utilities
  * Author:   David Register, Alec Leamas
  *

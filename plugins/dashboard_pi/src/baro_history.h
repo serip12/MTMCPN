@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: baro_history.h, v1.0 2014/02/10 tom-r Exp $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Dashboard Plugin
  * Author:   stedy
  * Based on code from  Thomas Rauch

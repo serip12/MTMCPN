@@ -643,7 +643,7 @@ int RouteGui::SendToGPS(const wxString &com_name, bool bsend_waypoints,
         break;
     }
   }
-  OCPNMessageBox(NULL, msg, _("EyeSea Info"), wxOK | wxICON_INFORMATION);
+  OCPNMessageBox(NULL, msg, _("ITS Info"), wxOK | wxICON_INFORMATION);
 
   return (result == 0);
 }

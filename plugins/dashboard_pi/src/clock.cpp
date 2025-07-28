@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: clock.cpp, v1.0 2011/05/15 nohal Exp $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Dashboard Plugin
  * Author:   Pavel Kalian
  *

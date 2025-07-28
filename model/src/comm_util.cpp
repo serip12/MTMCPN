@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Implement comm_util.h -- communication driver utilities
  * Author:   David Register, Alec Leamas
  *

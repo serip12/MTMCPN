@@ -1,10 +1,10 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Navigation Utility Functions
  * Authors:   David Register
  *            Sean D'Epagnier
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Navigation Utility Functions
  * Author:   David Register
  *

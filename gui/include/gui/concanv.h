@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Console Canvas
  * Author:   David Register
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  S52 Presentation Library
  * Authors:   David Register
  *            Jesper Weissglas

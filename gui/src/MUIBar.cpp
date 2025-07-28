@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  MUI Control Bar
  * Author:   David Register
  *

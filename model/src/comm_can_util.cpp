@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Low-level utility functions for socketcan support.
  * Author:   David Register, Alec Leamas
  *

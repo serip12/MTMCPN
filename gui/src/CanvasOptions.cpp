@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Canvas Options Window/Dialog
  * Author:   David Register
  *

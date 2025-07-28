@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  *
  ***************************************************************************
  *   Copyright (C) 2013 by David S. Register                               *
@@ -835,7 +835,7 @@ void RoutePropDlgImpl::OnRoutePropMenuSelected(wxCommandEvent& event) {
           moveup ? _("Are you sure you want to move Up this waypoint?")
                  : _("Are you sure you want to move Down this waypoint?");
       int dlg_return =
-          OCPNMessageBox(this, mess, _("EyeSea Move Waypoint"),
+          OCPNMessageBox(this, mess, _("ITS Move Waypoint"),
                          (long)wxYES_NO | wxCANCEL | wxYES_DEFAULT);
 
       if (dlg_return == wxID_YES) {
@@ -871,7 +871,7 @@ void RoutePropDlgImpl::OnRoutePropMenuSelected(wxCommandEvent& event) {
     case ID_RCLK_MENU_DELETE: {
       int dlg_return = OCPNMessageBox(
           this, _("Are you sure you want to remove this waypoint?"),
-          _("EyeSea Remove Waypoint"),
+          _("ITS Remove Waypoint"),
           (long)wxYES_NO | wxCANCEL | wxYES_DEFAULT);
 
       if (dlg_return == wxID_YES) {

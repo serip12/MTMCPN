@@ -1,7 +1,7 @@
 
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Hash of arbitrary length
  * Author:   Anton Samsonov
  *

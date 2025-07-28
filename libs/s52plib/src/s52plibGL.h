@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Global Build Options
  * Author:   David Register
  *

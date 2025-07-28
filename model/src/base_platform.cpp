@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Platform specific support utilities
  * Author:   David Register
  *

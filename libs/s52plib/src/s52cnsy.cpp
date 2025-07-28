@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  S52 Conditional Symbology Library
  * Author:   David Register, Sylvain Duclos
  *

@@ -1,6 +1,6 @@
 /*************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose: Notify/listen config var wrapper
  *
  * Copyright (C) 2022 Alec Leamas

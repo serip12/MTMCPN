@@ -1,6 +1,6 @@
 /****************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Toolbar
  * Author:   David Register
  *

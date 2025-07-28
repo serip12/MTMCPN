@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Notification Manager GUI
  * Author:   David Register
  *
@@ -284,7 +284,7 @@ NotificationsList::NotificationsList(wxWindow* parent) : wxDialog() {
   mstyle |= wxSTAY_ON_TOP;
 #endif
 
-  wxDialog::Create(parent, wxID_ANY, _("EyeSea Notifications"),
+  wxDialog::Create(parent, wxID_ANY, _("ITS Notifications"),
                    wxDefaultPosition, wxDefaultSize, mstyle);
 
   wxBoxSizer* topsizer = new wxBoxSizer(wxVERTICAL);

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  *
  ***************************************************************************
  *   Copyright (C) 2010 by David S. Register                               *
@@ -58,7 +58,7 @@ extern OCPNPlatform* g_Platform;
 static PeerDlgResult ConfirmWriteDlg() {
   std::string msg(_("Objects exists on server. OK to overwrite?"));
   long style = wxYES | wxNO | wxNO_DEFAULT | wxICON_QUESTION;
-  OCPNMessageDialog dlg(NULL, msg, _("EyeSea Info"), style);
+  OCPNMessageDialog dlg(NULL, msg, _("ITS Info"), style);
   int reply = dlg.ShowModal();
   return reply == wxID_YES ? PeerDlgResult::Ok : PeerDlgResult::Cancel;
 }
@@ -73,7 +73,7 @@ static PeerDlgResult RunStatusDlg(PeerDlg kind, int status) {
         ss << _("Curl transfer error: ")
            << curl_easy_strerror(static_cast<CURLcode>(-status));
       }
-      OCPNMessageDialog dlg(NULL, ss.str(), _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, ss.str(), _("ITS Info"),
                             wxICON_ERROR | wxOK | wxCANCEL);
       int r = dlg.ShowModal();
       return r == wxID_OK ? PeerDlgResult::Ok : PeerDlgResult::Cancel;
@@ -81,7 +81,7 @@ static PeerDlgResult RunStatusDlg(PeerDlg kind, int status) {
     case PeerDlg::ErrorReturn: {
       std::stringstream ss;
       ss << _("Server internal error response:") << status;
-      OCPNMessageDialog dlg(NULL, ss.str(), _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, ss.str(), _("ITS Info"),
                             wxICON_ERROR | wxOK | wxCANCEL);
       int r = dlg.ShowModal();
       return r == wxID_OK ? PeerDlgResult::Ok : PeerDlgResult::Cancel;
@@ -89,28 +89,28 @@ static PeerDlgResult RunStatusDlg(PeerDlg kind, int status) {
     case PeerDlg::TransferOk: {
       std::stringstream ss;
       std::string msg(_("Transfer successfully completed"));
-      OCPNMessageDialog dlg(NULL, msg, _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, msg, _("ITS Info"),
                             wxICON_INFORMATION | wxOK);
       dlg.ShowModal();
       return PeerDlgResult::Ok;
     }
     case PeerDlg::JsonParseError: {
       std::string msg(_("Cannot parse server reply"));
-      OCPNMessageDialog dlg(NULL, msg, _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, msg, _("ITS Info"),
                             wxICON_ERROR | wxOK | wxCANCEL);
       int r = dlg.ShowModal();
       return r == wxID_OK ? PeerDlgResult::Ok : PeerDlgResult::Cancel;
     }
     case PeerDlg::BadPincode: {
       std::string msg(_("Pincode not accepted"));
-      OCPNMessageDialog dlg(NULL, msg, _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, msg, _("ITS Info"),
                             wxICON_ERROR | wxOK | wxCANCEL);
       int r = dlg.ShowModal();
       return r == wxID_OK ? PeerDlgResult::Ok : PeerDlgResult::Cancel;
     }
     case PeerDlg::ActivateUnsupported: {
       std::string msg(_("Server does not support activation"));
-      OCPNMessageDialog dlg(NULL, msg, _("EyeSea Info"),
+      OCPNMessageDialog dlg(NULL, msg, _("ITS Info"),
                             wxICON_ERROR | wxOK | wxCANCEL);
 
       int r = dlg.ShowModal();
@@ -124,7 +124,7 @@ static PeerDlgResult RunStatusDlg(PeerDlg kind, int status) {
 
 std::pair<PeerDlgResult, std::string> RunPincodeDlg() {
   PinConfirmDlg dlg(wxTheApp->GetTopWindow(), wxID_ANY,
-                    _("EyeSea Server Message"), "", wxDefaultPosition,
+                    _("ITS Server Message"), "", wxDefaultPosition,
                     wxDefaultSize, SYMBOL_PCD_STYLE);
 
   static const char* const msg =

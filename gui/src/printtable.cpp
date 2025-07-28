@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Route table printout
  * Author:   Pavel Saviankou
  *

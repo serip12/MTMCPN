@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: altitude.cpp, v0.1 $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Dashboard Plugin, display altitude trace
  * Author:   derived from Jean-Eudes Onfray's depth.cpp by Andreas Merz
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Main wxWidgets Program
  * Author:   David Register
  *

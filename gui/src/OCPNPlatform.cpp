@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Platform specific support utilities
  * Author:   David Register
  *
@@ -340,7 +340,7 @@ void OCPNPlatform::Initialize_1(void) {
   CR_INSTALL_INFO info;
   memset(&info, 0, sizeof(CR_INSTALL_INFO));
   info.cb = sizeof(CR_INSTALL_INFO);
-  info.pszAppName = _T("EyeSea");
+  info.pszAppName = _T("ITS");
 
   info.pszAppVersion = wxString(VERSION_FULL).c_str();
 

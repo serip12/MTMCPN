@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  GSHHS Chart Object (Global Self-consistent, Hierarchical,
  *High-resolution Shoreline) Author:   Jesper Weissglas for the OpenCPN port.
  *

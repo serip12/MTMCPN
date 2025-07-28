@@ -81,7 +81,7 @@ public:
    _IpcClientFactory(wxAppConsole* _app, const std::string& path)
        : wxClient(), app(_app)
    {
-      connection = MakeConnection("localhost", path, "EyeSea");
+      connection = MakeConnection("localhost", path, "ITS");
    }
 
    wxConnectionBase* OnMakeConnection() { return new _IpcClient(app); }

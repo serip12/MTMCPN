@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Tide and Current Manager
  * Author:   David Register
  * Todo add original author

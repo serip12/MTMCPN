@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  efficient mipmap generation for use by opengl
  * Author:   Sean D'Epagnier
  *

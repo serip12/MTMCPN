@@ -1,6 +1,6 @@
 /**************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Track Properties Dialog
  * Author:   David Register
  *

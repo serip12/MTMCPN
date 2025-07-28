@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: gps.cpp, v1.0 2010/08/26 SethDart Exp $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Dashboard Plugin
  * Author:   Jean-Eudes Onfray
  *

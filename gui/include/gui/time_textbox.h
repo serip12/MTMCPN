@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Time textbox to replace broken wxTimePickerCtrl on wxGTK
  * Author:   David Register
  *

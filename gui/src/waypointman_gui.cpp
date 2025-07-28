@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  implement waypointman_gui.h: WayPointman drawing stuff
  * Author:   David Register, Alec Leamas
  *

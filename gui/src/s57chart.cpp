@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  S57 Chart Object
  * Author:   David Register
  *
@@ -3873,7 +3873,7 @@ int s57chart::ValidateAndCountUpdates(const wxFileName file000,
                 NULL,
                 _("S57 Cell Update chain incomplete.\nENC features may be "
                   "incomplete or inaccurate.\nCheck the logfile for details."),
-                _("EyeSea Create SENC Warning"), wxOK | wxICON_EXCLAMATION,
+                _("ITS Create SENC Warning"), wxOK | wxICON_EXCLAMATION,
                 30);
             chain_broken_mssage_shown = true;
           }

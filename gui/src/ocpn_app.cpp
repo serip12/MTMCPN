@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Main wxWidgets Program
  * Author:   David Register
  *
@@ -826,7 +826,7 @@ bool MyApp::OpenFile(const std::string &path) {
   if (!result) {
     std::string s(_("Cannot load route or waypoint file: "));
     s += std::string("\"") + path + "\"";
-    wxMessageBox(s, "EyeSea", wxICON_WARNING | wxOK);
+    wxMessageBox(s, "ITS", wxICON_WARNING | wxOK);
     return false;
   }
 
@@ -1076,7 +1076,7 @@ bool MyApp::OnInit() {
         m_checker.CleanUp();
         wxMessageBox(_("Sorry, an existing instance of OpenCPN may be too busy "
                        "to respond.\nPlease retry."),
-                     "EyeSea", wxICON_INFORMATION | wxOK);
+                     "ITS", wxICON_INFORMATION | wxOK);
         m_exitcode = 2;
         return true;  // main program quiet exit.
       }
@@ -1112,7 +1112,7 @@ bool MyApp::OnInit() {
   // Set the name of the app as displayed to the user.
   // This is necessary at least on OS X, for the capitalisation to be correct in
   // the system menus.
-  MyApp::SetAppDisplayName("EyeSea");
+  MyApp::SetAppDisplayName("ITS");
 
   //  Seed the random number generator
   wxDateTime x = wxDateTime::UNow();
@@ -1330,7 +1330,7 @@ bool MyApp::OnInit() {
   g_StyleManager->SetStyle(_T("MUI_flat"));
   if (!g_StyleManager->IsOK()) {
     wxString msg = _("Failed to initialize the user interface. ");
-    msg << _("EyeSea cannot start. ");
+    msg << _("ITS cannot start. ");
     msg << _("The necessary configuration files were not found. ");
     msg << _("See the log file at ") << g_Platform->GetLogFileName()
         << _(" for details.") << _T("\n\n");
@@ -1904,7 +1904,7 @@ bool MyApp::OnInit() {
   androidHideBusyIcon();
 #endif
   wxLogMessage(
-      wxString::Format(_("EyeSea Initialized in %ld ms."), init_sw.Time()));
+      wxString::Format(_("ITS Initialized in %ld ms."), init_sw.Time()));
 
   wxMilliSleep(500);
 

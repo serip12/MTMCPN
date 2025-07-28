@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  ChartBaseBSB and Friends
  * Author:   David Register
  *

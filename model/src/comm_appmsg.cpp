@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Implement comm_appmsg.h -- Decoded application messages.
  * Author:   David Register, Alec Leamas
  *

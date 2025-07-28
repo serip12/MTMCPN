@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Serial ports suppprt, notably enumeration
  * Author:   David Register
  *

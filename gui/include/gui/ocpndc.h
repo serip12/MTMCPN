@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Layer to use wxDC or opengl
  * Author:   Sean D'Epagnier
  *

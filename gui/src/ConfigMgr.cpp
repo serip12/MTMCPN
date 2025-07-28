@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  *
  ***************************************************************************
  *   Copyright (C) 2018 by David S. Register                               *
@@ -366,7 +366,7 @@ void OCPNConfigCatalog::SetRootConfigNode(void) {
   if (!strlen(m_config_root.name())) {
     m_config_root = append_child("configs");
     m_config_root.append_attribute("version") = "1.0";
-    m_config_root.append_attribute("creator") = "EyeSea";
+    m_config_root.append_attribute("creator") = "ITS";
     m_config_root.append_attribute("xmlns:xsi") =
         "http://www.w3.org/2001/XMLSchema-instance";
     m_config_root.append_attribute("xmlns") =
@@ -383,7 +383,7 @@ void OCPNConfigCatalog::SetRootConfigNode(void) {
 bool OCPNConfigCatalog::IsOpenCPN() {
   for (pugi::xml_attribute attr = root().first_child().first_attribute(); attr;
        attr = attr.next_attribute())
-    if (!strcmp(attr.name(), "creator") && !strcmp(attr.value(), "EyeSea"))
+    if (!strcmp(attr.name(), "creator") && !strcmp(attr.value(), "ITS"))
       return true;
   return false;
 }

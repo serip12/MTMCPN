@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Chart Canvas
  * Author:   David Register
  *

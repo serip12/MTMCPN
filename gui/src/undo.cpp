@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Framework for Undo features
  * Author:   Jesper Weissglas
  *

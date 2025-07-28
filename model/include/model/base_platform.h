@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Basic platform specific support utilities without GUI deps.
  * Author:   David Register
  *

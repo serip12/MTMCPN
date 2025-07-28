@@ -1,7 +1,7 @@
 #!/bin/bash
 #/******************************************************************************
 # *
-# * Project:  EyeSea
+# * Project:  ITS
 # * Purpose:  helper shell script
 # * Author:   David Register
 # *

@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: from_ownship.cpp
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Dashboard Plugin
  * Author:   Pavel Kalian
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Garmin NMEA Data Stream Object
  * Author:   David Register
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Wrapper for creating an NmeaContext based on global vars
  * Author:   Alec Leamas
  *

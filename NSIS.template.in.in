@@ -5,7 +5,7 @@ Written by Gunther Pilz (Netsurfer) netsurfer@opencpn.de
 -------------------------------------------------------------------------------------------------------
 
 CMake variables
-	CPACK_PACKAGE_NAME "EyeSea"
+	CPACK_PACKAGE_NAME "ITS"
 	CPACK_NSIS_PACKAGE_NAME_LC "opencpn"
 	CPACK_PACKAGE_VENDOR "opencpn.org"
 	CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR}
@@ -20,8 +20,8 @@ CMake variables
 	CPACK_NSIS_DIR "${CMAKE_SOURCE_DIR}/buildwin/NSIS_Unicode")
 
 	#CPACK_INSTALL_CMAKE_PROJECTS "${CMAKE_CURRENT_BINARY_DIR};${PACKAGE_NAME};ALL;/"
-	#CPACK_PACKAGE_EXECUTABLES ${PACKAGE_NAME} "EyeSea"
-	#CPACK_PACKAGE_INSTALL_DIRECTORY ${PACKAGE_NAME} "EyeSea"
+	#CPACK_PACKAGE_EXECUTABLES ${PACKAGE_NAME} "ITS"
+	#CPACK_PACKAGE_INSTALL_DIRECTORY ${PACKAGE_NAME} "ITS"
 	#CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenCPN ${PACKAGE_VERSION}"
 	#CPACK_NSIS_LINK_NAME "${CPACK_PACKAGE_NAME} ${PACKAGE_VERSION}"
 	#CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_NAME} Version ${PACKAGE_VERSION}"
@@ -597,7 +597,7 @@ CMake variables
 	!define MUI_STARTMENUPAGE_REGISTRY_ROOT "SHCTX"
 	!define MUI_STARTMENUPAGE_REGISTRY_KEY "${REG_KEY_UN}"
 	!define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "StartMenuFolder"
-	!define MUI_STARTMENUPAGE_DEFAULTFOLDER "EyeSea"
+	!define MUI_STARTMENUPAGE_DEFAULTFOLDER "ITS"
 	!define MUI_PAGE_CUSTOMFUNCTION_PRE Page_Startmenu_Pre
 	!insertmacro MUI_PAGE_STARTMENU "Application" $STARTMENU_FOLDER
 
@@ -2128,7 +2128,7 @@ FunctionEnd
                 ${OrIf} $INSTALL_TYPE == 3
                     StrCpy $R1 0
                      Push $INSTDIR
-                     Push "EyeSea"
+                     Push "ITS"
                      Push ">"
                      Call StrLoc
                      Pop $0
@@ -2950,7 +2950,7 @@ FunctionEnd
 ;Var latest_version
 ;Var latest_pathexe
 Function Reg_Scan_Old_Versions_HKCU
-	;# Versions from 2.2.727 up to 2.2.xxxx write RegKey "EyeSea" to "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\"
+	;# Versions from 2.2.727 up to 2.2.xxxx write RegKey "ITS" to "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\"
 	;# and also RegKey "OpenCPN <version>" to "HKCU\Software\opencpn.org\"
 	;# Find latest installed version => it's the one found in "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN"
 
@@ -3692,7 +3692,7 @@ FunctionEnd
 				StrLen $R2 $R1
 				${WordFind} "$R1" " " "+1" $R3
 				IntOp $R0 $R0 + 1
-				${If} $R3 == "EyeSea"
+				${If} $R3 == "ITS"
 				${AndIf} $R2 > 7
 					ReadRegStr $R4 SHCTX "${REG_ROOT_KEY_UN}\$R1" "CompareVersion"
 					StrCpy $LAST_VERSION_DATE $R4

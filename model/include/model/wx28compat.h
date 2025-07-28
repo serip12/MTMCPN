@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  wx 2.8 compatibility
  * Author:   Sean D'Epagnier
  *

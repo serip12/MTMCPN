@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Wrapper for creating a N0183DlgCtx based on global vars
  * Author:   Alec Leamas
  *

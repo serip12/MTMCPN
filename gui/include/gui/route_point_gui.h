@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Track and Trackpoint drawing stuff
  * Author:   David Register, Alec Leamas
  *

@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Route drawing stuff
  * Author:   David Register, Alec Leamas
  *

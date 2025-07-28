@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Options Dialog
  * Author:   David Register
  *
@@ -1111,7 +1111,7 @@ void MMSIEditDialog::OnMMSIEditOKClick(wxCommandEvent& event) {
           this,
           _("An MMSI Id is generally a number of nine digits.\nPlease check "
             "your entries and cancel if necessary."),
-          _("EyeSea Info"), wxOK | wxCANCEL);
+          _("ITS Info"), wxOK | wxCANCEL);
 
       dlg->ShowWindowModalThenDo([this, dlg](int retcode) {
         if (retcode == wxID_OK) {
@@ -2943,7 +2943,7 @@ void options::OnApplyConfig(wxCommandEvent& event) {
   bool bApplyStat = ConfigMgr::Get().ApplyConfigGUID(m_selectedConfigPanelGUID);
   if (bApplyStat) {
     //        OCPNMessageBox(this, _("Configuration successfully applied."),
-    //        _("EyeSea Info"), wxOK);
+    //        _("ITS Info"), wxOK);
     g_lastAppliedTemplateGUID = m_selectedConfigPanelGUID;
     wxString activeTitle =
         ConfigMgr::Get().GetTemplateTitle(g_lastAppliedTemplateGUID);
@@ -2953,7 +2953,7 @@ void options::OnApplyConfig(wxCommandEvent& event) {
     m_templateStatusBoxSizer->Layout();
   } else
     OCPNMessageBox(this, _("Problem applying selected configuration."),
-                   _("EyeSea Info"), wxOK);
+                   _("ITS Info"), wxOK);
 
   //  Clear all selections
   if (m_scrollWinConfigList) {
@@ -7179,7 +7179,7 @@ void options::ApplyChanges(wxCommandEvent& event) {
       msg += _("\n - your minimum ship icon size must be between 1 and 100 mm");
     if (!msg.IsEmpty()) {
       msg.Prepend(_("The settings for own ship real size are not correct:"));
-      OCPNMessageBox(this, msg, _("EyeSea info"), wxICON_ERROR | wxOK);
+      OCPNMessageBox(this, msg, _("ITS info"), wxICON_ERROR | wxOK);
       ::wxEndBusyCursor();
       event.SetInt(wxID_STOP);
       return;
@@ -8140,7 +8140,7 @@ void options::OnButtoncompressClick(wxCommandEvent& event) {
 This may make them incompatible with other programs or older versions of OpenCPN.\n\
 Compressed charts may take slightly longer to load and display on some systems.\n\
 They can be decompressed again using unxz or 7 zip programs."),
-                     _("EyeSea Warning"),
+                     _("ITS Warning"),
                      wxYES | wxCANCEL | wxCANCEL_DEFAULT | wxICON_WARNING) !=
       wxID_YES)
     return;
@@ -8157,7 +8157,7 @@ They can be decompressed again using unxz or 7 zip programs."),
       filespecs.Add("*.Z");
 
   wxGenericProgressDialog prog1(
-      _("EyeSea Compress Charts"), wxEmptyString,
+      _("ITS Compress Charts"), wxEmptyString,
       filespecs.GetCount() * pListBoxSelections.GetCount() + 1, this,
       wxPD_SMOOTH | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME |
           wxPD_REMAINING_TIME | wxPD_CAN_SKIP);
@@ -8194,14 +8194,14 @@ They can be decompressed again using unxz or 7 zip programs."),
   prog1.Hide();
 
   if (charts.GetCount() == 0) {
-    OCPNMessageBox(this, _("No charts found to compress."), _("EyeSea Info"));
+    OCPNMessageBox(this, _("No charts found to compress."), _("ITS Info"));
     return;
   }
 
   // TODO: make this use threads
   unsigned long total_size = 0, total_compressed_size = 0, count = 0;
   wxGenericProgressDialog prog(
-      _("EyeSea Compress Charts"), wxEmptyString, charts.GetCount() + 1, this,
+      _("ITS Compress Charts"), wxEmptyString, charts.GetCount() + 1, this,
       wxPD_SMOOTH | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME |
           wxPD_REMAINING_TIME | wxPD_CAN_SKIP);
 
@@ -8231,7 +8231,7 @@ They can be decompressed again using unxz or 7 zip programs."),
                        count, total_size_mb, total_compressed_size_mb,
                        total_size_mb - total_compressed_size_mb,
                        (1 - total_compressed_size_mb / total_size_mb) * 100.0),
-      _("EyeSea Info"));
+      _("ITS Info"));
 
   UpdateWorkArrayFromTextCtl();
 

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  General purpose fifo queue.
  * Author:   David Register, Alec Leamas
  *

@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: ocpn_draw_pi.h,v 1.0 2015/01/28 01:54:37 jongough Exp $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Redefine _() macro to allow usage of catalog
  * Author:   Jon Gough
  *

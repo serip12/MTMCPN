@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Authors:  David Register
  *           Sean D'Epagnier
  *

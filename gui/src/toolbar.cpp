@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenCPN Toolbar
  * Author:   David Register
  *
@@ -2157,7 +2157,7 @@ void ocpnToolBarSimple::OnRightClick(int id, long WXUNUSED(x),
   if (m_parentContainer) {
     if (m_parentContainer->m_FloatingToolbarConfigMenu) {
       ToolbarChoicesDialog *dlg =
-          new ToolbarChoicesDialog(NULL, m_parentContainer, -1, _T("EyeSea"),
+          new ToolbarChoicesDialog(NULL, m_parentContainer, -1, _T("ITS"),
                                    wxDefaultPosition, wxSize(100, 100));
       int rc = dlg->ShowModal();
       delete dlg;
@@ -2271,7 +2271,7 @@ void ocpnToolBarSimple::SetToolBitmapsSVG(int id, wxString fileSVGNormal,
 //-------------------------------------------------------------------------------------
 
 ToolbarMOBDialog::ToolbarMOBDialog(wxWindow *parent)
-    : wxDialog(parent, wxID_ANY, _("EyeSea Alert"), wxDefaultPosition,
+    : wxDialog(parent, wxID_ANY, _("ITS Alert"), wxDefaultPosition,
                wxSize(250, 230)) {
   wxBoxSizer *topSizer = new wxBoxSizer(wxVERTICAL);
 

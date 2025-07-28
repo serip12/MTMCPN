@@ -53,7 +53,7 @@ void PrintDialog::Print(wxWindow* parent, wxPrintout* output) {
           NULL,
           _("There was a problem printing.\nPerhaps your current printer is "
             "not set correctly?"),
-          _("EyeSea"), wxOK);
+          _("ITS"), wxOK);
     }
 
   } else {

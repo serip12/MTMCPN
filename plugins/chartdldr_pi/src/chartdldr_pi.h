@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: chartdldr_pi.h,v 1.0 2011/02/26 01:54:37 nohal Exp $
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Chart Downloader Plugin
  * Author:   Pavel Kalian
  *

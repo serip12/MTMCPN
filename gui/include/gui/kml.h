@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Read and write KML Format
  *(http://en.wikipedia.org/wiki/Keyhole_Markup_Language) Author:   Jesper
  *Weissglas

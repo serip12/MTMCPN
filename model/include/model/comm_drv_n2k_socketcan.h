@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Low-level driver for socketcan devices (linux only).
  * Author:   David Register, Alec Leamas
  *

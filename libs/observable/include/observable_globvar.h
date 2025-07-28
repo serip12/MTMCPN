@@ -1,6 +1,6 @@
 /*************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  global variables listen/notify wrapper.
  *
  * Copyright (C) 2022 Alec Leamas

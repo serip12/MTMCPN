@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  OpenGL text rendering
  * Author:   David Register, Sean D'Epagnier
  *

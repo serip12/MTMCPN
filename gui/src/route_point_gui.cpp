@@ -930,7 +930,7 @@ bool RoutePointGui::SendToGPS(const wxString &com_name, SendToGpsDlg *dialog) {
     }
   }
 
-  OCPNMessageBox(NULL, msg, _("EyeSea Info"), wxOK | wxICON_INFORMATION);
+  OCPNMessageBox(NULL, msg, _("ITS Info"), wxOK | wxICON_INFORMATION);
 
   return (result == 0);
 }

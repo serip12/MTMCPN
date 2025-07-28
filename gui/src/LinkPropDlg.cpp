@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Hyperlink properties
  * Author:   David Register
  *
@@ -131,7 +131,7 @@ void LinkPropImpl::OnLocalFileClick(wxCommandEvent& event) {
 void LinkPropImpl::OnOkClick(wxCommandEvent& event) {
   if (m_textCtrlLinkUrl->GetValue() == wxEmptyString)
     OCPNMessageBox(NULL, _("Link not complete, can't be saved."),
-                   _("EyeSea Info"), wxICON_HAND);
+                   _("ITS Info"), wxICON_HAND);
 
   else
     event.Skip();

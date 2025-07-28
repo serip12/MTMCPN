@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Latitude and Longitude Bounding Box
  * Author:   Sean D'Epagnier
  *

@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  *
  ***************************************************************************
  *   Copyright (C) 2010 by David S. Register                               *
@@ -1436,7 +1436,7 @@ void NavObjectCollection1::SetRootGPXNode(void) {
   if (!strlen(first_child().name())) {
     pugi::xml_node gpx_root = append_child("gpx");
     gpx_root.append_attribute("version") = "1.1";
-    gpx_root.append_attribute("creator") = "EyeSea";
+    gpx_root.append_attribute("creator") = "ITS";
     gpx_root.append_attribute("xmlns:xsi") =
         "http://www.w3.org/2001/XMLSchema-instance";
     gpx_root.append_attribute("xmlns") = "http://www.topografix.com/GPX/1/1";
@@ -1454,7 +1454,7 @@ void NavObjectCollection1::SetRootGPXNode(void) {
 bool NavObjectCollection1::IsOpenCPN() {
   for (pugi::xml_attribute attr = root().first_child().first_attribute(); attr;
        attr = attr.next_attribute())
-    if (!strcmp(attr.name(), "creator") && !strcmp(attr.value(), "EyeSea"))
+    if (!strcmp(attr.name(), "creator") && !strcmp(attr.value(), "ITS"))
       return true;
   return false;
 }

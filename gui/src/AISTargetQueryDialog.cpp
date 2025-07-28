@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  *
  ***************************************************************************
  *   Copyright (C) 2013 by David S. Register                               *
@@ -176,7 +176,7 @@ void AISTargetQueryDialog::OnIdTrkCreateClick(wxCommandEvent &event) {
                 _("The recently captured track of this target has been "
                   "recorded.\nDo you want to continue recording until the end "
                   "of the current OpenCPN session?"),
-                _("EyeSea Info"), wxYES_NO | wxCENTER, 60)) {
+                _("ITS Info"), wxYES_NO | wxCENTER, 60)) {
           td->b_PersistTrack = true;
           g_pAIS->m_persistent_tracks[td->MMSI] = t;
           td->b_show_track_old = td->b_show_track;

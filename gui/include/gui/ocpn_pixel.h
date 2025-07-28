@@ -1,7 +1,7 @@
 
 /******************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Optimized wxBitmap Object
  * Author:   David Register
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  EyeSea
+ * Project:  ITS
  * Purpose:  Implement comm_drv_n2k.h -- Nmea2000 serial driver.
  * Author:   David Register, Alec Leamas
  *
