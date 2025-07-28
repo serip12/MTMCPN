@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  AIS info GUI parts.
  * Author:   David Register
  *
@@ -100,7 +100,7 @@ Do you instead want to stop Persistent Tracking for this target?
 )");
 
 static void OnDeleteTrack(MmsiProperties *props) {
-  if (wxID_NO == OCPNMessageBox(NULL, kDeleteTrackPrompt, _("OpenCPN Info"),
+  if (wxID_NO == OCPNMessageBox(NULL, kDeleteTrackPrompt, _("EyeSea Info"),
                                 wxYES_NO | wxCENTER, 60)) {
     props->m_bPersistentTrack = true;
   }

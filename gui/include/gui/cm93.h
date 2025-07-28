@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  CM93 Chart Object
  * Author:   David Register
  *

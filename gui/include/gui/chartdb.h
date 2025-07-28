@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Chart Database Object
  * Author:   David Register
  *

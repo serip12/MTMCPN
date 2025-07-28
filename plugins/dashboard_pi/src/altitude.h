@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: altitude.h, v0.1 $
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Dashboard Plugin, display altitude trace
  * Author:   derived from Jean-Eudes Onfray's depth.h by Andreas Merz
  *

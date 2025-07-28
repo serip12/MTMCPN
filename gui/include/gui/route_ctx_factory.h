@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Wrapper for creating a RouteCtx based on global vars
  * Author:   Alec Leamas
  *

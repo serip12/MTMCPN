@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  OpenGL text rendering
  * Author:   Sean D'Epagnier
  *

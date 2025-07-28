@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  S52 Presentation Library
  * Authors:   David Register
  *            Jesper Weissglas

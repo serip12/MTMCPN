@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Support XZ compressed charts
  * Author:   Sean D'Epagnier
  *

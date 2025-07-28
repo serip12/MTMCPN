@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Authors:  David Register
  *           Sean D'Epagnier
  *

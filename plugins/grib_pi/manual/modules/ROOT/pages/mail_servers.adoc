@@ -31,7 +31,7 @@ in the plugin menu:
  Save or Cancel to finish...
 ----
 
-and there will be an error message in the opencpn.log similar to:
+and there will be an error message in the eyesea.log similar to:
 
 ----
  10:55:47 PM: MAIL Error: Failed to logon to MAPI using a shared session, Error:3

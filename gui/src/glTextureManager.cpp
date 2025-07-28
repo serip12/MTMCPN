@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Authors:  David Register
  *           Sean D'Epagnier
  *
@@ -1465,7 +1465,7 @@ void glTextureManager::BuildCompressedCache() {
                     NULL, NULL, sFont);
   if (width > (csz.x / 2)) m_bcompact = true;
 
-  m_progDialog->Create(_("OpenCPN Compressed Cache Update"), msg0, count + 1,
+  m_progDialog->Create(_("EyeSea Compressed Cache Update"), msg0, count + 1,
                        NULL, style);
 
   //    Make sure the dialog is big enough to be readable

@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Console Canvas
  * Author:   David Register
  *

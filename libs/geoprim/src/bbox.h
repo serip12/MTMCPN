@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Latitude and Longitude Bounding Box
  * Author:   Sean D'Epagnier
  *

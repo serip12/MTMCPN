@@ -22,7 +22,7 @@ IF(WIN32)
 #  SET(CPACK_GENERATOR "NSIS;ZIP")
 
   # override install directory to put package files in the opencpn directory
-  SET(CPACK_PACKAGE_INSTALL_DIRECTORY "OpenCPN")
+  SET(CPACK_PACKAGE_INSTALL_DIRECTORY "EyeSea")
 
 # CPACK_NSIS_DIR ??
 # CPACK_BUILDWIN_DIR ??

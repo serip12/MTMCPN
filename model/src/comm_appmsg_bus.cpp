@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_appmsg_bus.h -- Decoded messages bus.
  * Author:   David Register, Alec Leamas
  *

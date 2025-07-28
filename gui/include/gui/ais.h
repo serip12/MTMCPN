@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  AIS Decoder Object
  * Author:   David Register
  *

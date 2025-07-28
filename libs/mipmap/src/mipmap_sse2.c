@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  efficient mipmap generation for use by opengl
  * Author:   Sean D'Epagnier
  *

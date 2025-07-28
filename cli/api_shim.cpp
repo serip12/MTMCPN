@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  MTM CPN
  * Purpose:  Plugin API shim providing linkage but no functionality.
  * Author:   Alec Leamas
  *

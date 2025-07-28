@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Navigation Utility Functions
  * Author:   David Register
  *
@@ -2966,7 +2966,7 @@ void UI_ImportGPX(wxWindow *parent, bool islayer, wxString dirpath,
                 wxString::Format(_T("%d ") + _("duplicate waypoints detected "
                                                "during import and ignored."),
                                  wpt_dups),
-                _("OpenCPN Info"), wxICON_INFORMATION | wxOK, 10);
+                _("EyeSea Info"), wxICON_INFORMATION | wxOK, 10);
           }
         }
         delete pSet;

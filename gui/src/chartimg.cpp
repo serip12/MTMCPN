@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  ChartBase, ChartBaseBSB and Friends
  * Author:   David Register
  *

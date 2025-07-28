@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_appmsg.h -- Decoded application messages.
  * Author:   David Register, Alec Leamas
  *

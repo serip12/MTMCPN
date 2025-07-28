@@ -1,6 +1,6 @@
 /**************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Track Properties Dialog
  * Author:   David Register
  *

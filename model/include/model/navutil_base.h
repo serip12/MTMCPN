@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Navigation Utility Functions without GUI dependencies.
  * Author:   David Register
  *

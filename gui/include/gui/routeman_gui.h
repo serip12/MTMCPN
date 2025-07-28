@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Routeman drawing stuff
  * Author:   David Register, Alec Leamas
  *

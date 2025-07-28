@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_drv_n2k_net.h -- network nmea2K driver
  * Author:   David Register, Alec Leamas
  *

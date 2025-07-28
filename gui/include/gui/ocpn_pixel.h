@@ -1,7 +1,7 @@
 
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Optimized wxBitmap Object
  * Author:   David Register
  *

@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Route drawing stuff
  * Author:   David Register, Alec Leamas
  *

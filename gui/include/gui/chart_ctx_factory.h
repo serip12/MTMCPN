@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Wrapper for creating a ChartCtx based on global vars
  * Author:   Alec Leamas
  *

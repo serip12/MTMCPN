@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  CanvasMenuHandler
  * Author:   David Register
  *
@@ -1909,7 +1909,7 @@ void CanvasMenuHandler::PopupMenuHandler(wxCommandEvent &event) {
       if (g_bConfirmObjectDelete) {
         dlg_return = OCPNMessageBox(
             parent, _("Are you sure you want to delete this track?"),
-            _("OpenCPN Track Delete"),
+            _("EyeSea Track Delete"),
             (long)wxYES_NO | wxCANCEL | wxYES_DEFAULT);
       }
 

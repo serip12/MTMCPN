@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Low-level utility functions for socketcan support.
  * Author:   David Register, Alec Leamas
  *

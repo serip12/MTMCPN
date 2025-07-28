@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_drv_socketcan.h -- socketcan driver.
  * Author:   David Register, Alec Leamas
  *
@@ -271,7 +271,7 @@ bool CommDriverN2KSocketCanImpl::SendProductInfo() {
   payload.push_back(0xEC);  // Product Code, 1772
   payload.push_back(0x06);
 
-  std::string ModelID("OpenCPN");  // Model ID
+  std::string ModelID("EyeSea");  // Model ID
   AddStr(payload, ModelID, 32);
 
   std::string ModelSWCode(PACKAGE_VERSION);  // SwCode

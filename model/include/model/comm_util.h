@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Misc driver utilities
  * Author:   David Register, Alec Leamas
  *

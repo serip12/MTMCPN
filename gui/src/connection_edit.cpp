@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:
  * Author:   David Register
  *
@@ -1724,10 +1724,10 @@ void ConnectionEditDialog::OnCbOutput(wxCommandEvent& event) {
           mes << "\n"
               << _("Or consider using a different data port for one of them");
           if (warn)
-            OCPNMessageBox(this, mes, _("OpenCPN Warning"),
+            OCPNMessageBox(this, mes, _("EyeSea Warning"),
                            wxOK | wxICON_EXCLAMATION, 60);
           else
-            OCPNMessageBox(this, mes, _("OpenCPN info"),
+            OCPNMessageBox(this, mes, _("EyeSea info"),
                            wxOK | wxICON_INFORMATION, 60);
           break;
         }
@@ -2506,7 +2506,7 @@ void SentenceListDlg::OnAddClick(wxCommandEvent& event) {
           The whole sentences then looks like GPGGA or AITXT.\n \
           You may filter out all the sentences with certain TALKER prefix (like GP, AI etc.).\n \
           The filter also accepts Regular Expressions (REGEX) with 6 or more characters. \n\n"),
-        _("OpenCPN Info"));
+        _("EyeSea Info"));
     return;
   }
 
@@ -2519,7 +2519,7 @@ void SentenceListDlg::OnAddClick(wxCommandEvent& event) {
       return;
     } else {
       OCPNMessageBox(this, _("REGEX syntax error: \n") + stc,
-                     _("OpenCPN Info"));
+                     _("EyeSea Info"));
       return;
     }
   }

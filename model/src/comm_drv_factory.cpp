@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_drv_factory: Communication driver factory.
  * Author:   David Register, Alec Leamas
  *

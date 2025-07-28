@@ -65,7 +65,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerAbout = new wxBoxSizer(wxVERTICAL);
 
   m_staticTextOCPN =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("OpenCPN"),
+      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("EyeSea"),
                        wxDefaultPosition, wxDefaultSize, 0);
   m_staticTextOCPN->Wrap(-1);
   m_staticTextOCPN->SetFont(wxFont(30, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL,
@@ -94,7 +94,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_hyperlinkAuthors =
       new wxHyperlinkCtrl(m_scrolledWindowAbout, wxID_ANY,
-                          _("The OpenCPN Authors"), wxT("https://opencpn.org"),
+                          _("The EyeSea Authors"), wxT("https://opencpn.org"),
                           wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
   m_hyperlinkAuthors->SetFont(
       wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
@@ -106,7 +106,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_staticTextDescription = new wxStaticText(
       m_scrolledWindowAbout, wxID_ANY,
-      _("OpenCPN is a Free Software project, built by sailors.\nIt is freely "
+      _("EyeSea is a Free Software project, built by sailors.\nIt is freely "
         "available to download and distribute without charge."),
       wxDefaultPosition, wxDefaultSize, 0);
   m_staticTextDescription->Wrap(380);
@@ -159,7 +159,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_hyperlinkLogFile = new wxHyperlinkCtrl(
       m_scrolledWindowAbout, wxID_ANY,
-      _T("/Users/nohal/Library/Logs/opencpn.log"),
+      _T("/Users/nohal/Library/Logs/eyesea.log"),
       wxT("http://www.wxformbuilder.org"), wxDefaultPosition, wxDefaultSize,
       wxHL_CONTEXTMENU | wxHL_ALIGN_LEFT);
   m_hyperlinkLogFile->SetFont(
@@ -239,7 +239,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerLinksInner->Add(0, 0, 1, wxEXPAND, 5);
 
   m_hyperlinkWebsite =
-      new wxHyperlinkCtrl(m_panelMainLinks, wxID_ANY, _("OpenCPN Website"),
+      new wxHyperlinkCtrl(m_panelMainLinks, wxID_ANY, _("EyeSea Website"),
                           wxT("https://opencpn.org"), wxDefaultPosition,
                           wxDefaultSize, wxHL_DEFAULT_STYLE);
 

@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  MTM CPN
  *
  * Purpose:  Simple CLI application.
  *

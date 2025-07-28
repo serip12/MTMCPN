@@ -1,7 +1,7 @@
 #!/bin/bash
 #/******************************************************************************
 # *
-# * Project:  OpenCPN
+# * Project:  EyeSea
 # * Purpose:  helper shell script
 # * Author:   David Register
 # *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  NMEA Data Multiplexer Object
  * Author:   David Register
  *

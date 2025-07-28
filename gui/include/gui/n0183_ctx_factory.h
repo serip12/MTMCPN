@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Wrapper for creating a N0183DlgCtx based on global vars
  * Author:   Alec Leamas
  *

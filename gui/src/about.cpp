@@ -63,21 +63,21 @@ wxString OpenCPNVersion("\n      Version ");
 // clang-format off
 
 const wxString AboutText =
-    "<br>OpenCPN<br>"
-    "(c) 2000-2024  The OpenCPN Authors<br><br>";
+    "<br>EyeSea<br>"
+    "(c) 2000-2024  The EyeSea Authors<br><br>";
 
 const wxString OpenCPNInfo =
     "<br><br>"
-    "OpenCPN is a Free Software project, built by sailors. "
+    "EyeSea is a Free Software project, built by sailors. "
     "It is freely available to download and distribute "
     "without charge at opencpn.org.<br><br>"
-    "If you use OpenCPN, please consider contributing "
+    "If you use EyeSea, please consider contributing "
     "or donating funds to the project.<br><br>"
     "For more information, visit http://opencpn.org<br><br>";
 
 const wxString OpenCPNInfoAlt =
     "<br><br>"
-    "OpenCPN is a Free Software project, built by sailors."
+    "EyeSea is a Free Software project, built by sailors."
     "The complete source code and many other resources "
     "are freely available for your download and use, "
     "subject to applicable License agreements."
@@ -196,7 +196,7 @@ void About::Populate(void) {
   wxString msg;
   msg.Printf(" [%d]", androidGetVersionCode());
   wxString OpenCPNVersionAndroid =
-      "OpenCPN for Android Version " + androidGetVersionName() + msg;
+      "EyeSea for Android Version " + androidGetVersionName() + msg;
 
   aboutText.Append(AboutText + OpenCPNVersionAndroid + OpenCPNInfoAlt);
 #else

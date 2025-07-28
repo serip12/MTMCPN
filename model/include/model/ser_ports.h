@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Serial ports suppprt, notably enumeration
  * Author:   David Register
  *

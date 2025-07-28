@@ -130,7 +130,7 @@ public:
         wxString hostName = wxT("localhost");
         // Create the connection service, topic
         wxConnectionBase *connection =
-            client->MakeConnection(hostName, service_name, _T("OpenCPN"));
+            client->MakeConnection(hostName, service_name, _T("EyeSea"));
         if (connection) {
           // Ask the other instance to open a file or raise itself
           if (params.empty()) {
@@ -158,7 +158,7 @@ public:
           wxMessageBox(
               _("Sorry, an existing instance of OpenCPN may be too busy "
                 "to respond.\nPlease retry."),
-              wxT("OpenCPN"), wxICON_INFORMATION | wxOK);
+              wxT("EyeSea"), wxICON_INFORMATION | wxOK);
         }
         delete client;
         return false;  // exit quietly

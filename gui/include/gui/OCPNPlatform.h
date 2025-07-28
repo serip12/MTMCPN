@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  OpenCPN Platform specific support utilities
  * Author:   David Register
  *

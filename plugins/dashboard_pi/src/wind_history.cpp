@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: wind_history.cpp, v1.0 2010/08/30 tom-r Exp $
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Dashboard Plugin
  * Author:   Thomas Rauch
  *

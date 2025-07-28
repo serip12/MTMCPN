@@ -81,7 +81,7 @@ public:
    _IpcClientFactory(wxAppConsole* _app, const std::string& path)
        : wxClient(), app(_app)
    {
-      connection = MakeConnection("localhost", path, "OpenCPN");
+      connection = MakeConnection("localhost", path, "EyeSea");
    }
 
    wxConnectionBase* OnMakeConnection() { return new _IpcClient(app); }
@@ -107,7 +107,7 @@ public:
     for (size_t i = 0; i < parser.GetParamCount(); i++)
       args.push_back(parser.GetParam(i).ToStdString());
     if (!factory.connection) {
-      std::cout << "Cannot connect to server at " << SocketPath() << "\n" 
+      std::cout << "Cannot connect to server at " << SocketPath() << "\n"
               << std::flush;
       exit(1);
     }

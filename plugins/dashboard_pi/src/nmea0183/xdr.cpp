@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  NMEA0183 Support Classes
  * Author:   Thomas Rauch
  *

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Decoded messages definitions. These messages are handled by the
  *           ApgMsgBus defined in comm_appmsg_bus.h.
  * Author:   David Register, Alec Leamas

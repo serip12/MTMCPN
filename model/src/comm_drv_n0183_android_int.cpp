@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement comm_drv_n0183_android_int.h -- Nmea 0183 driver.
  * Author:   David Register, Alec Leamas
  *

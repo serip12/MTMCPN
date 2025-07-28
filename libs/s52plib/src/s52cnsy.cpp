@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  S52 Conditional Symbology Library
  * Author:   David Register, Sylvain Duclos
  *

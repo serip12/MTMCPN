@@ -1,7 +1,7 @@
 
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Hash of arbitrary length
  * Author:   Anton Samsonov
  *

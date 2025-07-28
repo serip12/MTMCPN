@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  General purpose fifo queue.
  * Author:   David Register, Alec Leamas
  *

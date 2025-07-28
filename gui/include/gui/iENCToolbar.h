@@ -1,6 +1,6 @@
 /****************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  OpenCPN iENCToolbar
  * Author:   David Register
  *

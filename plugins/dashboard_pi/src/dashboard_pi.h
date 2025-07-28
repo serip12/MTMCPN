@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: dashboard_pi.h, v1.0 2010/08/05 SethDart Exp $
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Dashboard Plugin
  * Author:   Jean-Eudes Onfray
  * expanded: Bernd Cirotzki 2023 (special colour design)

@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: from_ownship.cpp
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Dashboard Plugin
  * Author:   Pavel Kalian
  *

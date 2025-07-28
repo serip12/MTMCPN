@@ -344,7 +344,7 @@ public:
       if (getenv("FLATPAK_ID")) {
         auto flags = wxOK | wxICON_INFORMATION;
         auto msg = FLATPAK_INSTALL_MSG;
-        OCPNMessageBox(this, msg, _("OpenCPN"), flags);
+        OCPNMessageBox(this, msg, _("EyeSea"), flags);
       }
       dynamic_cast<wxDialog*>(GetParent())->EndModal(0);
     });
@@ -373,7 +373,7 @@ public:
       }
       flags = wxOK | wxICON_INFORMATION;
     }
-    OCPNMessageBox(this, msg, _("OpenCPN Info"), flags);
+    OCPNMessageBox(this, msg, _("EyeSea Info"), flags);
   }
 
 private:

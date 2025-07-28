@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Low-level driver for socketcan devices (linux only).
  * Author:   David Register, Alec Leamas
  *

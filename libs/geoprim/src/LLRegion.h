@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Latitude and Longitude regions
  * Author:   Sean D'Epagnier
  *

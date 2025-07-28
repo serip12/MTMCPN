@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  WaypoinrMan drawing stuff
  * Author:   David Register, Alec Leamas
  *

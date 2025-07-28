@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  OpenCPN Main wxWidgets Program
  * Author:   David Register
  *
@@ -515,20 +515,20 @@ void BuildiENCToolbar(bool bnew) {
 bool ShowNavWarning() {
   wxString msg(
       _("\n\
-OpenCPN is distributed in the hope that it will be useful, \
+EyeSea is distributed in the hope that it will be useful, \
 but WITHOUT ANY WARRANTY; without even the implied \
 warranty of MERCHANTABILITY or FITNESS FOR A \
 PARTICULAR PURPOSE.\n\n\
 See the GNU General Public License for more details.\n\n\
-OpenCPN must only be used in conjunction with approved \
+EyeSea must only be used in conjunction with approved \
 paper charts and traditional methods of navigation.\n\n\
-DO NOT rely upon OpenCPN for safety of life or property.\n\n\
+DO NOT rely upon EyeSea for safety of life or property.\n\n\
 Please click \"Agree\" and proceed, or \"Cancel\" to quit.\n"));
 
   wxString vs = wxString::Format(wxT(" .. Version %s"), VERSION_FULL);
 
 #ifdef __ANDROID__
-  androidShowDisclaimer(_("OpenCPN for Android") + vs, msg);
+  androidShowDisclaimer(_("EyeSea for Android") + vs, msg);
   return true;
 #else
   msg.Replace("\n", "<br>");
@@ -538,7 +538,7 @@ Please click \"Agree\" and proceed, or \"Cancel\" to quit.\n"));
   html << msg.ToStdString();
   html << "</p></body></html>";
 
-  std::string title = _("Welcome to OpenCPN").ToStdString();
+  std::string title = _("Welcome to EyeSea").ToStdString();
   std::string action = _("Agree").ToStdString();
   AlertDialog info_dlg(gFrame, title, action);
   info_dlg.SetInitialSize();
@@ -808,7 +808,7 @@ MyFrame::MyFrame(wxFrame *frame, const wxString &title, const wxPoint &pos,
           "A Persistent track recording will therefore be restarted for this "
           "target.\n\n"
           "Do you instead want to stop Persistent tracking for this target?"),
-        _("OpenCPN Info"), wxYES_NO | wxCENTER, 60);
+        _("EyeSea Info"), wxYES_NO | wxCENTER, 60);
     return r == wxID_YES;
   };
   ais_callbacks.get_target_mmsi = []() {
@@ -953,10 +953,10 @@ void MyFrame::RebuildChartDatabase() {
     //              given in the config file
     if (g_NeedDBUpdate == 1) {
       wxString msg1(
-          _("OpenCPN needs to update the chart database from config file "
+          _("EyeSea needs to update the chart database from config file "
             "entries...."));
 
-      OCPNMessageDialog mdlg(gFrame, msg1, wxString(_("OpenCPN Info")),
+      OCPNMessageDialog mdlg(gFrame, msg1, wxString(_("EyeSea Info")),
                              wxICON_INFORMATION | wxOK);
       mdlg.ShowModal();
     }
@@ -973,7 +973,7 @@ void MyFrame::RebuildChartDatabase() {
     wxString dummy2 = _("Estimated time : ");
     wxString dummy3 = _("Remaining time : ");
     wxGenericProgressDialog *pprog = new wxGenericProgressDialog(
-        _("OpenCPN Chart Update"), line, 100, NULL,
+        _("EyeSea Chart Update"), line, 100, NULL,
         wxPD_SMOOTH | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME |
             wxPD_REMAINING_TIME);
 
@@ -3707,7 +3707,7 @@ void MyFrame::RegisterGlobalMenuItems() {
                    _menuText(_("Smaller Scale Chart"), _T("Ctrl-Right")));
 #ifndef __WXOSX__
   nav_menu->AppendSeparator();
-  nav_menu->Append(ID_MENU_OQUIT, _menuText(_("Exit OpenCPN"), _T("Ctrl-Q")));
+  nav_menu->Append(ID_MENU_OQUIT, _menuText(_("Exit EyeSea"), _T("Ctrl-Q")));
 #endif
   m_pMenuBar->Append(nav_menu, _("&Navigate"));
 
@@ -3843,8 +3843,8 @@ void MyFrame::RegisterGlobalMenuItems() {
 #endif
 
   wxMenu *help_menu = new wxMenu();
-  help_menu->Append(wxID_ABOUT, _("About OpenCPN"));
-  help_menu->Append(wxID_HELP, _("OpenCPN Help"));
+  help_menu->Append(wxID_ABOUT, _("About EyeSea"));
+  help_menu->Append(wxID_HELP, _("EyeSea Help"));
   m_pMenuBar->Append(help_menu, _("&Help"));
 
   // Set initial values for menu check items and radio items
@@ -4217,8 +4217,8 @@ void MyFrame::ProcessOptionsDialog(int rr, ArrayOfCDI *pNewDirArray) {
   if (rr & STYLE_CHANGED) {
     OCPNMessageBox(
         NULL,
-        _("Please restart OpenCPN to activate language or style changes."),
-        _("OpenCPN Info"), wxOK | wxICON_INFORMATION);
+        _("Please restart EyeSea to activate language or style changes."),
+        _("EyeSea Info"), wxOK | wxICON_INFORMATION);
   }
 
   bool b_groupchange = false;
@@ -4557,7 +4557,7 @@ bool MyFrame::UpdateChartDatabaseInplace(ArrayOfCDI &DirArray, bool b_force,
 
   wxGenericProgressDialog *pprog = nullptr;
   if (b_prog) {
-    wxString longmsg = _("OpenCPN Chart Update");
+    wxString longmsg = _("EyeSea Chart Update");
     longmsg +=
         _T("..................................................................")
         _T("........");
@@ -4567,7 +4567,7 @@ bool MyFrame::UpdateChartDatabaseInplace(ArrayOfCDI &DirArray, bool b_force,
     wxFont *qFont = GetOCPNScaledFont(_("Dialog"));
     pprog->SetFont(*qFont);
 
-    pprog->Create(_("OpenCPN Chart Update"), longmsg, 100, gFrame,
+    pprog->Create(_("EyeSea Chart Update"), longmsg, 100, gFrame,
                   wxPD_SMOOTH | wxPD_ELAPSED_TIME | wxPD_ESTIMATED_TIME |
                       wxPD_REMAINING_TIME);
 
@@ -7227,7 +7227,7 @@ ocpnToolBarSimple *MyFrame::CreateMasterToolbar() {
 
   tic = new ToolbarItemContainer(
       ID_ABOUT, style->GetToolIcon(_T("MUI_help"), TOOLICON_NORMAL),
-      wxITEM_NORMAL, _("About OpenCPN"), _T("MUI_help"));
+      wxITEM_NORMAL, _("About EyeSea"), _T("MUI_help"));
   g_MainToolbar->AddToolItem(tic);
 
   //      Add any PlugIn toolbar tools that request default positioning
@@ -8267,7 +8267,7 @@ void ParseAllENC(wxWindow *parent) {
     wxFont *qFont = GetOCPNScaledFont(_("Dialog"));
     prog->SetFont(*qFont);
 
-    prog->Create(_("OpenCPN ENC Prepare"),
+    prog->Create(_("EyeSea ENC Prepare"),
                  _T("Longgggggggggggggggggggggggggggg"), count + 1, parent,
                  style);
 

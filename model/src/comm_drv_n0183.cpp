@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Implement the comm_drv_n0183.h -- Nmea0183 driver base
  * Author:   David Register, Alec Leamas
  *

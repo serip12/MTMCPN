@@ -1,6 +1,6 @@
 /*************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose: General observable implementation with several specializations.
  *
  * Copyright (C) 2022 Alec Leamas

@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Time textbox to replace broken wxTimePickerCtrl on wxGTK
  * Author:   David Register
  *

@@ -2721,7 +2721,7 @@ msgstr ""
 
 #: gui/src/about_frame.cpp:68 gui/src/print_dialog.cpp:56
 #: gui/src/udev_rule_mgr.cpp:347
-msgid "OpenCPN"
+msgid "EyeSea"
 msgstr ""
 
 #: gui/src/about_frame.cpp:97

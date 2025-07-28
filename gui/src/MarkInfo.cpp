@@ -1,6 +1,6 @@
 /**************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  MarkProperties Support
  * Author:   David Register
  *
@@ -1915,6 +1915,6 @@ void MarkInfoDlg::ShowTidesBtnClicked(wxCommandEvent& event) {
     wxString msg(_("Tide Station not found"));
     msg += _T(":\n");
     msg += m_comboBoxTideStation->GetStringSelection();
-    OCPNMessageBox(NULL, msg, _("OpenCPN Info"), wxOK | wxCENTER, 10);
+    OCPNMessageBox(NULL, msg, _("EyeSea Info"), wxOK | wxCENTER, 10);
   }
 }

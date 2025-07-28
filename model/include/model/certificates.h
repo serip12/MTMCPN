@@ -1,7 +1,7 @@
 
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  TLS Certificate support
  * Author:   David Register
  *

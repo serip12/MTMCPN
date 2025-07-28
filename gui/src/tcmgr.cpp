@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Tide and Current Manager
  * Author:   David Register
  *
@@ -682,7 +682,7 @@ TC_Error_Code TCMgr::LoadDataSources(std::vector<std::string> &sources) {
   if (m_Combined_IDX_array.empty())
     OCPNMessageBox(
         NULL, _("It seems you have no tide/current harmonic data installed."),
-        _("OpenCPN Info"), wxOK | wxCENTER);
+        _("EyeSea Info"), wxOK | wxCENTER);
 
   ScrubCurrentDepths();
   return TC_NO_ERROR;

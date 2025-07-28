@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Decoded messages send/receive support. This file represents the
  *           top layer in the three layer model drivers, raw messages and
  *           decoded messages.

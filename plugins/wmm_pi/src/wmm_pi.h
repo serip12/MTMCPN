@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: wmm_pi.h,v 1.0 2011/02/26 01:54:37 nohal Exp $
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  WMM Plugin
  * Author:   Pavel Kalian
  *

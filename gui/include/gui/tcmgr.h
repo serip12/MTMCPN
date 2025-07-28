@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Tide and Current Manager
  * Author:   David Register
  * Todo add original author

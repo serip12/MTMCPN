@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  PlugIn Manager Object
  * Author:   David Register
  *
@@ -302,7 +302,7 @@ public:
 
 private:
   void show_msg(wxString msg) {
-    OCPNMessageBox(NULL, msg, wxString(_("OpenCPN Info")),
+    OCPNMessageBox(NULL, msg, wxString(_("EyeSea Info")),
                    wxICON_INFORMATION | wxOK, 10);  // 10 second timeout
   }
 
@@ -617,7 +617,7 @@ static void run_update_dialog(PluginListPanel* parent, const PlugInData* pic,
           wxString msg =
               _("The plugin is not compatible with this version of OpenCPN, "
                 "and will be uninstalled.");
-          OCPNMessageBox(NULL, msg, wxString(_("OpenCPN Info")),
+          OCPNMessageBox(NULL, msg, wxString(_("EyeSea Info")),
                          wxICON_INFORMATION | wxOK, 10);
 
           PluginHandler::CleanupFiles(manifestPath, update.name);
@@ -872,7 +872,7 @@ EVT_CURL_DOWNLOAD(CurlThreadId, PlugInManager::OnCurlDownload)
 END_EVENT_TABLE()
 
 static void event_message_box(const wxString& msg) {
-  OCPNMessageBox(NULL, msg, wxString(_("OpenCPN Info")),
+  OCPNMessageBox(NULL, msg, wxString(_("EyeSea Info")),
                  wxICON_INFORMATION | wxOK, 0);  // no timeout
 }
 
@@ -2290,7 +2290,7 @@ void CatalogMgrPanel::OnUpdateButton(wxCommandEvent& event) {
   std::string message;
   if (status != CatalogHandler::ServerStatus::OK) {
     message = _("Cannot download data from url");
-    OCPNMessageBox(this, message, _("OpenCPN Catalog update"),
+    OCPNMessageBox(this, message, _("EyeSea Catalog update"),
                    wxICON_ERROR | wxOK);
     return;
   }
@@ -2302,7 +2302,7 @@ void CatalogMgrPanel::OnUpdateButton(wxCommandEvent& event) {
                                  wxFileName::GetPathSeparator() +
                                  _T("ocpn-plugins.xml"))) {
     OCPNMessageBox(this, _("Unable to copy catalog file"),
-                   _("OpenCPN Catalog update"), wxICON_ERROR | wxOK);
+                   _("EyeSea Catalog update"), wxICON_ERROR | wxOK);
     return;
   }
 #else
@@ -2312,7 +2312,7 @@ void CatalogMgrPanel::OnUpdateButton(wxCommandEvent& event) {
                       wxFileName::GetPathSeparator() +
                       _T("ocpn-plugins.xml"))) {
     OCPNMessageBox(this, _("Unable to copy catalog file"),
-                   _("OpenCPN Catalog update"), wxICON_ERROR | wxOK);
+                   _("EyeSea Catalog update"), wxICON_ERROR | wxOK);
     return;
   }
 #endif
@@ -2321,7 +2321,7 @@ void CatalogMgrPanel::OnUpdateButton(wxCommandEvent& event) {
   if (catalog == "master") {
     if (!ocpn::store_metadata(filePath.c_str())) {
       OCPNMessageBox(this, _("Unable to copy catalog file to cache"),
-                     _("OpenCPN Catalog update"), wxICON_ERROR | wxOK);
+                     _("EyeSea Catalog update"), wxICON_ERROR | wxOK);
       return;
     }
   }
@@ -2351,7 +2351,7 @@ void CatalogMgrPanel::OnUpdateButton(wxCommandEvent& event) {
 #endif
   if (m_PluginListPanel) m_PluginListPanel->ReloadPluginPanels();
   OCPNMessageBox(this, _("Catalog update successful"),
-                 _("OpenCPN Catalog update"), wxICON_INFORMATION | wxOK);
+                 _("EyeSea Catalog update"), wxICON_INFORMATION | wxOK);
 }
 
 void CatalogMgrPanel::OnPluginSettingsButton(wxCommandEvent& event) {
@@ -2385,12 +2385,12 @@ void CatalogMgrPanel::OnTarballButton(wxCommandEvent& event) {
     OCPNMessageBox(
         this,
         _("Error extracting metadata from tarball (missing metadata.xml?)"),
-        _("OpenCPN Plugin Import Error"));
+        _("EyeSea Plugin Import Error"));
     return;
   }
   if (!PluginHandler::IsCompatible(metadata)) {
     OCPNMessageBox(this, _("Incompatible import plugin detected."),
-                   _("OpenCPN Plugin Import Error"));
+                   _("EyeSea Plugin Import Error"));
     handler->Uninstall(metadata.name);
     return;
   }
@@ -2398,7 +2398,7 @@ void CatalogMgrPanel::OnTarballButton(wxCommandEvent& event) {
   ok = handler->InstallPlugin(metadata, path.ToStdString());
   if (!ok) {
     OCPNMessageBox(this, _("Error extracting import plugin tarball."),
-                   _("OpenCPN Plugin Import Error"));
+                   _("EyeSea Plugin Import Error"));
     return;
   }
   metadata.is_imported = true;

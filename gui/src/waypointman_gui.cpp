@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  implement waypointman_gui.h: WayPointman drawing stuff
  * Author:   David Register, Alec Leamas
  *

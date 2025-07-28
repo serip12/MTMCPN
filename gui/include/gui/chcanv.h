@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Chart Canvas
  * Author:   David Register
  *

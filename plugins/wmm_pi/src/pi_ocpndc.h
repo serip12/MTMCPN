@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Layer to use wxDC or opengl
  * Author:   Sean D'Epagnier
  *

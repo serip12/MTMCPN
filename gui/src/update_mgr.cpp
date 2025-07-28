@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  *
  ***************************************************************************
  *   Copyright (C) 2019 Alec Leamas                                        *
@@ -124,7 +124,7 @@ public:
   PluginIconPanel(wxWindow* parent, std::string plugin_name)
       : wxPanel(parent), m_plugin_name(plugin_name) {
     auto size = GetClientSize();
-    auto minsize = GetTextExtent("OpenCPN");
+    auto minsize = GetTextExtent("EyeSea");
     SetMinClientSize(wxSize(minsize.GetWidth(), size.GetHeight()));
     Layout();
     Bind(wxEVT_PAINT, &PluginIconPanel::OnPaint, this);

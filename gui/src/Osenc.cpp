@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  S57 SENC File Object
  * Author:   David Register
  *
@@ -1172,7 +1172,7 @@ int Osenc::ingestCell(OGRS57DataSource *poS57DS, const wxString &FullPath000,
             NULL,
             _("S57 Cell Update failed.\nENC features may be incomplete or "
               "inaccurate.\n\nCheck the logfile for details."),
-            _("OpenCPN Create SENC Warning"), wxOK | wxICON_EXCLAMATION, 5);
+            _("EyeSea Create SENC Warning"), wxOK | wxICON_EXCLAMATION, 5);
       }
     } else {  // no updates applied.
       if (!m_NoErrDialog)
@@ -1180,7 +1180,7 @@ int Osenc::ingestCell(OGRS57DataSource *poS57DS, const wxString &FullPath000,
                        _("S57 Cell Update failed.\nNo updates could be "
                          "applied.\nENC features may be incomplete or "
                          "inaccurate.\n\nCheck the logfile for details."),
-                       _("OpenCPN Create SENC Warning"),
+                       _("EyeSea Create SENC Warning"),
                        wxOK | wxICON_EXCLAMATION, 5);
     }
   }
@@ -1303,7 +1303,7 @@ int Osenc::ValidateAndCountUpdates(const wxFileName file000,
           //                                                inaccurate.\nCheck
           //                                                the logfile for
           //                                                details."),
-          //                                                _("OpenCPN Create
+          //                                                _("EyeSea Create
           //                                                SENC Warning"), wxOK
           //                                                |
           //                                                wxICON_EXCLAMATION,
@@ -1674,7 +1674,7 @@ int Osenc::createSenc200(const wxString &FullPath000,
   wxString Message = SENCfile.GetFullPath();
   Message.Append(_T("...Ingesting"));
 
-  wxString Title(_("OpenCPN S57 SENC File Create..."));
+  wxString Title(_("EyeSea S57 SENC File Create..."));
   Title.append(SENCfile.GetFullPath());
 
 #if wxUSE_PROGRESSDLG

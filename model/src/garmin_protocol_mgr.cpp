@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Garmin NMEA Data Stream Object
  * Author:   David Register
  *

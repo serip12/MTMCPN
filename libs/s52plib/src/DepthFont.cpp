@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  texture OpenGL text rendering built from wxFont
  * Author:   Sean D'Epagnier
  *

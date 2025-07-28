@@ -1,10 +1,10 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Navigation Utility Functions
  * Authors:   David Register
  *            Sean D'Epagnier
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Navigation Utility Functions
  * Author:   David Register
  *

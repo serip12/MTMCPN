@@ -108,14 +108,14 @@ void AboutFrameImpl::OnLinkHelp(wxHyperlinkEvent& event) {
   wxString testFile = wxString::Format("/%s/doc/help_web.html",
                                        g_Platform->GetSharedDataDir().c_str());
   if (!::wxFileExists(testFile)) {
-    wxString msg = _("OpenCPN Help documentation is not available locally.");
+    wxString msg = _("EyeSea Help documentation is not available locally.");
     msg += _T("\n");
     msg +=
         _("Would you like to visit the opencpn.org website for more "
           "information?");
 
     if (wxID_YES ==
-        OCPNMessageBox(NULL, msg, _("OpenCPN Info"), wxYES_NO | wxCENTER, 60)) {
+        OCPNMessageBox(NULL, msg, _("EyeSea Info"), wxYES_NO | wxCENTER, 60)) {
       wxLaunchDefaultBrowser(_T("https://opencpn.org"));
     }
   } else

@@ -1,7 +1,7 @@
 /******************************************************************************
  * $Id: compass.cpp, v1.0 2010/08/05 SethDart Exp $
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Dashboard Plugin
  * Author:   Jean-Eudes Onfray
  *           (Inspired by original work from Andreas Heiming)

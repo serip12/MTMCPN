@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Basic platform specific support utilities without GUI deps.
  * Author:   David Register
  *
@@ -74,10 +74,10 @@ public:
   AbstractPlatform() = default;
   virtual ~AbstractPlatform() = default;
 
-  /** Return dir path for opencpn.log, etc., respecting -c cli option. */
+  /** Return dir path for eyesea.log, etc., respecting -c cli option. */
   wxString& GetPrivateDataDir();
 
-  /** Return dir path for opencpn.log, etc., does not respect -c option. */
+  /** Return dir path for eyesea.log, etc., does not respect -c option. */
   wxString& DefaultPrivateDataDir();
 
   wxString* GetPluginDirPtr();

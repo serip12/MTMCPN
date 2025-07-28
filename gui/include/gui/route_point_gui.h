@@ -1,6 +1,6 @@
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  Track and Trackpoint drawing stuff
  * Author:   David Register, Alec Leamas
  *

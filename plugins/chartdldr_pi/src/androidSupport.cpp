@@ -1,7 +1,7 @@
 
 /***************************************************************************
  *
- * Project:  OpenCPN
+ * Project:  EyeSea
  * Purpose:  OpenCPN Android support utilities
  * Author:   David Register
  *
