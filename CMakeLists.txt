@@ -62,7 +62,7 @@ if ("${OCPN_TARGET_TUPLE}" MATCHES "Android")
 endif ()
 
 if (APPLE)
-  set(PACKAGE_NAME OpenCPN)
+  set(PACKAGE_NAME ITS)
   string(REPLACE ";" "," CMAKE_OSX_ARCHITECTURES_COMMA_SEP "${CMAKE_OSX_ARCHITECTURES}")
 elseif (QT_ANDROID)
   set(PACKAGE_NAME gorp)
@@ -70,7 +70,7 @@ else ()
   set(PACKAGE_NAME opencpn)
 endif ()
 
-project(OpenCPN)
+project(ITS)
 
 if (NOT DEFINED OCPN_VERBOSE OR OCPN_VERBOSE)
   set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -1174,7 +1174,7 @@ if (wxWidgets_VERSION_STRING VERSION_LESS "3.1.6"
 endif ()
 
 # Some of these "find_path" macros generate "false-positives" under Windows,
-# especially if mingw is installed For OpenCPN, these include files and related
+# especially if mingw is installed For ITS, these include files and related
 # methods are really only valid in complete linux/unix environments So, pending
 # further information, we disable these tests for non-UNIX-like builds.
 if (UNIX)
@@ -2202,7 +2202,7 @@ macro (GETTEXT_BUILD_MO _poFile _lang)
     install(
       FILES ${_gmoFile}
       DESTINATION
-        ${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Resources/${_lang}.lproj
+        ${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Resources/${_lang}.lproj
       RENAME ${PACKAGE_NAME}.mo
     )
   else ()
@@ -2284,7 +2284,7 @@ if (APPLE)
     install(
       FILES ${_current_wx_mofile}
       DESTINATION
-        ${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Resources/${_mlang}.lproj
+        ${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Resources/${_mlang}.lproj
       RENAME wxstd.mo
     )
   endforeach ()
@@ -2453,7 +2453,7 @@ endif ()
 set(CPACK_BINDIR "${CMAKE_BINARY_DIR}")
 set(CPACK_PACKAGE_NAME "ITS")
 set(CPACK_PACKAGE_VENDOR "opencpn.org")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenCPN ${PACKAGE_VERSION}")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "ITS ${PACKAGE_VERSION}")
 set(CPACK_PACKAGE_VERSION ${PACKAGE_VERSION})
 set(CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR})
 set(CPACK_PACKAGE_VERSION_MINOR ${VERSION_MINOR})
@@ -2634,29 +2634,29 @@ if (APPLE)
   # -- Run the BundleUtilities cmake code
   set(CPACK_BUNDLE_PLIST "${CMAKE_SOURCE_DIR}/buildosx/Info.plist.in")
 
-  set(APPS "\${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app")
+  set(APPS "\${CMAKE_INSTALL_PREFIX}/bin/ITS.app")
   set(DIRS "/usr/local/lib")
 
-  # INSTALL(DIRECTORY DESTINATION "bin/OpenCPN.app/Contents/Plugins")
+  # INSTALL(DIRECTORY DESTINATION "bin/ITS.app/Contents/Plugins")
   install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/plugins/dashboard_pi/libdashboard_pi.dylib
-    DESTINATION "bin/OpenCPN.app/Contents/Plugins"
+    DESTINATION "bin/ITS.app/Contents/Plugins"
   )
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/plugins/grib_pi/libgrib_pi.dylib
-          DESTINATION "bin/OpenCPN.app/Contents/Plugins"
+          DESTINATION "bin/ITS.app/Contents/Plugins"
   )
   install(
     FILES ${CMAKE_CURRENT_BINARY_DIR}/plugins/chartdldr_pi/libchartdldr_pi.dylib
-    DESTINATION "bin/OpenCPN.app/Contents/Plugins"
+    DESTINATION "bin/ITS.app/Contents/Plugins"
   )
   install(FILES ${CMAKE_CURRENT_BINARY_DIR}/plugins/wmm_pi/libwmm_pi.dylib
-          DESTINATION "bin/OpenCPN.app/Contents/Plugins"
+          DESTINATION "bin/ITS.app/Contents/Plugins"
   )
   set(LIBS
-      "\${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Plugins/libdashboard_pi.dylib"
-      "\${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Plugins/libgrib_pi.dylib"
-      "\${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Plugins/libchartdldr_pi.dylib"
-      "\${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app/Contents/Plugins/libwmm_pi.dylib"
+      "\${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Plugins/libdashboard_pi.dylib"
+      "\${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Plugins/libgrib_pi.dylib"
+      "\${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Plugins/libchartdldr_pi.dylib"
+      "\${CMAKE_INSTALL_PREFIX}/bin/ITS.app/Contents/Plugins/libwmm_pi.dylib"
   )
   install(
     CODE "
@@ -2680,13 +2680,13 @@ if (APPLE)
   add_custom_command(
     OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/${PACKAGE_NAME}_${PACKAGE_VERSION}.dmg
     COMMAND
-      create-dmg --volname "OpenCPN Installer"
+      create-dmg --volname "ITS Installer"
       --background ${CMAKE_SOURCE_DIR}/buildosx/background.png --window-pos 200
-      120 --window-size 500 300 --icon-size 80 --icon OpenCPN.app 120 150
-      --hide-extension OpenCPN.app --app-drop-link 390 145 --no-internet-enable
+      120 --window-size 500 300 --icon-size 80 --icon ITS.app 120 150
+      --hide-extension ITS.app --app-drop-link 390 145 --no-internet-enable
       ${CMAKE_CURRENT_BINARY_DIR}/${PACKAGE_NAME}_${PACKAGE_VERSION}.dmg
       ${CMAKE_INSTALL_PREFIX}/bin/
-    DEPENDS ${CMAKE_INSTALL_PREFIX}/bin/OpenCPN.app
+    DEPENDS ${CMAKE_INSTALL_PREFIX}/bin/ITS.app
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     COMMENT "create-dmg [${PACKAGE_NAME}]: Generated dmg file."
   )
@@ -2710,7 +2710,7 @@ if (APPLE)
   )
   add_custom_target(
     show-bundled-libs COMMAND ls -l
-                              /tmp/opencpn/bin/OpenCPN.app/Contents/Frameworks
+                              /tmp/opencpn/bin/ITS.app/Contents/Frameworks
   )
 
   add_custom_target(pkg-tmp COMMAND cmake -E make_directory pkg_tmp)
@@ -2718,9 +2718,9 @@ if (APPLE)
   add_custom_target(
     component-pkg
     COMMAND
-      pkgbuild --root /tmp/opencpn/bin/OpenCPN.app --identifier org.opencpn
-      --install-location /Applications/OpenCPN.app
-      --scripts "${CMAKE_SOURCE_DIR}/buildosx/scripts" OpenCPN.app.pkg
+      pkgbuild --root /tmp/opencpn/bin/ITS.app --identifier org.opencpn
+      --install-location /Applications/ITS.app
+      --scripts "${CMAKE_SOURCE_DIR}/buildosx/scripts" ITS.app.pkg
   )
   add_dependencies(component-pkg show-bundled-libs pkg-tmp)
 
@@ -2733,7 +2733,7 @@ if (APPLE)
   )
   add_dependencies(build-macos-pkg component-pkg)
 
-  add_custom_target(remove-tmp-pkg COMMAND cmake -E rm -f OpenCPN.app.pkg)
+  add_custom_target(remove-tmp-pkg COMMAND cmake -E rm -f ITS.app.pkg)
   add_dependencies(remove-tmp-pkg build-macos-pkg)
 
   add_custom_target(macos-pkg)
