@@ -1,18 +1,18 @@
 /*-----------------------------------------------------------------------------------------------------
-NSIS Installer script for OpenCPN (Windows)
+NSIS Installer script for ITS (Windows)
 NSIS version 2.46
 Written by Gunther Pilz (Netsurfer) netsurfer@opencpn.de
 -------------------------------------------------------------------------------------------------------
 
 CMake variables
 	CPACK_PACKAGE_NAME "ITS"
-	CPACK_NSIS_PACKAGE_NAME_LC "opencpn"
-	CPACK_PACKAGE_VENDOR "opencpn.org"
+	CPACK_NSIS_PACKAGE_NAME_LC "ITS"
+	CPACK_PACKAGE_VENDOR "ITS.org"
 	CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR}
 	CPACK_PACKAGE_VERSION_MINOR ${VERSION_MINOR}
 	CPACK_PACKAGE_VERSION_PATCH ${VERSION_PATCH}
 	CPACK_PACKAGE_VERSION ${PACKAGE_VERSION}
-	CPACK_NSIS_INSTALLED_ICON_NAME "opencpn.exe"
+	CPACK_NSIS_INSTALLED_ICON_NAME "ITS.exe"
 	CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/resources/bitmaps\\\\opencpn.ico"
 	CPACK_NSIS_EXTRA_INSTALL_COMMANDS ${CPACK_NSIS_EXTRA_INSTALL_COMMANDS}
 	CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/data/license.txt"
@@ -22,7 +22,7 @@ CMake variables
 	#CPACK_INSTALL_CMAKE_PROJECTS "${CMAKE_CURRENT_BINARY_DIR};${PACKAGE_NAME};ALL;/"
 	#CPACK_PACKAGE_EXECUTABLES ${PACKAGE_NAME} "ITS"
 	#CPACK_PACKAGE_INSTALL_DIRECTORY ${PACKAGE_NAME} "ITS"
-	#CPACK_PACKAGE_DESCRIPTION_SUMMARY "OpenCPN ${PACKAGE_VERSION}"
+	#CPACK_PACKAGE_DESCRIPTION_SUMMARY "ITS ${PACKAGE_VERSION}"
 	#CPACK_NSIS_LINK_NAME "${CPACK_PACKAGE_NAME} ${PACKAGE_VERSION}"
 	#CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_NAME} Version ${PACKAGE_VERSION}"
 	#CPACK_NSIS_HELP_LINK "http:\\\\\\\\www.opencpn.org"
@@ -45,8 +45,8 @@ CMake variables
 ;# You must define these values
 	!define OCPN_INSTALLER_VERSION "1.0.0"
 	/*
-	!define CPACK_NSIS_INSTALLED_ICON_NAME "opencpn.exe"
-	!define CPACK_NSIS_PACKAGE_NAME_LC "opencpn"
+	!define CPACK_NSIS_INSTALLED_ICON_NAME "ITS.exe"
+	!define CPACK_NSIS_PACKAGE_NAME_LC "ITS"
 	!define CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_NAME} ${PACKAGE_VERSION}"
 	!define CPACK_PACKAGE_ICON "${CMAKE_SOURCE_DIR}/resources/bitmaps/opencpn.ico"
 	!define CPACK_BUILDWIN_DIR "${CMAKE_SOURCE_DIR}/buildwin"
@@ -56,9 +56,9 @@ CMake variables
 	!define OUTPUT_FILE_NAME "@CPACK_NSIS_PACKAGE_NAME_LC@_@CPACK_PACKAGE_VERSION@_setup.exe"
 	!define INST_DIR "@CPACK_TEMPORARY_DIRECTORY@"
 	!define REG_ROOT_KEY "Software"
-	!define REG_KEY "Software\OpenCPN"
+	!define REG_KEY "Software\ITS"
 	!define REG_ROOT_KEY_UN "Software\Microsoft\Windows\CurrentVersion\Uninstall"
-	!define REG_KEY_UN "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN @CPACK_PACKAGE_VERSION@"
+	!define REG_KEY_UN "Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS @CPACK_PACKAGE_VERSION@"
 	!define CSIDL_LOCAL_APPDATA "0x1C"
 	!define Explode "!insertmacro Explode"
 	!define unExplode "!insertmacro unExplode"
@@ -192,9 +192,9 @@ CMake variables
   OutFile "@CPACK_TOPLEVEL_DIRECTORY@/${OUTPUT_FILE_NAME}"
 
   ;# Default installation folder
-  InstallDir "$PROGRAMFILES\OpenCPN"
+  InstallDir "$PROGRAMFILES\ITS"
 
-  BrandingText /TRIMLEFT "OpenCPN $(Installer) v${OCPN_INSTALLER_VERSION}"
+  BrandingText /TRIMLEFT "ITS $(Installer) v${OCPN_INSTALLER_VERSION}"
 ;--------------------------------
 ;# Interface Settings
   !define MUI_CUSTOMFUNCTION_GUIINIT myGuiInit
@@ -612,7 +612,7 @@ CMake variables
 	!insertmacro MUI_PAGE_INSTFILES
 
 	;# Finish page
-	#!define MUI_FINISHPAGE_RUN opencpn.exe
+	#!define MUI_FINISHPAGE_RUN ITS.exe
 	!define MUI_FINISHPAGE_RUN
 	!define MUI_FINISHPAGE_RUN_FUNCTION ExecAppFile
 
@@ -794,8 +794,8 @@ SectionGroup /e "!Shortcuts Section Group" SecGrpShortcuts
 		!insertmacro MUI_STARTMENU_WRITE_BEGIN Application
 			;# Create shortcuts
 			CreateDirectory "$SMPROGRAMS\$STARTMENU_FOLDER"
-			CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\OpenCPN @CPACK_PACKAGE_VERSION@.lnk" "$INSTDIR\opencpn.exe"
-			CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\OpenCPN @CPACK_PACKAGE_VERSION@ - No OpenGL.lnk" "$INSTDIR\opencpn.exe" "--no_opengl"
+			CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\ITS @CPACK_PACKAGE_VERSION@.lnk" "$INSTDIR\ITS.exe"
+			CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\ITS @CPACK_PACKAGE_VERSION@ - No OpenGL.lnk" "$INSTDIR\ITS.exe" "--no_opengl"
 			CreateDirectory "$SMPROGRAMS\$STARTMENU_FOLDER\$(Uninstall_Folder_Name)"
 			CreateShortCut "$SMPROGRAMS\$STARTMENU_FOLDER\$(Uninstall_Folder_Name)\$(Uninstall_Link).lnk" "$INSTDIR\Uninstall @CPACK_PACKAGE_VERSION@.exe"
 		!insertmacro MUI_STARTMENU_WRITE_END
@@ -803,16 +803,16 @@ SectionGroup /e "!Shortcuts Section Group" SecGrpShortcuts
 
 	Section "Desktop Shortcut Section" SecShortcutDesktop
 		SetShellVarContext all
-		CreateShortCut "$DESKTOP\OpenCPN @CPACK_PACKAGE_VERSION@.lnk" "$INSTDIR\opencpn.exe"
+		CreateShortCut "$DESKTOP\ITS @CPACK_PACKAGE_VERSION@.lnk" "$INSTDIR\ITS.exe"
 	SectionEnd
 SectionGroupEnd
 
 ;# Write Config Section
 Section "!Set Config Section" SecSetConfig
-	;# Write settings for config file (opencpn.ini) to HKLM Software\OpenCPN
+	;# Write settings for config file (opencpn.ini) to HKLM Software\ITS
 	${If} $CONFIG_SET_LANG == 1
 		;Call Write_Reg_Lang
-		WriteRegStr HKLM "Software\OpenCPN" "InstallerLanguage" $REG_LANG
+		WriteRegStr HKLM "Software\ITS" "InstallerLanguage" $REG_LANG
 	${EndIf}
 
 	${If} $CHART_DIR_TMP_FILE == 1
@@ -834,7 +834,7 @@ Section "-Install Section" SecInstall
 
 	;# Registry Entries
 	SetShellVarContext all ;# make sure that we write to HKLM
-	;# HKLM Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN <DisplayVersion>
+	;# HKLM Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS <DisplayVersion>
 	WriteRegStr SHCTX "${REG_KEY_UN}" "DisplayName" "@CPACK_PACKAGE_NAME@ @CPACK_PACKAGE_VERSION@"
 	WriteRegStr SHCTX "${REG_KEY_UN}" "DisplayVersion" "@CPACK_PACKAGE_VERSION@"
 	WriteRegStr SHCTX "${REG_KEY_UN}" "CompareVersion" "$VERSION_DATE"
@@ -851,9 +851,9 @@ Section "-Install Section" SecInstall
 	WriteRegDWORD SHCTX "${REG_KEY_UN}" "VersionPatch" $PATCH_D
 	WriteRegDWORD SHCTX "${REG_KEY_UN}" "NoModify" 1
 	WriteRegDWORD SHCTX "${REG_KEY_UN}" "NoRepair" 1
-	WriteRegStr SHCTX "${REG_KEY_UN}" "HelpLink" "http://opencpn.org/"
-	WriteRegStr SHCTX "${REG_KEY_UN}" "URLInfoAbout" "http://opencpn.org/"
-	WriteRegStr SHCTX "${REG_KEY_UN}" "Contact" "http://opencpn.org/"
+	WriteRegStr SHCTX "${REG_KEY_UN}" "HelpLink" "#"
+	WriteRegStr SHCTX "${REG_KEY_UN}" "URLInfoAbout" "#"
+	WriteRegStr SHCTX "${REG_KEY_UN}" "Contact" "#"
 	WriteRegStr SHCTX "${REG_KEY_UN}" "InstallUser" "$USERS_NAME"
 	${If} ${UAC_IsInnerInstance}
 		WriteRegStr SHCTX "${REG_KEY_UN}" "InstallAdminUser" "$USERNAME"
@@ -1010,7 +1010,7 @@ Function .onInit
 
 	;# Delete all temporary files created during the installation
 	Delete "$TEMP\opencpn_*.tmp"
-	;DeleteRegKey HKCU "Software\OpenCPN" ;# remove RegKey possibly exists - was used by versions 2.2.808 to 2.2.823
+	;DeleteRegKey HKCU "Software\ITS" ;# remove RegKey possibly exists - was used by versions 2.2.808 to 2.2.823
 
 	;# Check for unloaded Registry hive from previous installation attempt e.g. when installer crashed
 	StrCpy $0 0
@@ -1166,7 +1166,7 @@ Function myGuiInit
 	SectionSetText ${SecShortcutDesktop} $(SecShortcutDesktop_Text)
 	SectionSetText ${SecSetConfig} $(SecSetConfig_Text)
 
-	;# Look for config dir ("%APPDATA%\opencpn) and the several config files
+	;# Look for config dir ("%APPDATA%\ITS) and the several config files
 	Call Check_Config_Exists
 
 	${If} $CONFIG_EXISTS != 1
@@ -1758,12 +1758,12 @@ FunctionEnd
 					Call Update_Old_Installs
 				${EndIf}
 
-				;# Delete RegKeys in HKU Software\...\Uninstall\OpenCPN
+				;# Delete RegKeys in HKU Software\...\Uninstall\ITS
 				${If} $R6 == 1
 					Call Update_Old_Uninstalls
 				${EndIf}
 
-				;# Delete %APPDATA\opencpn folder
+				;# Delete %APPDATA\ITS folder
 				${If} $R5 == 1
 					Call Update_Appdata
 				${EndIf}
@@ -1938,7 +1938,7 @@ FunctionEnd
 			FileWriteUTF16LE $1 "$2$\r$\n"                          ;# write line to temp file
 			Goto loop
 			${TrimNewLines} $3 $3
-			RMDir /r "$3\opencpn"
+			RMDir /r "$3\ITS"
 			ClearErrors
 			Goto loop
 		done:
@@ -2148,7 +2148,7 @@ FunctionEnd
                 ${Endif}
 
 		${If} $INSTALL_TYPE == 4
-			StrCpy $INSTDIR "$PROGRAMFILES\OpenCPN @CPACK_PACKAGE_VERSION@"
+			StrCpy $INSTDIR "$PROGRAMFILES\ITS @CPACK_PACKAGE_VERSION@"
 		${EndIf}
 	FunctionEnd
 
@@ -2259,7 +2259,7 @@ FunctionEnd
 		${EndIf}
 
 		${If} $INSTALL_TYPE == 4
-		${AndIf} ${FileExists} "$INSTDIR\opencpn.exe"
+		${AndIf} ${FileExists} "$INSTDIR\ITS.exe"
 			MessageBox MB_OK|MB_ICONSTOP "$(Msg_Path_Installation_Exists)"
 			Abort
 		${EndIf}
@@ -2374,7 +2374,7 @@ FunctionEnd
 					SendMessage $ListBox_SetConfig ${LB_ADDSTRING} 0 "STR:$R5"
 					Goto loop2
 			${Else}
-				ReadRegStr $0 HKLM "Software\OpenCPN" "ChartDirs"
+				ReadRegStr $0 HKLM "Software\ITS" "ChartDirs"
 				StrCmp $0 "" cont2
 				${Explode} $3 ";" "$0"
 				${For} $1 1 $3
@@ -2659,7 +2659,7 @@ FunctionEnd
 
 
 Function Check_Config_Exists
-	;# Look for config dir ("%APPDATA%\opencpn) and the several config files
+	;# Look for config dir ("%APPDATA%\ITS) and the several config files
 	SetShellVarContext all
 
 	${IfNot} ${FileExists} "$APPDATA\@CPACK_NSIS_PACKAGE_NAME_LC@\*.*"
@@ -2851,7 +2851,7 @@ Function Users_Appdata_Paths
 	StrCmp $2 "" done
 
 	StrCpy $5 "none"
-	;# check if an OpenCPN config folder exists in the given path
+	;# check if an ITS config folder exists in the given path
 	${If} ${FileExists} "$2\@CPACK_NSIS_PACKAGE_NAME_LC@\opencpn.ini"
 		ReadINIStr $3 "$2\@CPACK_NSIS_PACKAGE_NAME_LC@\opencpn.ini" Directories S57DataLocation
 		${WordReplace} "$3" "\\" "\" "+" $4
@@ -2951,18 +2951,18 @@ FunctionEnd
 ;Var latest_pathexe
 Function Reg_Scan_Old_Versions_HKCU
 	;# Versions from 2.2.727 up to 2.2.xxxx write RegKey "ITS" to "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\"
-	;# and also RegKey "OpenCPN <version>" to "HKCU\Software\opencpn.org\"
-	;# Find latest installed version => it's the one found in "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN"
+	;# and also RegKey "ITS <version>" to "HKCU\Software\opencpn.org\"
+	;# Find latest installed version => it's the one found in "HKCU\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS"
 
-	ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN" "DisplayVersion"
+	ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS" "DisplayVersion"
 	${If} $0 != ""
 		StrCpy $latest_version $0
-		ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN" "DisplayIcon"
+		ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS" "DisplayIcon"
 		StrCpy $latest_pathexe $0
-		ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN" "UninstallString"
+		ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS" "UninstallString"
 		;StrCpy $CU_VERSION_UNINST $0
 		${WordFind} "$0" "\" "-2{*" $1
-		${If} ${FileExists} "$1\opencpn.exe"
+		${If} ${FileExists} "$1\ITS.exe"
 		${AndIf} ${FileExists} "$1\unins*.exe"
 			ClearErrors
 			${If} ${FileExists} "$TEMP\opencpn_old_uninstall_regkeys.tmp"
@@ -2974,11 +2974,11 @@ Function Reg_Scan_Old_Versions_HKCU
 
 			IfErrors done
 			FileWriteUTF16LE $R0 "$SID$\r$\n"
-			FileWriteUTF16LE $R0 "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN$\r$\n"
+			FileWriteUTF16LE $R0 "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS$\r$\n"
 			FileWriteUTF16LE $R0 "$1$\r$\n"
 			FileClose $R0
 		${Else}
-			DeleteRegKey HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN"
+			DeleteRegKey HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\ITS"
 		${EndIf}
 	${EndIf}
 
@@ -3018,10 +3018,10 @@ Function Reg_Scan_Old_Versions_HKCU
 			${WordReplace} "$R5" "%USERPROFILE%" "$USERPROFILE" "+" $R5
 			ExpandEnvStrings $R5 $R5
 			;StrCpy $CU_VERSION_INST "$R3\"
-			${If} "$R3\opencpn.exe" == $latest_pathexe
+			${If} "$R3\ITS.exe" == $latest_pathexe
 			${AndIf} $R2 != $latest_version
 				DeleteRegKey HKU "$SID\Software\opencpn.org\$R1"
-			${ElseIf} ${FileExists} "$R3\opencpn.exe"
+			${ElseIf} ${FileExists} "$R3\ITS.exe"
 			${AndIf} ${FileExists} "$R3\unins*.exe"
 				FileWriteUTF16LE $R0 "$SID\Software\opencpn.org\$R1"
 				FileWriteUTF16LE $R0 "$\r$\n"
@@ -3049,7 +3049,7 @@ FunctionEnd
 
 
 Function Quick_Scan_Old_Versions
-  ;# Scan the given Drive for file "opencpn.exe"
+  ;# Scan the given Drive for file "ITS.exe"
 	${If} ${FileExists} "$TEMP\opencpn_personal.tmp"
 		ClearErrors
 		FileOpen $R0 "$TEMP\opencpn_personal.tmp" r
@@ -3060,14 +3060,14 @@ Function Quick_Scan_Old_Versions
 			IfErrors done
 			StrCmp $R2 "" done
 			${TrimNewLines} $R2 $R2
-			${Locate} "$R2" "/L=F /M=opencpn.exe" "Found_OpenCPN_Installation"
+			${Locate} "$R2" "/L=F /M=ITS.exe" "Found_OpenCPN_Installation"
 		${Loop}
 		done:
 		FileClose $R0
 	${EndIf}
 
 	end:
-	${Locate} "$PROGRAMFILES" "/L=F /M=opencpn.exe" "Found_OpenCPN_Installation"
+	${Locate} "$PROGRAMFILES" "/L=F /M=ITS.exe" "Found_OpenCPN_Installation"
 FunctionEnd
 
 
@@ -3129,7 +3129,7 @@ FunctionEnd
 
 
 Function Scan_Drive
-  ;# Scan the given Drive for file "opencpn.exe"
+  ;# Scan the given Drive for file "ITS.exe"
 	/*;#DEBUG - scan only crtain drives
 	${IfNot} $9 == "D:\"
 	;${AndIfNot} $9 == "F:\"
@@ -3139,7 +3139,7 @@ Function Scan_Drive
 	StrCpy $3 "$(Banner_Scan_Drive)"
 	GetDlgItem $2 $Banner_Handle 76
 	SendMessage $2 ${WM_SETTEXT} 0 "STR:$3"
-	${Locate} "$9" "/L=F /M=opencpn.exe" "Found_OCPN_Exe"
+	${Locate} "$9" "/L=F /M=ITS.exe" "Found_OCPN_Exe"
 	end:
 	Push $0
 FunctionEnd
@@ -3256,8 +3256,8 @@ Function Delete_Installation_Dir
 	${EndIf}
 
 	;# Check files and delete them ...
-	${If} ${FileExists} "$Uninstall_Path_Tmp\opencpn.exe"
-		Delete "$Uninstall_Path_Tmp\opencpn.exe"
+	${If} ${FileExists} "$Uninstall_Path_Tmp\ITS.exe"
+		Delete "$Uninstall_Path_Tmp\ITS.exe"
 	${EndIf}
 
 	${If} ${FileExists} "$Uninstall_Path_Tmp\license.txt"
@@ -3330,7 +3330,7 @@ FunctionEnd
 
 
 Function ExecAppFile
-    !insertmacro UAC_AsUser_ExecShell 'open' '$INSTDIR\opencpn.exe' '' '$INSTDIR' ''
+    !insertmacro UAC_AsUser_ExecShell 'open' '$INSTDIR\ITS.exe' '' '$INSTDIR' ''
 	loop:
     System::Call user32::GetForegroundWindow()i.r0
     Sleep 200
@@ -3423,7 +3423,7 @@ Function Write_Reg_ChartDirs
 		Goto loop
 	done:
 		FileClose $R0
-		WriteRegStr HKLM "Software\OpenCPN" "ChartDirs" $REG_CHARTDIRS
+		WriteRegStr HKLM "Software\ITS" "ChartDirs" $REG_CHARTDIRS
 	end:
 FunctionEnd
 
@@ -3840,7 +3840,7 @@ Var Patch_Date
 			IfErrors 0 +2
 			StrCpy $6 0
 			;#NON-DEBUG
-			${If} $7 == "opencpn"
+			${If} $7 == "ITS"
 			${OrIf} $7 == "Uninstall"
 			${OrIf} $7 == "unins000"
 			${OrIf} $6 == 1
@@ -3892,7 +3892,7 @@ Var Patch_Date
 					Pop $1
 					${WordFind2X} "$1" "\" ".exe" "-1" $7
 					;#NON-DEBUG
-					${If} $7 == "opencpn"
+					${If} $7 == "ITS"
 					${OrIf} $7 == "Uninstall"
 					${OrIf} $7 == "unins000"
 						Delete "$R2$CurrentDirVar\$CurrentFileVar"
@@ -3964,7 +3964,7 @@ Var Patch_Date
 			IfErrors 0 +2
 			StrCpy $6 0
 			;#NON-DEBUG
-			${If} $7 == "opencpn"
+			${If} $7 == "ITS"
 			${OrIf} $7 == "Uninstall"
 			${OrIf} $7 == "unins000"
 			${OrIf} $6 == 1
@@ -4015,7 +4015,7 @@ Var Patch_Date
 					Pop $1
 					${WordFind2X} "$1" "\" ".exe" "-1" $7
 					;#NON-DEBUG
-					${If} $7 == "opencpn"
+					${If} $7 == "ITS"
 					${OrIf} $7 == "Uninstall"
 					${OrIf} $7 == "unins000"
 						Delete "$R2$CurrentDirVar\$CurrentFileVar"
@@ -4344,7 +4344,7 @@ Var explArrCount
 	LangString LangDialog_Text ${LANG_ENGLISH} "Please select a language:"
 
    ;License dialog
-	LangString License_Message ${LANG_ENGLISH} "OpenCPN is software libre. You are encouraged and legally \
+	LangString License_Message ${LANG_ENGLISH} "ITS is software libre. You are encouraged and legally \
         entitled to copy, reinstall, modify, and redistribute this program \
         for yourself and your friends under the terms of the GPL. $\r$\nSmooth sailing!"
 
@@ -4353,7 +4353,7 @@ Var explArrCount
 
 	LangString Scanning_HDD ${LANG_ENGLISH} "Scanning HDD ..."
 
-	LangString OCPN_Scanning_HDD ${LANG_ENGLISH} "OpenCPN: Scan HDD ..., please wait!"
+	LangString OCPN_Scanning_HDD ${LANG_ENGLISH} "ITS: Scan HDD ..., please wait!"
 
 	LangString Search_old_installations ${LANG_ENGLISH} "Searching for old installations"
 
@@ -4402,9 +4402,9 @@ Var explArrCount
   ;Set Config page
 	LangString Page_SetConfig_Title ${LANG_ENGLISH} "Default configuration settings"
 
-	LangString Page_SetConfig_Subtitle ${LANG_ENGLISH} "Preconfigure settings for OpenCPN"
+	LangString Page_SetConfig_Subtitle ${LANG_ENGLISH} "Preconfigure settings for ITS"
 
-	LangString Select_Chart_Directory ${LANG_ENGLISH} "Please select a chart directory to add to OpenCPN"
+	LangString Select_Chart_Directory ${LANG_ENGLISH} "Please select a chart directory to add to ITS"
 
 	LangString BT_Browse_SetConfig_Text ${LANG_ENGLISH} "Browse..."
 
@@ -4414,11 +4414,11 @@ Var explArrCount
 
 	LangString GB_ChartDir_SetConfig_Text ${LANG_ENGLISH} "Add Chart Directory"
 
-	LangString CB_Language_SetConfig_Text ${LANG_ENGLISH} "Set OpenCPN program language to $LANG_NAME"
+	LangString CB_Language_SetConfig_Text ${LANG_ENGLISH} "Set ITS program language to $LANG_NAME"
 
-	LangString GB_Language_SetConfig_Text ${LANG_ENGLISH} "Set OpenCPN program language"
+	LangString GB_Language_SetConfig_Text ${LANG_ENGLISH} "Set ITS program language"
 
-	LangString Label_SetConfig_Text ${LANG_ENGLISH} "Configure preconfig settings for the OpenCPN program.$\r$\nThese settings are saved in the file opencpn.ini."
+	LangString Label_SetConfig_Text ${LANG_ENGLISH} "Configure preconfig settings for the ITS program.$\r$\nThese settings are saved in the file opencpn.ini."
 
   ;Confirm page
 	LangString Page_Confirm_Title ${LANG_ENGLISH} "Ready to Install"
@@ -4453,7 +4453,7 @@ Var explArrCount
 
   ;Installer Sections
 	;Reset config
-	LangString SecGrpResetConfig_Text ${LANG_ENGLISH} "Reset ALL OpenCPN configuration files"
+	LangString SecGrpResetConfig_Text ${LANG_ENGLISH} "Reset ALL ITS configuration files"
 
 	;Delete Config file (opencpn.ini)
 	LangString SecDeleteConfigFile_Text ${LANG_ENGLISH} "Delete config file (opencpn.ini)"
@@ -4474,7 +4474,7 @@ Var explArrCount
 	LangString SecDeleteNavobjFile_Text ${LANG_ENGLISH} "Delete Navobject file (navobj.xml)"
 
 	;Set config
-	LangString SecSetConfig_Text ${LANG_ENGLISH} "OpenCPN Configuration Settings"
+	LangString SecSetConfig_Text ${LANG_ENGLISH} "ITS Configuration Settings"
 
 	;Set language
 	LangString SecSetConfigLang_Text ${LANG_ENGLISH} "Set language to $LANG_NAME"
@@ -4499,15 +4499,15 @@ Var explArrCount
 
 	LangString SecDeleteNavobjFile_Desc ${LANG_ENGLISH} "Deletes the file 'navobj.xml' in the config folder. This file contains the Tracks."
 
-	LangString SecDeleteLogFile_Desc ${LANG_ENGLISH} "Deletes the OpenCPN log file 'its.log'."
+	LangString SecDeleteLogFile_Desc ${LANG_ENGLISH} "Deletes the ITS log file 'its.log'."
 
 	LangString SecGrpShortcuts_Desc ${LANG_ENGLISH} "Creates shortcuts in both, the Start Menu and on the Desktop."
 
-	LangString SecShortcutStartmenu_Desc ${LANG_ENGLISH} "Creates shortcuts for OpenCPN and the Uninstaller in the Start Menu - configurable on the next page."
+	LangString SecShortcutStartmenu_Desc ${LANG_ENGLISH} "Creates shortcuts for ITS and the Uninstaller in the Start Menu - configurable on the next page."
 
-	LangString SecShortcutDesktop_Desc ${LANG_ENGLISH} "Creates a shortcut for OpenCPN on the Desktop."
+	LangString SecShortcutDesktop_Desc ${LANG_ENGLISH} "Creates a shortcut for ITS on the Desktop."
 
-	LangString SecSetConfig_Desc ${LANG_ENGLISH} "Preconfigure the language setting and the chart dir(s) for OpenCPN. When selected a separate page is shown for configuration."
+	LangString SecSetConfig_Desc ${LANG_ENGLISH} "Preconfigure the language setting and the chart dir(s) for ITS. When selected a separate page is shown for configuration."
 
   ;Uninstaller Descriptions
 	LangString UnSecDeleteConfigFolder_Desc ${LANG_ENGLISH} "Deletes the config folder and all its files and subdirectories."
@@ -4520,45 +4520,45 @@ Var explArrCount
 	LangString Page_TypeInst_Title ${LANG_ENGLISH} "Previous Installations"
 
 	;Subtitle
-    LangString Page_TypeInst_Subtitle ${LANG_ENGLISH} "$MULTIPLE_INSTALLS installations of OpenCPN found.$\r$\nChoose how you want to install OpenCPN."
+    LangString Page_TypeInst_Subtitle ${LANG_ENGLISH} "$MULTIPLE_INSTALLS installations of ITS found.$\r$\nChoose how you want to install ITS."
 
   ;Multiple Install = 1
     ;Title
 	LangString Page_TypeInst_Title_1 ${LANG_ENGLISH} "Already Installed"
 
 	;Subtitle
-    LangString Page_TypeInst_Subtitle_1 ${LANG_ENGLISH} "Found installed version of OpenCPN.$\r$\nChoose how you want to install OpenCPN."
+    LangString Page_TypeInst_Subtitle_1 ${LANG_ENGLISH} "Found installed version of ITS.$\r$\nChoose how you want to install ITS."
 
   ;Version exists
     ;Title
 	LangString Page_TypeInst_Title_Exists ${LANG_ENGLISH} "Version Already Installed"
 
 	;Subtitle
-    LangString Page_TypeInst_Subtitle_Exists ${LANG_ENGLISH} "OpenCPN @CPACK_PACKAGE_VERSION@ is already installed.$\r$\nChoose how you want to install OpenCPN."
+    LangString Page_TypeInst_Subtitle_Exists ${LANG_ENGLISH} "ITS @CPACK_PACKAGE_VERSION@ is already installed.$\r$\nChoose how you want to install ITS."
 
 	;Label
-	LangString Label_TypeInst_Reinstall_Text ${LANG_ENGLISH} "OpenCPN @CPACK_PACKAGE_VERSION@ is already installed on your system. You can reinstall the version now using the previous settings. If you wish to install the program with different settings, cancel installation and un-install the existing version first. Click Next to continue."
+	LangString Label_TypeInst_Reinstall_Text ${LANG_ENGLISH} "ITS @CPACK_PACKAGE_VERSION@ is already installed on your system. You can reinstall the version now using the previous settings. If you wish to install the program with different settings, cancel installation and un-install the existing version first. Click Next to continue."
 
 	;Radio button 'Reinstall'
 	LangString RB_Reinstall_TypeInst_Text ${LANG_ENGLISH} "Reinstall using previous settings"
 
   ;Version newer
 	;Label
-    LangString Label_TypeInst_Upgrade_Text ${LANG_ENGLISH} "An older version of OpenCPN is installed on your system. Select the installation type you want to perform and click Next to continue."
+    LangString Label_TypeInst_Upgrade_Text ${LANG_ENGLISH} "An older version of ITS is installed on your system. Select the installation type you want to perform and click Next to continue."
 
 	;Radio button 'Upgrade'
-	LangString RB_Upgrade_TypeInst_Text ${LANG_ENGLISH} "Upgrade OpenCPN using previous settings (recommended)"
+	LangString RB_Upgrade_TypeInst_Text ${LANG_ENGLISH} "Upgrade ITS using previous settings (recommended)"
 
   ;Version older
 	;Label
-    LangString Label_TypeInst_Downgrade_Text ${LANG_ENGLISH} "A newer version of OpenCPN is installed on your system. It is not recommended to downgrade to an older version. Select the installation type you want to perform and click Next to continue."
+    LangString Label_TypeInst_Downgrade_Text ${LANG_ENGLISH} "A newer version of ITS is installed on your system. It is not recommended to downgrade to an older version. Select the installation type you want to perform and click Next to continue."
 
 	;Radio button 'Downgrade'
-	LangString RB_Downgrade_TypeInst_Text ${LANG_ENGLISH} "Downgrade OpenCPN using previous settings (recommended)"
+	LangString RB_Downgrade_TypeInst_Text ${LANG_ENGLISH} "Downgrade ITS using previous settings (recommended)"
 
   ;Multiple versions
 	;Label
-	LangString Label_TypeInst_Parallel_Text ${LANG_ENGLISH} "Setup has detected several installed versions of OpenCPN on your system. It is recommended to have only one version of OpenCPN installed at a time. Select the operation you want to perform and click Next to continue."
+	LangString Label_TypeInst_Parallel_Text ${LANG_ENGLISH} "Setup has detected several installed versions of ITS on your system. It is recommended to have only one version of ITS installed at a time. Select the operation you want to perform and click Next to continue."
 
 	;Radio button 'Parallel Installation'
 	LangString RB_Parallel_TypeInst_Text ${LANG_ENGLISH} "Parallel Installation (advanced users)"
@@ -4569,7 +4569,7 @@ Var explArrCount
   ;Finish page
 	LangString Show_Readme_Text ${LANG_ENGLISH} "Show Install Log file"
 
-	LangString Finish_Link_Text ${LANG_ENGLISH} "OpenCPN website (Internet connection required)"
+	LangString Finish_Link_Text ${LANG_ENGLISH} "ITS website (Internet connection required)"
 
 	LangString Finish_Link_URL ${LANG_ENGLISH} "http://opencpn.info/?ref=installer&user=$USERS_NAME&lang=$REG_LANG&version=@CPACK_PACKAGE_VERSION@"
 
@@ -4586,9 +4586,9 @@ Var explArrCount
 
 	LangString Msg_Path_Invalid ${LANG_ENGLISH} "The entered path is invalid!$\r$\n$\r$\nPlease check your input."
 
-	LangString Msg_Path_Installation_Exists ${LANG_ENGLISH} "There already exists an installation of OpenCPN in the given path.$\r$\nIf you wish to use this path, first uninstall the version. Or select another path for this installation."
+	LangString Msg_Path_Installation_Exists ${LANG_ENGLISH} "There already exists an installation of ITS in the given path.$\r$\nIf you wish to use this path, first uninstall the version. Or select another path for this installation."
 
-	LangString Msg_Uninstall_Old_Versions ${LANG_ENGLISH} "Setup has detected at least one older version of OpenCPN which is not compatible with the new version control.$\r$\n\
+	LangString Msg_Uninstall_Old_Versions ${LANG_ENGLISH} "Setup has detected at least one older version of ITS which is not compatible with the new version control.$\r$\n\
 		It is recommended to first uninstall all of these installations (this does not affect your Config files) and clean-up the Registry.$\r$\n\
 		If you click Yes on the next page a listbox with all installation locations will be shown and you will have the possibility to select the installations you wish to uninstall.$\r$\n\
 		If you are unsure about possible other previous installations than those shown in the listbox, you can also perform a scan of the entire \
