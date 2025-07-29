@@ -1,7 +1,7 @@
 /******************************************************************************
  *
  * Project:  ITS
- * Purpose:  OpenCPN Main wxWidgets Program
+ * Purpose:  ITS Main wxWidgets Program
  * Author:   David Register
  *
  ***************************************************************************

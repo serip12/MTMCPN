@@ -348,9 +348,9 @@ wxString message_by_status(PluginStatus stat) {
     case PluginStatus::System:
       return _("Plugin is a standard system plugin");
     case PluginStatus::Managed:
-      return _("Plugin is managed by OpenCPN");
+      return _("Plugin is managed by ITS");
     case PluginStatus::Unmanaged:
-      return _("Plugin is not managed by OpenCPN");
+      return _("Plugin is not managed by ITS");
     case PluginStatus::Ghost:
       return ("");
     case PluginStatus::Unknown:
@@ -615,7 +615,7 @@ static void run_update_dialog(PluginListPanel* parent, const PlugInData* pic,
         auto loader = PluginLoader::GetInstance();
         if (!loader->CheckPluginCompatibility(str)) {
           wxString msg =
-              _("The plugin is not compatible with this version of OpenCPN, "
+              _("The plugin is not compatible with this version of ITS, "
                 "and will be uninstalled.");
           OCPNMessageBox(NULL, msg, wxString(_("ITS Info")),
                          wxICON_INFORMATION | wxOK, 10);
@@ -2135,7 +2135,7 @@ wxArrayString PlugInManager::GetPlugInChartClassNameArray(void) {
 //-------------------------------------------------------------------------------
 
 #define DISABLED_SETTINGS_MSG                                               \
-  _("These settings might destabilize OpenCPN and are by default disabled." \
+  _("These settings might destabilize ITS and are by default disabled." \
     " To despite the dangers enable them manually add a CatalogExpert=1"    \
     " line in the [PlugIns] section in the configuration file.")
 

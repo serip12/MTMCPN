@@ -1773,7 +1773,7 @@ void CanvasMenuHandler::PopupMenuHandler(wxCommandEvent &event) {
           dlg.SetScanOnCreate(true);
 
         dlg.SetScanTime(5);  // seconds
-        dlg.Create(NULL, -1, _("Send Waypoint to OpenCPN Peer") + _T( "..." ),
+        dlg.Create(NULL, -1, _("Send Waypoint to ITS Peer") + _T( "..." ),
                    _T(""));
         dlg.ShowModal();
       }
@@ -1818,7 +1818,7 @@ void CanvasMenuHandler::PopupMenuHandler(wxCommandEvent &event) {
           dlg.SetScanOnCreate(true);
 
         dlg.SetScanTime(5);  // seconds
-        dlg.Create(NULL, -1, _("Send Route to OpenCPN Peer") + _T( "..." ),
+        dlg.Create(NULL, -1, _("Send Route to ITS Peer") + _T( "..." ),
                    _T(""));
         dlg.ShowModal();
       }
@@ -1951,7 +1951,7 @@ void CanvasMenuHandler::PopupMenuHandler(wxCommandEvent &event) {
           dlg.SetScanOnCreate(true);
 
         dlg.SetScanTime(5);  // seconds
-        dlg.Create(NULL, -1, _("Send Track to OpenCPN Peer") + _T( "..." ),
+        dlg.Create(NULL, -1, _("Send Track to ITS Peer") + _T( "..." ),
                    _T(""));
         dlg.ShowModal();
       }

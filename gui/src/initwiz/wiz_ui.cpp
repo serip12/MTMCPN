@@ -99,7 +99,7 @@ FirstUseWizImpl::FirstUseWizImpl(wxWindow* parent, MyConfig* pConfig,
         "tab."));
   // Quick start guide
   m_htmlWinFinish->SetPage(
-      _("<html><body><h1>Welcome to OpenCPN!</h1><p>You have successfully "
+      _("<html><body><h1>Welcome to ITS!</h1><p>You have successfully "
         "completed the initial configuration. You can now start using the "
         "application.</p></body></html>"));
 }

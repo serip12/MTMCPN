@@ -611,7 +611,7 @@ void MarkInfoDlg::Create() {
       new wxTextCtrl(sbSizerExtProperties->GetStaticBox(), wxID_ANY,
                      wxEmptyString, wxDefaultPosition, wxDefaultSize, 0);
   m_textArrivalRadius->SetToolTip(
-      _("Distance from the waypoint at which OpenCPN will consider the "
+      _("Distance from the waypoint at which ITS will consider the "
         "waypoint reached. Used for automatic waypoint advancement during "
         "active navigation."));
   gbSizerInnerExtProperties1->Add(m_textArrivalRadius, 0, wxALL | wxEXPAND, 5);

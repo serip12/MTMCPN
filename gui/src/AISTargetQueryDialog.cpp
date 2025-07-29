@@ -175,7 +175,7 @@ void AISTargetQueryDialog::OnIdTrkCreateClick(wxCommandEvent &event) {
                 gFrame,
                 _("The recently captured track of this target has been "
                   "recorded.\nDo you want to continue recording until the end "
-                  "of the current OpenCPN session?"),
+                  "of the current ITS session?"),
                 _("ITS Info"), wxYES_NO | wxCENTER, 60)) {
           td->b_PersistTrack = true;
           g_pAIS->m_persistent_tracks[td->MMSI] = t;

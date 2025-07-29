@@ -968,7 +968,7 @@ void MMSIEditDialog::CreateControls(void) {
 
   m_cbTrackPersist = new wxCheckBox(this, wxID_ANY, _("Persistent"));
   m_cbTrackPersist->SetToolTip(
-      _("Save this vessel's track between OpenCPN sessions. Useful for vessels "
+      _("Save this vessel's track between ITS sessions. Useful for vessels "
         "you want to monitor continuously over time."));
   gridSizer->Add(m_cbTrackPersist, 0, wxALL, 5);
 
@@ -986,7 +986,7 @@ void MMSIEditDialog::CreateControls(void) {
   m_MOBButton = new wxCheckBox(this, wxID_ANY,
                                _("Handle this MMSI as SART/PLB(AIS) MOB."));
   m_MOBButton->SetToolTip(
-      _("When checked, OpenCPN will display a special icon for this device, "
+      _("When checked, ITS will display a special icon for this device, "
         "sound a distinctive alarm, and automatically create a temporary MOB "
         "route from your vessel to this device in emergency. For crew safety "
         "devices, you can assign the crew member's name using the Name "
@@ -1830,7 +1830,7 @@ void options::Init(void) {
 
 static const wxString BAD_ACCESS_MSG = _(
     "The device selected is not accessible; opencpn will likely not be able\n"
-    "to use this device as-is. You might want to exit OpenCPN, reboot and\n"
+    "to use this device as-is. You might want to exit ITS, reboot and\n"
     "retry after creating a file called /etc/udev/rules.d/70-opencpn.rules\n"
     "with the following contents:\n\n"
     "            KERNEL==\"ttyUSB*\", MODE=\"0666\"\n"
@@ -1842,7 +1842,7 @@ static const wxString BAD_ACCESS_MSG = _(
 
 static const wxString BAD_ACCESS_MSG = _(R"(
 The device selected is not accessible; opencpn will likely not be able
-to use this device as-is. You might want to exit OpenCPN, reboot and
+to use this device as-is. You might want to exit ITS, reboot and
 retry after creating a file called /etc/udev/rules.d/70-opencpn.rules
 with the following contents:
 
@@ -8137,7 +8137,7 @@ void options::OnButtoncompressClick(wxCommandEvent& event) {
   }
 
   if (OCPNMessageBox(this, _("Compression will alter chart files on disk.\n\
-This may make them incompatible with other programs or older versions of OpenCPN.\n\
+This may make them incompatible with other programs or older versions of ITS.\n\
 Compressed charts may take slightly longer to load and display on some systems.\n\
 They can be decompressed again using unxz or 7 zip programs."),
                      _("ITS Warning"),
@@ -9439,7 +9439,7 @@ OpenGLOptionsDlg::OpenGLOptionsDlg(wxWindow* parent)
   m_cbPolygonSmoothing = new wxCheckBox(this, wxID_ANY, _("Polygon Smoothing"));
   m_cbLineSmoothing = new wxCheckBox(this, wxID_ANY, _("Line Smoothing"));
   m_cbSoftwareGL =
-      new wxCheckBox(this, wxID_ANY, _("Software OpenGL (restart OpenCPN)"));
+      new wxCheckBox(this, wxID_ANY, _("Software OpenGL (restart ITS)"));
   m_cbUseAcceleratedPanning =
       new wxCheckBox(this, wxID_ANY, _("Use Accelerated Panning"));
 

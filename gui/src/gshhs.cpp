@@ -2,7 +2,7 @@
  *
  * Project:  ITS
  * Purpose:  GSHHS Chart Object (Global Self-consistent, Hierarchical,
- *High-resolution Shoreline) Author:   Jesper Weissglas for the OpenCPN port.
+ *High-resolution Shoreline) Author:   Jesper Weissglas for the ITS port.
  *
  *           Derived from http://www.zygrib.org/ and
  *http://sourceforge.net/projects/qtvlm/ which has the original copyright:

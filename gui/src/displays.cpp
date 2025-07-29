@@ -1,7 +1,7 @@
 /***************************************************************************
  *
  * Project:  ITS
- * Purpose:  OpenCPN Display utilities
+ * Purpose:  ITS Display utilities
  * Author:   David Register
  *
  ***************************************************************************
