@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
-Name=OpenCPN
-Comment=Open source chart plotter / navigator
+Name=ITS
+Comment=ITS
 Exec=opencpn
 Icon=opencpn
 StartupNotify=true

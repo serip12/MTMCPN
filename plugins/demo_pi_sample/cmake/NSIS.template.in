@@ -11,7 +11,7 @@ CMake variables
 	CPACK_PACKAGE_VERSION_MINOR ${VERSION_MINOR}
 	CPACK_PACKAGE_VERSION_PATCH ${VERSION_PATCH}
 	CPACK_PACKAGE_VERSION ${PACKAGE_VERSION}
-	CPACK_NSIS_INSTALLED_ICON_NAME "opencpn.exe"
+	CPACK_NSIS_INSTALLED_ICON_NAME "ITS.exe"
 	CPACK_PACKAGE_ICON "${PROJECT_SOURCE_DIR}/src/bitmaps\\\\opencpn.ico"
 	CPACK_NSIS_EXTRA_INSTALL_COMMANDS ${CPACK_NSIS_EXTRA_INSTALL_COMMANDS}
 	CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/data/license.txt"
@@ -37,7 +37,7 @@ CMake variables
 ;# You must define these values
 	!define OCPN_INSTALLER_VERSION "1.0.0"
 	/*
-	!define CPACK_NSIS_INSTALLED_ICON_NAME "opencpn.exe"
+	!define CPACK_NSIS_INSTALLED_ICON_NAME "ITS.exe"
 	!define CPACK_NSIS_PACKAGE_NAME_LC "opencpn"
 	!define CPACK_NSIS_DISPLAY_NAME "${CPACK_PACKAGE_NAME} ${PACKAGE_VERSION}"
 	!define CPACK_PACKAGE_ICON "${PROJECT_SOURCE_DIR}/src/bitmaps/opencpn.ico"
@@ -667,7 +667,7 @@ FunctionEnd
 
 	;# Finish page
 
-	#!define MUI_FINISHPAGE_RUN opencpn.exe
+	#!define MUI_FINISHPAGE_RUN ITS.exe
 #	!define MUI_FINISHPAGE_RUN
 #	!define MUI_FINISHPAGE_RUN_FUNCTION ExecAppFile
 
@@ -2250,7 +2250,7 @@ FunctionEnd
 		${EndIf}
 
                 ${If} $INSTALL_TYPE == 4
-		${AndIf} ${FileExists} "$INSTDIR\opencpn.exe"
+		${AndIf} ${FileExists} "$INSTDIR\ITS.exe"
 			MessageBox MB_OK|MB_ICONSTOP "$(Msg_Path_Installation_Exists)"
 			Abort
 		${EndIf}
@@ -2771,7 +2771,7 @@ Function Reg_Scan_Old_Versions_HKLM
 			StrCpy $LM_VERSION_UNINST $3
 			ReadRegStr $4 HKLM Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN_is1 "InstallLocation"
 			${TrimNewLines} $4 $4
-			${If} ${FileExists} "$4opencpn.exe"
+			${If} ${FileExists} "$4ITS.exe"
 			${AndIf} ${FileExists} "$4unins*.exe"
 				;# check if last character of $4 is a "\" and if so remove it
 				${RIndexOf} $6 "$4" "\"
@@ -2965,7 +2965,7 @@ Function Reg_Scan_Old_Versions_HKCU
 		ReadRegStr $0 HKU "$SID\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN" "UninstallString"
 		;StrCpy $CU_VERSION_UNINST $0
 		${WordFind} "$0" "\" "-2{*" $1
-		${If} ${FileExists} "$1\opencpn.exe"
+		${If} ${FileExists} "$1\ITS.exe"
 		${AndIf} ${FileExists} "$1\unins*.exe"
 			ClearErrors
 			${If} ${FileExists} "$TEMP\opencpn_old_uninstall_regkeys.tmp"
@@ -3021,10 +3021,10 @@ Function Reg_Scan_Old_Versions_HKCU
 			${WordReplace} "$R5" "%USERPROFILE%" "$USERPROFILE" "+" $R5
 			ExpandEnvStrings $R5 $R5
 			;StrCpy $CU_VERSION_INST "$R3\"
-			${If} "$R3\opencpn.exe" == $latest_pathexe
+			${If} "$R3\ITS.exe" == $latest_pathexe
 			${AndIf} $R2 != $latest_version
 				DeleteRegKey HKU "$SID\Software\opencpn.org\$R1"
-			${ElseIf} ${FileExists} "$R3\opencpn.exe"
+			${ElseIf} ${FileExists} "$R3\ITS.exe"
 			${AndIf} ${FileExists} "$R3\unins*.exe"
 				FileWriteUTF16LE $R0 "$SID\Software\opencpn.org\$R1"
 				FileWriteUTF16LE $R0 "$\r$\n"
@@ -3052,7 +3052,7 @@ FunctionEnd
 
 
 Function Quick_Scan_Old_Versions
-  ;# Scan the given Drive for file "opencpn.exe"
+  ;# Scan the given Drive for file "ITS.exe"
 	${If} ${FileExists} "$TEMP\opencpn_personal.tmp"
 		ClearErrors
 		FileOpen $R0 "$TEMP\opencpn_personal.tmp" r
@@ -3063,14 +3063,14 @@ Function Quick_Scan_Old_Versions
 			IfErrors done
 			StrCmp $R2 "" done
 			${TrimNewLines} $R2 $R2
-			${Locate} "$R2" "/L=F /M=opencpn.exe" "Found_OpenCPN_Installation"
+			${Locate} "$R2" "/L=F /M=ITS.exe" "Found_OpenCPN_Installation"
 		${Loop}
 		done:
 		FileClose $R0
 	${EndIf}
 
 	end:
-	${Locate} "$PROGRAMFILES" "/L=F /M=opencpn.exe" "Found_OpenCPN_Installation"
+	${Locate} "$PROGRAMFILES" "/L=F /M=ITS.exe" "Found_OpenCPN_Installation"
 FunctionEnd
 
 
@@ -3132,7 +3132,7 @@ FunctionEnd
 
 
 Function Scan_Drive
-  ;# Scan the given Drive for file "opencpn.exe"
+  ;# Scan the given Drive for file "ITS.exe"
 	/*;#DEBUG - scan only crtain drives
 	${IfNot} $9 == "D:\"
 	;${AndIfNot} $9 == "F:\"
@@ -3142,7 +3142,7 @@ Function Scan_Drive
 	StrCpy $3 "$(Banner_Scan_Drive)"
 	GetDlgItem $2 $Banner_Handle 76
 	SendMessage $2 ${WM_SETTEXT} 0 "STR:$3"
-	${Locate} "$9" "/L=F /M=opencpn.exe" "Found_OCPN_Exe"
+	${Locate} "$9" "/L=F /M=ITS.exe" "Found_OCPN_Exe"
 	end:
 	Push $0
 FunctionEnd
@@ -3259,8 +3259,8 @@ Function Delete_Installation_Dir
 	${EndIf}
 
 	;# Check files and delete them ...
-	${If} ${FileExists} "$Uninstall_Path_Tmp\opencpn.exe"
-		Delete "$Uninstall_Path_Tmp\opencpn.exe"
+	${If} ${FileExists} "$Uninstall_Path_Tmp\ITS.exe"
+		Delete "$Uninstall_Path_Tmp\ITS.exe"
 	${EndIf}
 
 	${If} ${FileExists} "$Uninstall_Path_Tmp\license.txt"
@@ -3333,7 +3333,7 @@ FunctionEnd
 
 
 Function ExecAppFile
-    !insertmacro UAC_AsUser_ExecShell 'open' '$INSTDIR\opencpn.exe' '' '$INSTDIR' ''
+    !insertmacro UAC_AsUser_ExecShell 'open' '$INSTDIR\ITS.exe' '' '$INSTDIR' ''
 	loop:
     System::Call user32::GetForegroundWindow()i.r0
     Sleep 200

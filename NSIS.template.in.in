@@ -2768,7 +2768,7 @@ Function Reg_Scan_Old_Versions_HKLM
 			StrCpy $LM_VERSION_UNINST $3
 			ReadRegStr $4 HKLM Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenCPN_is1 "InstallLocation"
 			${TrimNewLines} $4 $4
-			${If} ${FileExists} "$4opencpn.exe"
+			${If} ${FileExists} "$4ITS.exe"
 			${AndIf} ${FileExists} "$4unins*.exe"
 				;# check if last character of $4 is a "\" and if so remove it
 				${RIndexOf} $6 "$4" "\"

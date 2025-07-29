@@ -67,7 +67,7 @@ if (APPLE)
 elseif (QT_ANDROID)
   set(PACKAGE_NAME gorp)
 else ()
-  set(PACKAGE_NAME opencpn)
+  set(PACKAGE_NAME ITS)
 endif ()
 
 project(ITS)
@@ -2571,8 +2571,8 @@ if (WIN32)
   # There is a bug in NSI that does not handle full unix paths properly. Make
   # sure there is at least one set of four (4) backlasshes.
 
-  set(CPACK_NSIS_INSTALLED_ICON_NAME "opencpn.exe")
-  set(CPACK_NSIS_PACKAGE_NAME_LC "opencpn")
+  set(CPACK_NSIS_INSTALLED_ICON_NAME "ITS.exe")
+  set(CPACK_NSIS_PACKAGE_NAME_LC "ITS")
   set(CPACK_NSIS_DIR "${CMAKE_SOURCE_DIR}/buildwin/NSIS_Unicode") # Gunther
   set(CPACK_BUILDWIN_DIR "${CMAKE_SOURCE_DIR}/buildwin") # Gunther
 

@@ -5,7 +5,7 @@ if ("${CMAKE_BINARY_DIR}" STREQUAL "")
 endif ()
 
 set (mingw_bundle_dlls "${CMAKE_BINARY_DIR}/../mingw/tools/mingw-bundle-dlls")
-file(GLOB opencpn_exe "${CMAKE_BINARY_DIR}/*opencpn.exe")
+file(GLOB opencpn_exe "${CMAKE_BINARY_DIR}/*ITS.exe")
 execute_process(
     COMMAND python3 ${mingw_bundle_dlls} ${opencpn_exe}
     OUTPUT_VARIABLE MINGW_LIBS
