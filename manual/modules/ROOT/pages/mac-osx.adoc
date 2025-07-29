@@ -143,7 +143,7 @@ When building OpenCPN on Apple Silicon Macs, additional configuration
 may be needed to handle code signing and architecture.
 After building, sign the application with an ad-hoc signature:
 
- $ codesign --force --deep --sign - /path/bin/OpenCPN.app
+ $ codesign --force --deep --sign - /path/bin/ITS.app
 
 Note: These settings create a build that can run locally but
 isn't suitable for distribution through the App Store.
@@ -163,7 +163,7 @@ set of the wxWidgets dynamic library into the install directory, causing
 OpenCPN to fail. This is intended, but gets annoying for local bundles
 not intended to be distributed. A kludgey fix:
 
- $ sudo rm /usr/local/bin/OpenCPN.app/Contents/MacOS/libwx*dylib
+ $ sudo rm /usr/local/bin/ITS.app/Contents/MacOS/libwx*dylib
 
 Build the installable PKG:
 

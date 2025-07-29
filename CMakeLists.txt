@@ -1898,7 +1898,7 @@ if (APPLE)
   set(MACOSX_BUNDLE_ICON_FILE opencpn.icns)
   set(MACOSX_BUNDLE_SHORT_VERSION_STRING "${PACKAGE_VERSION}")
   set(MACOSX_BUNDLE_BUNDLE_NAME "ITS")
-  set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.opencpn")
+  set(MACOSX_BUNDLE_GUI_IDENTIFIER "org.ITS")
 
   if (OCPN_BUNDLE_DOCS)
     set(DOC_FILES data/doc/help_web.html
@@ -2718,7 +2718,7 @@ if (APPLE)
   add_custom_target(
     component-pkg
     COMMAND
-      pkgbuild --root /tmp/opencpn/bin/ITS.app --identifier org.opencpn
+      pkgbuild --root /tmp/opencpn/bin/ITS.app --identifier org.ITS
       --install-location /Applications/ITS.app
       --scripts "${CMAKE_SOURCE_DIR}/buildosx/scripts" ITS.app.pkg
   )
@@ -2729,7 +2729,7 @@ if (APPLE)
     COMMAND
       productbuild --distribution distro.plist --version
       ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH} --identifier
-      org.opencpn ${MACOS_PKG}
+      org.ITS ${MACOS_PKG}
   )
   add_dependencies(build-macos-pkg component-pkg)
 

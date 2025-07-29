@@ -728,7 +728,7 @@ wxString AbstractPlatform::GetPluginDataPath() {
   } else if (osSystemId & wxOS_WINDOWS) {
     dirs = GetWinPluginBaseDir();
   } else if (osSystemId & wxOS_MAC) {
-    dirs = "/Applications/OpenCPN.app/Contents/SharedSupport/plugins;";
+    dirs = "/Applications/ITS.app/Contents/SharedSupport/plugins;";
     dirs +=
         "~/Library/Application Support/OpenCPN/Contents/SharedSupport/plugins";
   }

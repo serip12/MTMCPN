@@ -8864,7 +8864,7 @@ wxString GetOCPNKnownLanguage(wxString lang_canonical, wxString& lang_dir) {
   } else if ((lang_canonical == _T("vi_VN")) ||
              (lang_canonical == _T("vi_VN"))) {
     dir_suffix = _T("vi_VN");
-    return_string = wxString("Vietnamese", wxConvUTF8);
+    return_string = wxString("Tiếng Việt", wxConvUTF8);
 
   } else {
     dir_suffix = lang_canonical;

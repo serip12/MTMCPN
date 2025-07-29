@@ -183,11 +183,11 @@ void PluginPaths::InitApplePaths() {
       fn_exe.GetPath(wxPATH_GET_VOLUME | wxPATH_GET_SEPARATOR).ToStdString() +
       "PlugIns";
   m_libdirs.push_back(exeLibDir);
-  // m_libdirs.push_back("/Applications/OpenCPN.app/Contents/Plugins");
+  // m_libdirs.push_back("/Applications/ITS.app/Contents/Plugins");
   m_bindirs = m_libdirs;
 
   m_datadirs.push_back(m_user_datadir);
-  m_datadirs.push_back("/Applications/OpenCPN.app/Contents/PlugIns");
+  m_datadirs.push_back("/Applications/ITS.app/Contents/PlugIns");
 }
 
 void PluginPaths::InitAndroidPaths() {

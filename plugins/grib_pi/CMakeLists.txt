@@ -325,14 +325,14 @@ if (APPLE)
   install(
     TARGETS ${PACKAGE_NAME}
     RUNTIME
-    LIBRARY DESTINATION ${CMAKE_BINARY_DIR}/OpenCPN.app/Contents/PlugIns
+    LIBRARY DESTINATION ${CMAKE_BINARY_DIR}/ITS.app/Contents/PlugIns
   )
 
   if (EXISTS ${PROJECT_SOURCE_DIR}/data)
     install(
       DIRECTORY data
       DESTINATION
-        ${CMAKE_BINARY_DIR}/OpenCPN.app/Contents/SharedSupport/plugins/${PACKAGE_NAME}
+        ${CMAKE_BINARY_DIR}/ITS.app/Contents/SharedSupport/plugins/${PACKAGE_NAME}
     )
   endif (EXISTS ${PROJECT_SOURCE_DIR}/data)
 endif (APPLE)
