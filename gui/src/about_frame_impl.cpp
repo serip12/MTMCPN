@@ -111,12 +111,12 @@ void AboutFrameImpl::OnLinkHelp(wxHyperlinkEvent& event) {
     wxString msg = _("ITS Help documentation is not available locally.");
     msg += _T("\n");
     msg +=
-        _("Would you like to visit the opencpn.org website for more "
+        _("Would you like to visit the website for more "
           "information?");
 
     if (wxID_YES ==
         OCPNMessageBox(NULL, msg, _("ITS Info"), wxYES_NO | wxCENTER, 60)) {
-      wxLaunchDefaultBrowser(_T("https://opencpn.org"));
+      wxLaunchDefaultBrowser(_T("#"));
     }
   } else
 #endif
