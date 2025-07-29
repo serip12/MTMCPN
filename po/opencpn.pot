@@ -2499,7 +2499,7 @@ msgstr ""
 #: gui/include/gui/about.h:39 gui/include/gui/about_frame.h:105
 #: gui/include/gui/about_frame_impl.h:76 gui/src/ocpn_frame.cpp:3759
 #: gui/src/ocpn_frame.cpp:7150
-msgid "About OpenCPN"
+msgid "About ITS"
 msgstr ""
 
 #: gui/include/gui/AISTargetAlertDialog.h:48 gui/src/routemanagerdialog.cpp:1457

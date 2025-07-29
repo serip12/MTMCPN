@@ -60,9 +60,9 @@ AboutFrameImpl::AboutFrameImpl(wxWindow* parent, wxWindowID id,
   else
     m_staticTextVersion->SetLabel(PACKAGE_VERSION);
 
-  m_staticTextCopyYears->SetLabel("\u00A9 2000-2024");
-  m_hyperlinkIniFile->SetLabel(g_Platform->GetConfigFileName());
-  m_hyperlinkIniFile->SetURL(g_Platform->GetConfigFileName());
+  m_staticTextCopyYears->SetLabel("\u00A9 2025");
+  // m_hyperlinkIniFile->SetLabel(g_Platform->GetConfigFileName());
+  // m_hyperlinkIniFile->SetURL(g_Platform->GetConfigFileName());
   m_hyperlinkLogFile->SetLabel(g_Platform->GetLogFileName());
   m_hyperlinkLogFile->SetURL(g_Platform->GetLogFileName());
   m_htmlWinAuthors->Hide();

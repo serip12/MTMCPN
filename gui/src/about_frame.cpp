@@ -74,7 +74,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerAbout->Add(m_staticTextOCPN, 0, wxALL, 5);
 
   m_staticTextVersion =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _T("5.6.0"),
+      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _T("1.0.0"),
                        wxDefaultPosition, wxDefaultSize, 0);
   m_staticTextVersion->Wrap(-1);
   m_staticTextVersion->SetFont(wxFont(wxNORMAL_FONT->GetPointSize(),
@@ -87,14 +87,14 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerAuthors1 = new wxBoxSizer(wxHORIZONTAL);
 
   m_staticTextCopyYears =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, "(c) 2000-2024",
+      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, "(c) 2025",
                        wxDefaultPosition, wxDefaultSize, 0);
   m_staticTextCopyYears->Wrap(-1);
   bSizerAuthors1->Add(m_staticTextCopyYears, 0, wxALL, 5);
 
   m_hyperlinkAuthors =
       new wxHyperlinkCtrl(m_scrolledWindowAbout, wxID_ANY,
-                          _("The ITS Authors"), wxT("https://opencpn.org"),
+                          _("The ITS Authors"), wxT("#"),
                           wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
   m_hyperlinkAuthors->SetFont(
       wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
@@ -106,8 +106,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_staticTextDescription = new wxStaticText(
       m_scrolledWindowAbout, wxID_ANY,
-      _("ITS is a Free Software project, built by sailors.\nIt is freely "
-        "available to download and distribute without charge."),
+      _("ITS."),
       wxDefaultPosition, wxDefaultSize, 0);
   m_staticTextDescription->Wrap(380);
   bSizerAbout->Add(m_staticTextDescription, 0, wxALL, 5);
@@ -115,36 +114,36 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   wxBoxSizer* bSizerParticipate;
   bSizerParticipate = new wxBoxSizer(wxHORIZONTAL);
 
-  m_staticTextHelp =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("Want to help?"),
-                       wxDefaultPosition, wxDefaultSize, 0);
-  m_staticTextHelp->Wrap(-1);
-  bSizerParticipate->Add(m_staticTextHelp, 0, wxALL | wxTOP, 5);
+  // m_staticTextHelp =
+  //     new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("Want to help?"),
+  //                      wxDefaultPosition, wxDefaultSize, 0);
+  // m_staticTextHelp->Wrap(-1);
+  // bSizerParticipate->Add(m_staticTextHelp, 0, wxALL | wxTOP, 5);
 
-  m_hyperlinkDonate = new wxHyperlinkCtrl(
-      m_scrolledWindowAbout, wxID_ANY, _("Donate"),
-      wxT("https://sourceforge.net/donate/index.php?group_id=180842"),
-      wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
-  m_hyperlinkDonate->SetFont(wxFont(wxNORMAL_FONT->GetPointSize(),
-                                    wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL,
-                                    wxFONTWEIGHT_NORMAL, false, wxEmptyString));
+  // m_hyperlinkDonate = new wxHyperlinkCtrl(
+  //     m_scrolledWindowAbout, wxID_ANY, _("Donate"),
+  //     wxT("https://sourceforge.net/donate/index.php?group_id=180842"),
+  //     wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
+  // m_hyperlinkDonate->SetFont(wxFont(wxNORMAL_FONT->GetPointSize(),
+  //                                   wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL,
+  //                                   wxFONTWEIGHT_NORMAL, false, wxEmptyString));
 
-  bSizerParticipate->Add(m_hyperlinkDonate, 0, wxALIGN_CENTER_VERTICAL, 5);
+  // bSizerParticipate->Add(m_hyperlinkDonate, 0, wxALIGN_CENTER_VERTICAL, 5);
 
-  m_staticTextOr = new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("or"),
-                                    wxDefaultPosition, wxDefaultSize, 0);
-  m_staticTextOr->Wrap(-1);
-  bSizerParticipate->Add(m_staticTextOr, 0, wxALL, 5);
+  // m_staticTextOr = new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("or"),
+  //                                   wxDefaultPosition, wxDefaultSize, 0);
+  // m_staticTextOr->Wrap(-1);
+  // bSizerParticipate->Add(m_staticTextOr, 0, wxALL, 5);
 
-  m_hyperlinkGetInvolved =
-      new wxHyperlinkCtrl(m_scrolledWindowAbout, wxID_ANY, _("get involved!"),
-                          wxT("https://github.com/OpenCPN/OpenCPN"),
-                          wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
-  m_hyperlinkGetInvolved->SetFont(
-      wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
-             wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
+  // m_hyperlinkGetInvolved =
+  //     new wxHyperlinkCtrl(m_scrolledWindowAbout, wxID_ANY, _("get involved!"),
+  //                         wxT("https://github.com/OpenCPN/OpenCPN"),
+  //                         wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
+  // m_hyperlinkGetInvolved->SetFont(
+  //     wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
+  //            wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
 
-  bSizerParticipate->Add(m_hyperlinkGetInvolved, 0, wxALIGN_CENTER_VERTICAL, 5);
+  // bSizerParticipate->Add(m_hyperlinkGetInvolved, 0, wxALIGN_CENTER_VERTICAL, 5);
 
   bSizerAbout->Add(bSizerParticipate, 0, wxEXPAND, 5);
 
@@ -170,36 +169,36 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   bSizerAbout->Add(bSizerLogFile, 1, wxEXPAND | wxTOP, 15);
 
-  wxBoxSizer* bSizerIniFile;
-  bSizerIniFile = new wxBoxSizer(wxHORIZONTAL);
+  // wxBoxSizer* bSizerIniFile;
+  // bSizerIniFile = new wxBoxSizer(wxHORIZONTAL);
 
-  m_staticTextIniFile =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("Config file:"),
-                       wxDefaultPosition, wxDefaultSize, 0);
-  m_staticTextIniFile->Wrap(-1);
-  bSizerIniFile->Add(m_staticTextIniFile, 0, wxALL, 5);
+  // m_staticTextIniFile =
+  //     new wxStaticText(m_scrolledWindowAbout, wxID_ANY, _("Config file:"),
+  //                      wxDefaultPosition, wxDefaultSize, 0);
+  // m_staticTextIniFile->Wrap(-1);
+  // bSizerIniFile->Add(m_staticTextIniFile, 0, wxALL, 5);
 
-  m_hyperlinkIniFile = new wxHyperlinkCtrl(
-      m_scrolledWindowAbout, wxID_ANY,
-      _T("/Users/nohal/Library/Preferences/opencpn/opencpn.ini"),
-      wxT("http://www.wxformbuilder.org"), wxDefaultPosition, wxDefaultSize,
-      wxHL_CONTEXTMENU | wxHL_ALIGN_LEFT);
-  m_hyperlinkIniFile->SetFont(
-      wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
-             wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
-  m_hyperlinkIniFile->SetToolTip(_("Copy to clipboard"));
+  // m_hyperlinkIniFile = new wxHyperlinkCtrl(
+  //     m_scrolledWindowAbout, wxID_ANY,
+  //     _T("/Users/nohal/Library/Preferences/opencpn/opencpn.ini"),
+  //     wxT("http://www.wxformbuilder.org"), wxDefaultPosition, wxDefaultSize,
+  //     wxHL_CONTEXTMENU | wxHL_ALIGN_LEFT);
+  // m_hyperlinkIniFile->SetFont(
+  //     wxFont(wxNORMAL_FONT->GetPointSize(), wxFONTFAMILY_DEFAULT,
+  //            wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, wxEmptyString));
+  // m_hyperlinkIniFile->SetToolTip(_("Copy to clipboard"));
 
-  bSizerIniFile->Add(m_hyperlinkIniFile, 0, wxALL, 5);
+  // bSizerIniFile->Add(m_hyperlinkIniFile, 0, wxALL, 5);
 
-  bSizerAbout->Add(bSizerIniFile, 1, wxEXPAND, 5);
+  // bSizerAbout->Add(bSizerIniFile, 1, wxEXPAND, 5);
 
-  auto bApiInfo = new wxBoxSizer(wxHORIZONTAL);
-  std::ostringstream api_os;
-  api_os << _("Plugin API: ") << API_VERSION_MAJOR * 100 + API_VERSION_MINOR;
-  auto API_info =
-      new wxStaticText(m_scrolledWindowAbout, wxID_ANY, api_os.str());
-  bApiInfo->Add(API_info, 0, wxALL, 5);
-  bSizerAbout->Add(bApiInfo, 1, wxEXPAND, 5);
+  // auto bApiInfo = new wxBoxSizer(wxHORIZONTAL);
+  // std::ostringstream api_os;
+  // api_os << _("Plugin API: ") << API_VERSION_MAJOR * 100 + API_VERSION_MINOR;
+  // auto API_info =
+  //     new wxStaticText(m_scrolledWindowAbout, wxID_ANY, api_os.str());
+  // bApiInfo->Add(API_info, 0, wxALL, 5);
+  // bSizerAbout->Add(bApiInfo, 1, wxEXPAND, 5);
 
   m_scrolledWindowAbout->SetSizer(bSizerAbout);
   m_scrolledWindowAbout->Layout();
@@ -240,7 +239,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
 
   m_hyperlinkWebsite =
       new wxHyperlinkCtrl(m_panelMainLinks, wxID_ANY, _("ITS Website"),
-                          wxT("https://opencpn.org"), wxDefaultPosition,
+                          wxT("#"), wxDefaultPosition,
                           wxDefaultSize, wxHL_DEFAULT_STYLE);
 
   m_hyperlinkWebsite->SetNormalColour(wxColour(255, 255, 255));
@@ -251,7 +250,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerLinksInner->Add(m_hyperlinkWebsite, 0, wxALL, 20);
 
   m_hyperlinkHelp = new wxHyperlinkCtrl(
-      m_panelMainLinks, wxID_ANY, _("Help"), wxT("file://index.html"),
+      m_panelMainLinks, wxID_ANY, _("Help"), wxT("#"),
       wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
 
   m_hyperlinkHelp->SetNormalColour(wxColour(255, 255, 255));
@@ -262,7 +261,7 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   bSizerLinksInner->Add(m_hyperlinkHelp, 0, wxALL, 20);
 
   m_hyperlinkLicense = new wxHyperlinkCtrl(
-      m_panelMainLinks, wxID_ANY, _("License"), wxT("file://license.html"),
+      m_panelMainLinks, wxID_ANY, _("License"), wxT("#"),
       wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE);
 
   m_hyperlinkLicense->SetNormalColour(wxColour(255, 255, 255));
@@ -297,18 +296,18 @@ AboutFrame::AboutFrame(wxWindow* parent, wxWindowID id, const wxString& title,
   m_hyperlinkAuthors->Connect(
       wxEVT_COMMAND_HYPERLINK,
       wxHyperlinkEventHandler(AboutFrame::OnLinkAuthors), NULL, this);
-  m_hyperlinkDonate->Connect(wxEVT_COMMAND_HYPERLINK,
-                             wxHyperlinkEventHandler(AboutFrame::OnLinkDonate),
-                             NULL, this);
-  m_hyperlinkGetInvolved->Connect(
-      wxEVT_COMMAND_HYPERLINK,
-      wxHyperlinkEventHandler(AboutFrame::OnLinkGetInvolved), NULL, this);
+  // m_hyperlinkDonate->Connect(wxEVT_COMMAND_HYPERLINK,
+  //                            wxHyperlinkEventHandler(AboutFrame::OnLinkDonate),
+  //                            NULL, this);
+  // m_hyperlinkGetInvolved->Connect(
+  //     wxEVT_COMMAND_HYPERLINK,
+  //     wxHyperlinkEventHandler(AboutFrame::OnLinkGetInvolved), NULL, this);
   m_hyperlinkLogFile->Connect(
       wxEVT_COMMAND_HYPERLINK,
       wxHyperlinkEventHandler(AboutFrame::OnLinkLogfile), NULL, this);
-  m_hyperlinkIniFile->Connect(
-      wxEVT_COMMAND_HYPERLINK,
-      wxHyperlinkEventHandler(AboutFrame::OnLinkConfigfile), NULL, this);
+  // m_hyperlinkIniFile->Connect(
+  //     wxEVT_COMMAND_HYPERLINK,
+  //     wxHyperlinkEventHandler(AboutFrame::OnLinkConfigfile), NULL, this);
   m_htmlWinHelp->Connect(
       wxEVT_COMMAND_HTML_LINK_CLICKED,
       wxHtmlLinkEventHandler(AboutFrame::m_htmlWinHelpOnHtmlLinkClicked), NULL,
@@ -333,18 +332,18 @@ AboutFrame::~AboutFrame() {
   m_hyperlinkAuthors->Disconnect(
       wxEVT_COMMAND_HYPERLINK,
       wxHyperlinkEventHandler(AboutFrame::OnLinkAuthors), NULL, this);
-  m_hyperlinkDonate->Disconnect(
-      wxEVT_COMMAND_HYPERLINK,
-      wxHyperlinkEventHandler(AboutFrame::OnLinkDonate), NULL, this);
-  m_hyperlinkGetInvolved->Disconnect(
-      wxEVT_COMMAND_HYPERLINK,
-      wxHyperlinkEventHandler(AboutFrame::OnLinkGetInvolved), NULL, this);
+  // m_hyperlinkDonate->Disconnect(
+  //     wxEVT_COMMAND_HYPERLINK,
+  //     wxHyperlinkEventHandler(AboutFrame::OnLinkDonate), NULL, this);
+  // m_hyperlinkGetInvolved->Disconnect(
+  //     wxEVT_COMMAND_HYPERLINK,
+  //     wxHyperlinkEventHandler(AboutFrame::OnLinkGetInvolved), NULL, this);
   m_hyperlinkLogFile->Disconnect(
       wxEVT_COMMAND_HYPERLINK,
       wxHyperlinkEventHandler(AboutFrame::OnLinkLogfile), NULL, this);
-  m_hyperlinkIniFile->Disconnect(
-      wxEVT_COMMAND_HYPERLINK,
-      wxHyperlinkEventHandler(AboutFrame::OnLinkConfigfile), NULL, this);
+  // m_hyperlinkIniFile->Disconnect(
+  //     wxEVT_COMMAND_HYPERLINK,
+  //     wxHyperlinkEventHandler(AboutFrame::OnLinkConfigfile), NULL, this);
   m_htmlWinHelp->Disconnect(
       wxEVT_COMMAND_HTML_LINK_CLICKED,
       wxHtmlLinkEventHandler(AboutFrame::m_htmlWinHelpOnHtmlLinkClicked), NULL,
