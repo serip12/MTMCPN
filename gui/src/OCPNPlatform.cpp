@@ -243,7 +243,7 @@ static bool checkIfFlatpacked() {
   if (!wxGetEnv("FLATPAK_ID", &id)) {
     return false;
   }
-  return id == "org.its.ITS";
+  return id == "org.opencpn.OpenCPN";
 }
 
 OCPNPlatform::OCPNPlatform() {
@@ -1112,7 +1112,7 @@ wxString OCPNPlatform::ChangeLocale(wxString &newLocaleID,
   wxLocale *locale = new wxLocale;
   if (isFlatpacked()) {
     std::string path(getenv("HOME"));
-    path += "/.var/app/org.its.ITS/data/locale";
+    path += "/.var/app/org.opencpn.OpenCPN/data/locale";
     locale->AddCatalogLookupPathPrefix(path);
     wxLogMessage("Using flatpak locales at %s", path.c_str());
   }
