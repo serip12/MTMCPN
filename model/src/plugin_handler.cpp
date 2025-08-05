@@ -693,7 +693,7 @@ static bool apple_entry_set_install_path(struct archive_entry* entry,
   using namespace std;
 
   const string base = PluginPaths::GetInstance()->Homedir() +
-                      "/Library/Application Support/OpenCPN";
+                      "/Library/Application Support/ITS";
 
   string path = archive_entry_pathname(entry);
   if (ocpn::startswith(path, "./")) path = path.substr(2);

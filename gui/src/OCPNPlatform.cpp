@@ -243,7 +243,7 @@ static bool checkIfFlatpacked() {
   if (!wxGetEnv("FLATPAK_ID", &id)) {
     return false;
   }
-  return id == "org.opencpn.OpenCPN";
+  return id == "org.its.ITS";
 }
 
 OCPNPlatform::OCPNPlatform() {
@@ -1014,7 +1014,7 @@ void OCPNPlatform::SetLocaleSearchPrefixes(void) {
 #ifdef __WXOSX__
   std::string macDir =
       PluginPaths::GetInstance()->Homedir() +
-      "/Library/Application Support/OpenCPN/Contents/Resources";
+      "/Library/Application Support/ITS/Contents/Resources";
   wxString Mac_managed_locale_location(macDir);
   wxLocale::AddCatalogLookupPathPrefix(Mac_managed_locale_location);
 #endif
@@ -1073,7 +1073,7 @@ wxString OCPNPlatform::GetAdjustedAppLocale() {
 //  and use this selection for opencpn...
 #if defined(__WXMSW__)
   if (g_bFirstRun || wxIsEmpty(adjLocale)) {
-    wxRegKey RegKey(wxString(_T("HKEY_LOCAL_MACHINE\\SOFTWARE\\OpenCPN")));
+    wxRegKey RegKey(wxString(_T("HKEY_LOCAL_MACHINE\\SOFTWARE\\ITS")));
     if (RegKey.Exists()) {
       wxLogMessage(
           _T("Retrieving initial language selection from Windows Registry"));
@@ -1112,7 +1112,7 @@ wxString OCPNPlatform::ChangeLocale(wxString &newLocaleID,
   wxLocale *locale = new wxLocale;
   if (isFlatpacked()) {
     std::string path(getenv("HOME"));
-    path += "/.var/app/org.opencpn.OpenCPN/data/locale";
+    path += "/.var/app/org.its.ITS/data/locale";
     locale->AddCatalogLookupPathPrefix(path);
     wxLogMessage("Using flatpak locales at %s", path.c_str());
   }

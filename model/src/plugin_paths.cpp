@@ -77,7 +77,7 @@ void PluginPaths::InitWindowsPaths() {
 void PluginPaths::InitFlatpakPaths() {
   using namespace std;
 
-  const string flathome = m_home + "/.var/app/org.opencpn.OpenCPN";
+  const string flathome = m_home + "/.var/app/org.its.ITS";
   m_userLibdir = flathome + "/lib";
   m_user_bindir = flathome + "/bin";
   m_user_datadir = flathome + "/data";
@@ -171,7 +171,7 @@ void PluginPaths::InitLinuxPaths() {
 void PluginPaths::InitApplePaths() {
   using namespace std;
 
-  const string mac_home = m_home + "/Library/Application Support/OpenCPN";
+  const string mac_home = m_home + "/Library/Application Support/ITS";
   m_userLibdir = mac_home + "/Contents/PlugIns";
   m_user_bindir = m_userLibdir;
   m_user_datadir = mac_home + "/Contents";

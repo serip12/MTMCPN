@@ -92,7 +92,7 @@ public:
     ObsListener obs_listener(dbus_server.on_raise);
 
     constexpr const char* const kDbusSendCmd =
-        "dbus-send --type=method_call --print-reply --dest=org.opencpn.OpenCPN"
+        "dbus-send --type=method_call --print-reply --dest=org.its.ITS"
         " /org/opencpn/OpenCPN opencpn.desktop.Raise";
     FILE* f = popen(kDbusSendCmd, "r");
     std::this_thread::sleep_for(50ms);  // Need some time to settle input
@@ -127,7 +127,7 @@ public:
     DbusServer& dbus_server = DbusServer::GetInstance();
     ObsListener listener(dbus_server);
     constexpr const char* const kDbusSendCmd =
-        "dbus-send --type=method_call --dest=org.opencpn.OpenCPN --print-reply"
+        "dbus-send --type=method_call --dest=org.its.ITS --print-reply"
         " /org/opencpn/OpenCPN opencpn.desktop.Quit";
     FILE* f = popen(kDbusSendCmd, "r");
     char buff[1024];
@@ -151,7 +151,7 @@ TEST(DbusServer, Ping) {
   DbusServer& dbus_server = DbusServer::GetInstance();
 
   constexpr const char* const kDbusSendCmd =
-      "dbus-send --type=method_call --print-reply --dest=org.opencpn.OpenCPN"
+      "dbus-send --type=method_call --print-reply --dest=org.its.ITS"
       " /org/opencpn/OpenCPN opencpn.desktop.Ping";
   FILE* f = popen(kDbusSendCmd, "r");
   char buff[1024];
@@ -230,7 +230,7 @@ TEST(DbusServer, Open) {
   };
 
   constexpr const char* const kDbusSendCmd =
-      "dbus-send --type=method_call --print-reply --dest=org.opencpn.OpenCPN"
+      "dbus-send --type=method_call --print-reply --dest=org.its.ITS"
       " /org/opencpn/OpenCPN opencpn.desktop.Open string:/foo/bar.gpx";
   FILE* f = popen(kDbusSendCmd, "r");
   std::this_thread::sleep_for(100ms);
@@ -269,7 +269,7 @@ TEST(DbusServer, GetRestEndpoint) {
   dbus_server.get_rest_api_endpoint_cb = []() { return "2.2.2.2/3333"; };
 
   constexpr const char* const kDbusSendCmd =
-      "dbus-send --type=method_call --print-reply --dest=org.opencpn.OpenCPN"
+      "dbus-send --type=method_call --print-reply --dest=org.its.ITS"
       " /org/opencpn/OpenCPN opencpn.desktop.GetRestEndpoint";
   FILE* f = popen(kDbusSendCmd, "r");
   char buff[1024];

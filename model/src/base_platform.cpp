@@ -95,7 +95,7 @@ static bool checkIfFlatpacked() {
   if (!wxGetEnv("FLATPAK_ID", &id)) {
     return false;
   }
-  return id == "org.opencpn.OpenCPN";
+  return id == "org.its.ITS";
 }
 
 static wxString ExpandPaths(wxString paths, AbstractPlatform* platform);
@@ -320,7 +320,7 @@ wxString& AbstractPlatform::DefaultPrivateDataDir() {
       config_home = getenv("XDG_CONFIG_HOME");
     } else {
       config_home = getenv("HOME");
-      config_home += "/.var/app/org.opencpn.OpenCPN/config";
+      config_home += "/.var/app/org.its.ITS/config";
     }
     m_PrivateDataDir = config_home + "/opencpn";
 
@@ -593,7 +593,7 @@ wxString& AbstractPlatform::GetConfigFileName() {
 #elif defined FLATPAK
     m_config_file_name = GetPrivateDataDir();
     m_config_file_name.Append("/opencpn.conf");
-    // Usually ~/.var/app/org.opencpn.OpenCPN/config/opencpn.conf
+    // Usually ~/.var/app/org.its.ITS/config/opencpn.conf
 #else
     m_config_file_name = std_path.GetUserDataDir();  // should be ~/.opencpn
     appendOSDirSlash(&m_config_file_name);
@@ -722,7 +722,7 @@ wxString AbstractPlatform::GetPluginDataPath() {
 #else
   auto const osSystemId = wxPlatformInfo::Get().GetOperatingSystemId();
   if (isFlatpacked()) {
-    dirs = "~/.var/app/org.opencpn.OpenCPN/data/opencpn/plugins";
+    dirs = "~/.var/app/org.its.ITS/data/opencpn/plugins";
   } else if (osSystemId & wxOS_UNIX_LINUX) {
     dirs = GetLinuxDataPath();
   } else if (osSystemId & wxOS_WINDOWS) {
@@ -730,7 +730,7 @@ wxString AbstractPlatform::GetPluginDataPath() {
   } else if (osSystemId & wxOS_MAC) {
     dirs = "/Applications/ITS.app/Contents/SharedSupport/plugins;";
     dirs +=
-        "~/Library/Application Support/OpenCPN/Contents/SharedSupport/plugins";
+        "~/Library/Application Support/ITS/Contents/SharedSupport/plugins";
   }
 #endif
 
